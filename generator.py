@@ -14,6 +14,7 @@ PENDING_FILE = "pending.csv"
 CHANNELS = {
     "Małgorzata Mostowska": "UCITlHzj4MUzRNM17pdWUWeQ",
     "Yoga Home": "UCUVNvkkzMrT4qMhlql2t4iQ",
+    "Malva Stretching":"UCIJA9AD3fxbDNwARNBww5mg"
 
 }
 

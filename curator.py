@@ -11,7 +11,10 @@ client = OpenAI(api_key=os.getenv("OPENAI_API_KEY"))
 PENDING_FILE = "pending.csv"
 LIBRARY_FILE = "yoga_library.csv"
 
-# --- AKTUALIZACJA PROMPTU ---
+# --- ZABEZPIECZENIE: Oczekiwane kolumny w pliku pending.csv ---
+EXPECTED_COLUMNS = ['video_id', 'title', 'channel', 'duration', 'raw_description', 'url']
+
+# --- SYSTEM PROMPT (bez zmian) ---
 SYSTEM_PROMPT = """
 Jesteś ekspertem jogi. Analizujesz filmy z YouTube pod kątem aplikacji fitness.
 Dla każdego filmu otrzymasz: Tytuł, Czas, Opis.
@@ -20,12 +23,12 @@ Zwróć JSON z polami:
 2. "tags" (list): Max 4 tagi (np. "Biodra", "Kręgosłup", "Vinyasa", "Relaks", "Siła", "Poranek").
 3. "clean_description" (string): 1-2 zdania technicznego opisu (co robimy).
 4. "intensity" (integer): Skala 1-5.
-   - 1: Bardzo łagodna (Yin, Nidra, Leżenie, Medytacja w ruchu)
+   - 1: Bardzo łagodna (Yin, Nidra, Leżenie)
    - 2: Łagodna (Spokojne rozciąganie, Hatha dla początkujących)
-   - 3: Umiarkowana (Standardowa Vinyasa, Flow, lekkie wzmacnianie)
-   - 4: Wymagająca (Power Yoga, Strong Flow, dłuższe trzymanie trudnych asan)
-   - 5: Wysiłkowa (Cardio Yoga, HIIT, "Pot i łzy", Zaawansowane inwersje)
-5. "props" (string): Wymień wymagany sprzęt (np. "Klocki", "Pasek", "Wałek"). Jeśli nic nie trzeba (lub tylko mata), wpisz "Brak".
+   - 3: Umiarkowana (Standardowa Vinyasa, Flow)
+   - 4: Wymagająca (Power Yoga, Strong Flow)
+   - 5: Wysiłkowa (Cardio Yoga, HIIT)
+5. "props" (string): Wymień wymagany sprzęt (np. "Klocki", "Pasek"). Jeśli nic nie trzeba, wpisz "Brak".
 """
 
 def main():
@@ -33,25 +36,38 @@ def main():
         print("📭 Plik 'pending.csv' nie istnieje.")
         return
 
+    # --- PANCERNE WCZYTYWANIE ---
     try:
-        df_pending = pd.read_csv(PENDING_FILE)
+        # Wczytujemy wszystko jako string, żeby uniknąć błędów typów
+        df_pending = pd.read_csv(PENDING_FILE, dtype=str)
+        
+        # 1. Czyszczenie spacji w nagłówkach
         df_pending.columns = df_pending.columns.str.strip()
         
-        if 'title' not in df_pending.columns:
-            print("❌ Błąd struktury pliku CSV (brak kolumny title).")
+        # 2. Sprawdzenie czy plik nie jest pusty (tylko nagłówek)
+        if df_pending.empty:
+            print("📭 Plik 'pending.csv' jest pusty (ma tylko nagłówek).")
             return
-            
+
+        # 3. Uzupełnianie brakujących kolumn (gdyby generator coś pomieszał)
+        for col in EXPECTED_COLUMNS:
+            if col not in df_pending.columns:
+                print(f"⚠️ Brak kolumny '{col}' w CSV. Dodaję pustą.")
+                df_pending[col] = ""
+                
     except pd.errors.EmptyDataError:
-        print("📭 Plik 'pending.csv' jest pusty.")
+        print("📭 Plik 'pending.csv' jest całkowicie pusty.")
+        return
+    except Exception as e:
+        print(f"❌ Krytyczny błąd odczytu CSV: {e}")
         return
 
-    if df_pending.empty:
-        print("📭 Brak filmów do przetworzenia.")
-        return
-
+    # Konwersja duration na liczby (bo wczytaliśmy jako string)
+    df_pending['duration'] = pd.to_numeric(df_pending['duration'], errors='coerce').fillna(0).astype(int)
     df_pending = df_pending.fillna('')
+    
     records = df_pending.to_dict('records')
-    print(f"🤖 Rozpoczynam przetwarzanie {len(records)} filmów (z oceną intensywności)...")
+    print(f"🤖 Rozpoczynam przetwarzanie {len(records)} filmów...")
     
     cleaned_data = []
     BATCH_SIZE = 10
@@ -62,9 +78,12 @@ def main():
 
         videos_text = ""
         for idx, v in enumerate(batch):
-            title = v.get('title', 'Brak tytułu')
-            duration = v.get('duration', 0)
-            raw_desc = str(v.get('raw_description', ''))[:400]
+            # Teraz mamy pewność, że klucze istnieją, bo wymusiliśmy kolumny
+            title = str(v['title'])
+            duration = v['duration']
+            # Ucinamy opis
+            raw_desc = str(v['raw_description'])[:400]
+            
             videos_text += f"ID: {idx}\nTitle: {title}\nDuration: {duration}\nDesc: {raw_desc}\n---\n"
 
         try:
@@ -72,7 +91,6 @@ def main():
                 model="gpt-4o-mini",
                 messages=[
                     {"role": "system", "content": SYSTEM_PROMPT},
-                    # Dodajemy instrukcję struktury JSON uwzględniającą nowe pola
                     {"role": "user", "content": f"Format JSON: {{ 'videos': [ {{ 'id': 0, 'is_practice': true, 'tags': ['Tag'], 'clean_description': '...', 'intensity': 3, 'props': 'Brak' }} ] }}\n\nDATA:\n{videos_text}"}
                 ],
                 response_format={ "type": "json_object" }
@@ -88,29 +106,39 @@ def main():
                     
                     if ai_res.get("is_practice", False):
                         cleaned_data.append({
+                            "video_id": original.get("video_id"), # Ważne dla deduplikacji
                             "title": original.get("title"),
                             "category": ", ".join(ai_res.get("tags", [])),
                             "duration": original.get("duration"),
                             "channel": original.get("channel"),
                             "description": ai_res.get("clean_description"),
-                            # --- NOWE POLA ---
-                            "intensity": ai_res.get("intensity", 1), # Domyślnie 1 jak AI zgłupieje
+                            "intensity": ai_res.get("intensity", 1),
                             "props": ai_res.get("props", "Brak"),
                             "url": original.get("url")
                         })
                         
         except Exception as e:
-            print(f"❌ Błąd w paczce: {e}")
+            print(f"❌ Błąd AI w paczce {i}: {e}")
 
+    # ZAPIS
     if cleaned_data:
         df_clean = pd.DataFrame(cleaned_data)
-        header_mode = not os.path.exists(LIBRARY_FILE)
-        df_clean.to_csv(LIBRARY_FILE, mode='a', index=False, header=header_mode, quoting=1)
         
-        print(f"\n✅ Sukces! Dodano {len(cleaned_data)} praktyk do bazy.")
-        open(PENDING_FILE, 'w').close() 
+        # Sprawdzamy czy plik docelowy istnieje, żeby wiedzieć czy pisać nagłówek
+        file_exists = os.path.exists(LIBRARY_FILE)
+        
+        # Tryb 'a' (append)
+        df_clean.to_csv(LIBRARY_FILE, mode='a', index=False, header=not file_exists, quoting=1)
+        
+        print(f"\n✅ Sukces! Dodano {len(cleaned_data)} nowych praktyk.")
+        
+        # Czyścimy pending
+        open(PENDING_FILE, 'w').close()
+        print("🗑️ Wyczyszczono pending.csv")
     else:
-        print("⚠️ Nie dodano żadnych filmów.")
+        print("⚠️ Nie dodano żadnych filmów (błędy lub brak praktyk).")
+        # Opcjonalnie: też wyczyść pending, jeśli to same śmieci/vlogi, żeby nie mieliło ich w kółko
+        # open(PENDING_FILE, 'w').close() 
 
 if __name__ == "__main__":
     main()
