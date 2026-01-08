@@ -2,6 +2,18 @@ import streamlit as st
 import pandas as pd
 import random
 from datetime import datetime
+import os
+
+# --- DEBUGGING ---
+# st.write("📂 Obecny katalog roboczy:", os.getcwd())
+# st.write("📄 Pliki w tym katalogu:", os.listdir())
+
+# # Sprawdźmy czy plik istnieje z perspektywy Pythona
+# if os.path.exists("yoga_library.csv"):
+#     st.success("✅ Plik yoga_library.csv ISTNIEJE!")
+# else:
+#     st.error("❌ Plik yoga_library.csv NIE ISTNIEJE fizycznie w tym folderze.")
+
 
 # 1. Konfiguracja strony
 st.set_page_config(page_title="Joga App", page_icon="🧘‍♀️", layout="centered")
@@ -46,34 +58,40 @@ hide_streamlit_style = """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
 # 3. Ładowanie danych
-@st.cache_data
+# @st.cache_data
+# 3. Ładowanie danych
+# UWAGA: Usunąłem @st.cache_data tymczasowo, żeby wymusić odczyt pliku przy każdym odświeżeniu!
+# Jak naprawimy błąd, możesz przywrócić dekorator.
+# W pliku app.py
+
 def load_data():
+    csv_path = "yoga_library.csv"
+    
+    if not os.path.exists(csv_path):
+        st.error(f"❌ Funkcja load_data nie widzi pliku: {csv_path}")
+        return pd.DataFrame()
+
     try:
-        df = pd.read_csv("yoga_library.csv")
+        # ZMIANA TUTAJ: on_bad_lines='skip' ignoruje uszkodzone wiersze
+        df = pd.read_csv(csv_path, on_bad_lines='skip', engine='python')
         
-        # Czyszczenie nazw kolumn
         df.columns = df.columns.str.strip()
         
-        # Parsowanie tagów
         df['tags_list'] = df['category'].fillna('').apply(
             lambda x: [tag.strip() for tag in str(x).split(',') if tag.strip()]
         )
         
-        # Zabezpieczenia dla brakujących kolumn
-        if 'intensity' not in df.columns:
-            df['intensity'] = 1
-        else:
-            df['intensity'] = pd.to_numeric(df['intensity'], errors='coerce').fillna(1).astype(int)
+        if 'intensity' not in df.columns: df['intensity'] = 1
+        else: df['intensity'] = pd.to_numeric(df['intensity'], errors='coerce').fillna(1).astype(int)
             
-        if 'props' not in df.columns:
-            df['props'] = 'Brak'
-        else:
-            df['props'] = df['props'].fillna('Brak')
+        if 'props' not in df.columns: df['props'] = 'Brak'
+        else: df['props'] = df['props'].fillna('Brak')
             
         return df
-    except Exception:
+        
+    except Exception as e:
+        st.error(f"❌ Nieoczekiwany błąd w load_data: {e}")
         return pd.DataFrame()
-
 df = load_data()
 
 # --- FUNKCJA POMOCNICZA: Rysowanie kropek intensywności ---
