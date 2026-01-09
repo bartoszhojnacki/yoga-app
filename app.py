@@ -4,282 +4,265 @@ import random
 from datetime import datetime
 import os
 
-# --- DEBUGGING ---
-# st.write("📂 Obecny katalog roboczy:", os.getcwd())
-# st.write("📄 Pliki w tym katalogu:", os.listdir())
-
-# # Sprawdźmy czy plik istnieje z perspektywy Pythona
-# if os.path.exists("yoga_library.csv"):
-#     st.success("✅ Plik yoga_library.csv ISTNIEJE!")
-# else:
-#     st.error("❌ Plik yoga_library.csv NIE ISTNIEJE fizycznie w tym folderze.")
-
-
 # 1. Konfiguracja strony
-st.set_page_config(page_title="Joga App", page_icon="🧘‍♀️", layout="centered")
+st.set_page_config(page_title="Joga & Mobility", page_icon="🧘‍♀️", layout="centered")
 
-# 2. CSS - Stylizacja "Mobile First"
+# 2. CSS - Stylizacja
 hide_streamlit_style = """
             <style>
             #MainMenu {visibility: hidden;}
             footer {visibility: hidden;}
             header {visibility: hidden;}
-            .block-container {
-                padding-top: 1rem;
-                padding-bottom: 3rem;
-            }
+            .block-container {padding-top: 1rem; padding-bottom: 3rem;}
             /* Styl tagów */
-            .tag-selected {
-                background-color: #FF4B4B;
-                color: white;
-                padding: 2px 8px;
-                border-radius: 10px;
-                font-size: 0.8rem;
-                margin-right: 5px;
-                display: inline-block;
-                margin-bottom: 4px;
-            }
-            .tag-normal {
-                background-color: #f0f2f6;
-                color: #31333F;
-                padding: 2px 8px;
-                border-radius: 10px;
-                font-size: 0.8rem;
-                margin-right: 5px;
-                display: inline-block;
-                margin-bottom: 4px;
-            }
-            /* Styl dla przycisku losowania */
-            .stButton button {
-                border-radius: 12px;
-            }
+            .tag-selected {background-color: #FF4B4B; color: white; padding: 2px 8px; border-radius: 10px; font-size: 0.8rem; margin-right: 5px; display: inline-block; margin-bottom: 4px;}
+            .tag-normal {background-color: #f0f2f6; color: #31333F; padding: 2px 8px; border-radius: 10px; font-size: 0.8rem; margin-right: 5px; display: inline-block; margin-bottom: 4px;}
+            .stTabs [data-baseweb="tab-list"] {gap: 20px;}
+            .stTabs [data-baseweb="tab"] {height: 50px; white-space: pre-wrap; background-color: #f0f2f6; border-radius: 4px 4px 0px 0px; gap: 1px; padding-top: 10px; padding-bottom: 10px;}
+            .stTabs [aria-selected="true"] {background-color: #FF4B4B; color: white;}
+            
+            /* Styl dla tagów Mobility (niebieskie dla odmiany) */
+            .mob-tag-type {background-color: #E3F2FD; color: #0D47A1; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; margin-right: 4px; border: 1px solid #BBDEFB;}
+            .mob-tag-body {background-color: #E8F5E9; color: #1B5E20; padding: 2px 8px; border-radius: 4px; font-size: 0.75rem; margin-right: 4px; border: 1px solid #C8E6C9;}
             </style>
             """
 st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
-# 3. Ładowanie danych
-# @st.cache_data
-# 3. Ładowanie danych
-# UWAGA: Usunąłem @st.cache_data tymczasowo, żeby wymusić odczyt pliku przy każdym odświeżeniu!
-# Jak naprawimy błąd, możesz przywrócić dekorator.
-# W pliku app.py
+# --- DEFINICJA SŁÓW KLUCZOWYCH DLA MOBILITY ---
+MOBILITY_KEYWORDS = {
+    # Kategoria: [Lista słów, które jej szukają]
+    "types": {
+        "Stretching": ["rozciąganie", "stretching", "stretch", "elastyczność"],
+        "Mobility": ["mobilność", "mobility", "zakresy", "ruchomość"],
+        "Rolowanie": ["rolowanie", "roller", "rozluźnianie", "automasaż", "piłeczka"],
+        "Wzmacnianie": ["wzmacnianie", "siła", "stabilizacja", "aktywacja"]
+    },
+    "body_parts": {
+        "Biodra": ["biodra", "bioder", "miednica", "pośladki", "otwieranie bioder"],
+        "Barki & Szyja": ["barki", "barków", "ramiona", "szyja", "kark", "klatka"],
+        "Kręgosłup": ["kręgosłup", "plecy", "lędźwi", "grzbiet"],
+        "Nogi": ["nogi", "nóg", "uda", "staw skokowy", "stopy", "łydki", "kolana"],
+        "Nadgarstki": ["nadgarstki", "dłonie", "przedramiona"],
+        "Całe ciało": ["całe ciało", "full body", "ogólne"]
+    }
+}
 
-def load_data():
-    csv_path = "yoga_library.csv"
+def auto_tag_mobility(row):
+    """Funkcja analizuje tekst i zwraca znalezione tagi."""
+    # Łączymy tytuł i opis, zamieniamy na małe litery
+    text = (str(row['title']) + " " + str(row.get('description', ''))).lower()
     
-    if not os.path.exists(csv_path):
-        st.error(f"❌ Funkcja load_data nie widzi pliku: {csv_path}")
-        return pd.DataFrame()
+    found_types = []
+    found_body = []
+    
+    # Szukamy typu
+    for cat, keywords in MOBILITY_KEYWORDS['types'].items():
+        if any(k in text for k in keywords):
+            found_types.append(cat)
+            
+    # Szukamy części ciała
+    for cat, keywords in MOBILITY_KEYWORDS['body_parts'].items():
+        if any(k in text for k in keywords):
+            found_body.append(cat)
+            
+    return found_types, found_body
 
+# 3. Ładowanie danych
+def load_yoga_data():
     try:
-        # ZMIANA TUTAJ: on_bad_lines='skip' ignoruje uszkodzone wiersze
-        df = pd.read_csv(csv_path, on_bad_lines='skip', engine='python')
-        
+        df = pd.read_csv("yoga_library.csv", on_bad_lines='skip', engine='python')
         df.columns = df.columns.str.strip()
-        
-        df['tags_list'] = df['category'].fillna('').apply(
-            lambda x: [tag.strip() for tag in str(x).split(',') if tag.strip()]
-        )
-        
+        df['tags_list'] = df['category'].fillna('').apply(lambda x: [tag.strip() for tag in str(x).split(',') if tag.strip()])
         if 'intensity' not in df.columns: df['intensity'] = 1
         else: df['intensity'] = pd.to_numeric(df['intensity'], errors='coerce').fillna(1).astype(int)
-            
         if 'props' not in df.columns: df['props'] = 'Brak'
         else: df['props'] = df['props'].fillna('Brak')
-            
         return df
-        
-    except Exception as e:
-        st.error(f"❌ Nieoczekiwany błąd w load_data: {e}")
+    except Exception:
         return pd.DataFrame()
-df = load_data()
 
-# --- FUNKCJA POMOCNICZA: Rysowanie kropek intensywności ---
-def render_intensity_html(level):
+def load_mobility_data():
     try:
-        lvl = int(level)
-        lvl = max(1, min(lvl, 5))
-    except:
-        lvl = 1
+        df = pd.read_csv("mobility.csv", on_bad_lines='skip', engine='python')
+        df.columns = df.columns.str.strip()
         
-    color = "#555" 
-    if lvl >= 4: color = "#D32F2F"
-    
-    filled = "● " * lvl
-    empty = "○ " * (5 - lvl)
-    return f"<span style='color: {color}; letter-spacing: 1px;'>{filled}{empty}</span>"
+        # --- AUTO-TAGOWANIE W LOCIE ---
+        # Tworzymy dwie nowe kolumny z listami tagów
+        tags_result = df.apply(auto_tag_mobility, axis=1)
+        df['type_tags'] = tags_result.apply(lambda x: x[0])
+        df['body_tags'] = tags_result.apply(lambda x: x[1])
+        
+        return df
+    except Exception:
+        return pd.DataFrame()
 
-# --- FUNKCJA: SUGEROWANIE DNIA (Toast) ---
+# Wczytanie
+df_yoga = load_yoga_data()
+df_mob = load_mobility_data()
+
+# 4. Funkcje pomocnicze
+def render_intensity_html(level):
+    try: lvl = max(1, min(int(level), 5))
+    except: lvl = 1
+    color = "#D32F2F" if lvl >= 4 else "#555"
+    return f"<span style='color: {color}; letter-spacing: 1px;'>{'● '*lvl}{'○ '*(5-lvl)}</span>"
+
+# Sugestia dnia (Toast)
 day_of_week = datetime.now().weekday()
-days_map = {
-    0: ("Poniedziałek", "To dobry dzień na energię! Filtruj po 'Flow' lub 'Poranek'."),
-    4: ("Piątek", "Koniec tygodnia! Czas na 'Relaks' lub 'Kręgosłup'."),
-    5: ("Sobota", "Masz więcej czasu? Spróbuj czegoś dłuższego."),
-    6: ("Niedziela", "Zregeneruj się przed nowym tygodniem.")
-}
-day_name, msg = days_map.get(day_of_week, ("Witaj na macie", "Jaka praktyka dzisiaj?"))
-st.toast(f"📅 {day_name}! {msg}", icon="🧘")
+days_map = {0: "Poniedziałek", 4: "Piątek", 5: "Sobota", 6: "Niedziela"}
+day_name = days_map.get(day_of_week, "Dzień dobry")
+st.toast(f"📅 {day_name}! Wybierz zakładkę poniżej.", icon="👋")
 
+st.title("Studio Ruchu")
 
-# 4. Nagłówek
-if df.empty:
-    st.error("Brak bazy danych 'yoga_library.csv'. Uruchom najpierw generator i curatora!")
-    st.stop()
+# --- ZAKŁADKI ---
+tab_yoga, tab_mob = st.tabs(["🧘‍♀️ Joga", "🤸‍♂️ Mobility & Stretch"])
 
-st.title("🧘‍♀️ Studio Jogi")
+# ==================================================
+# ZAKŁADKA 1: JOGA
+# ==================================================
+with tab_yoga:
+    if df_yoga.empty:
+        st.info("Brak bazy jogi (yoga_library.csv).")
+    else:
+        all_tags = sorted(list(set([t for l in df_yoga['tags_list'] for t in l])))
+        all_channels = sorted(df_yoga['channel'].unique())
 
-# Pobranie dostępnych tagów i kanałów
-all_available_tags = sorted(list(set([tag for sublist in df['tags_list'] for tag in sublist])))
-all_channels = sorted(df['channel'].unique())
+        with st.expander("🔍 Filtry Jogi", expanded=True):
+            y_tags = st.multiselect("Cel:", all_tags, key="y_tags")
+            y_chan = st.multiselect("Kanał:", all_channels, key="y_chan")
+            st.markdown("---")
+            TIME_RANGES = {"Wszystkie": (0, 999), "⚡ Do 15 min": (0, 15), "🧘 15-30 min": (15, 30), "💪 30-45 min": (30, 45), "🛌 45+ min": (45, 999)}
+            y_time_choice = st.pills("Czas:", list(TIME_RANGES.keys()), default="Wszystkie", key="y_time")
+            y_min, y_max = TIME_RANGES.get(y_time_choice, (0, 999))
+            st.markdown("---")
+            y_intens = st.slider("Trudność:", 1, 5, (1, 5), key="y_int")
 
-# 5. Panel Filtrów
-with st.expander("🔍 Filtruj praktykę", expanded=True):
-    
-    # A. Tagi
-    selected_tags = st.multiselect(
-        "Cel:", 
-        options=all_available_tags,
-        placeholder="np. Poranek, Kręgosłup..."
-    )
-    
-    # B. NOWOŚĆ: Kanał
-    selected_channels = st.multiselect(
-        "Kanał:",
-        options=all_channels,
-        placeholder="Wszyscy instruktorzy"
-    )
-    
-    st.markdown("---")
-    
-    # C. Czas (Pills)
-    TIME_RANGES = {
-        "Wszystkie": (0, 999),
-        "⚡ Do 6 min": (0, 6),
-        "☕ 6 - 10 min": (6, 10),
-        "🧘 10 - 20 min": (10, 20),
-        "🔥 20 - 30 min": (20, 30),
-        "💪 30 - 45 min": (30, 45),
-        "🛌 45+ min": (45, 999)
-    }
-    
-    time_choice = st.pills(
-        "Czas:",
-        options=list(TIME_RANGES.keys()),
-        default="Wszystkie",
-        selection_mode="single"
-    )
-    min_time, max_time = TIME_RANGES.get(time_choice, (0, 999))
-    
-    st.markdown("---")
-    
-    # D. Intensywność (Slider)
-    intensity_range = st.slider("Poziom trudności (1-5):", 1, 5, (1, 5))
-
-# 6. Logika Rankingu i Filtrowania
-# Krok 1: Filtry "sztywne" (Czas, Intensywność)
-filtered_df = df[
-    (df['duration'] >= min_time) & 
-    (df['duration'] <= max_time) &
-    (df['intensity'] >= intensity_range[0]) &
-    (df['intensity'] <= intensity_range[1])
-].copy()
-
-# Krok 2: Filtr kanału (jeśli wybrano)
-if selected_channels:
-    filtered_df = filtered_df[filtered_df['channel'].isin(selected_channels)]
-
-# Krok 3: Ranking po tagach (Scoring)
-if selected_tags:
-    filtered_df['match_score'] = filtered_df['tags_list'].apply(
-        lambda tags: len(set(tags).intersection(set(selected_tags)))
-    )
-    filtered_df = filtered_df[filtered_df['match_score'] > 0]
-    filtered_df = filtered_df.sort_values(by=['match_score', 'duration'], ascending=[False, True])
-else:
-    filtered_df['match_score'] = 0
-    filtered_df = filtered_df.sort_values(by=['duration'])
-
-
-# --- FUNKCJA: WYLOSUJ COŚ ---
-if not filtered_df.empty:
-    st.markdown("###")
-    if st.button("🎲 Nie wiem co wybrać (Losuj)", type="primary", use_container_width=True):
-        random_practice = filtered_df.sample(1).iloc[0]
+        df_y_filt = df_yoga[
+            (df_yoga['duration'] >= y_min) & (df_yoga['duration'] <= y_max) &
+            (df_yoga['intensity'] >= y_intens[0]) & (df_yoga['intensity'] <= y_intens[1])
+        ].copy()
         
-        st.success("✨ Los ślepy wybrał dla Ciebie:")
-        
-        with st.container(border=True):
-            st.subheader(random_practice['title'])
-            
-            intens_html = render_intensity_html(random_practice['intensity'])
-            props_txt = ""
-            if random_practice['props'] and random_practice['props'] != "Brak":
-                props_txt = f"&nbsp;|&nbsp; 🧱 {random_practice['props']}"
-                
-            st.markdown(f"Trudność: {intens_html} {props_txt}", unsafe_allow_html=True)
-            st.caption(f"📺 {random_practice['channel']} | ⏱️ {random_practice['duration']} min")
-            
-            st.write(random_practice['description'])
-            st.link_button("▶️ Uruchom wylosowaną", random_practice['url'], type="primary", use_container_width=True)
-        
-        if st.button("🔄 Wróć do listy"):
-            st.rerun()
-            
-        st.stop()
+        if y_chan: df_y_filt = df_y_filt[df_y_filt['channel'].isin(y_chan)]
+        if y_tags:
+            df_y_filt['score'] = df_y_filt['tags_list'].apply(lambda x: len(set(x).intersection(set(y_tags))))
+            df_y_filt = df_y_filt[df_y_filt['score'] > 0].sort_values(by=['score', 'duration'], ascending=[False, True])
+        else:
+            df_y_filt = df_y_filt.sort_values(by=['duration'])
 
+        if not df_y_filt.empty:
+             if st.button("🎲 Wylosuj Jogę", key="rnd_yoga", type="primary", use_container_width=True):
+                r = df_y_filt.sample(1).iloc[0]
+                st.success(f"Wylosowano: {r['title']}")
+                st.link_button("▶️ Start", r['url'], use_container_width=True)
 
-# 7. Wyświetlanie Wyników (Lista)
-st.caption(f"Znaleziono: {len(filtered_df)}")
-
-if filtered_df.empty:
-    st.info("Brak wyników. Zmień kryteria.")
-else:
-    for index, row in filtered_df.iterrows():
-        try:
+        st.caption(f"Wyników: {len(df_y_filt)}")
+        for _, row in df_y_filt.iterrows():
             with st.container():
-                st.markdown("---") 
-                
-                # Tytuł
+                st.markdown("---")
                 st.subheader(row['title'])
-                
-                # Tagi
-                tags_html = ""
-                for tag in row['tags_list']:
-                    style = 'tag-selected' if tag in selected_tags else 'tag-normal'
-                    tags_html += f"<span class='{style}'>{tag}</span>"
+                tags_html = "".join([f"<span class='tag-selected'>{t}</span>" if t in y_tags else f"<span class='tag-normal'>{t}</span>" for t in row['tags_list']])
                 st.markdown(tags_html, unsafe_allow_html=True)
-                
-                # Info + Intensywność + Sprzęt
-                intensity_visual = render_intensity_html(row['intensity'])
-                
-                props_info = ""
-                if row['props'] and row['props'] != "Brak":
-                    props_info = f"&nbsp; | &nbsp; 🧱 {row['props']}"
-                
-                st.markdown(
-                    f"""
-                    <div style="margin-top: 5px; margin-bottom: 5px; font-size: 0.9em; color: #555;">
-                        Trudność: <b>{intensity_visual}</b> {props_info} <br>
-                        <span style="color: grey; font-size: 0.9em">📺 {row['channel']} &nbsp;|&nbsp; ⏱️ {row['duration']} min</span>
-                    </div>
-                    """, 
-                    unsafe_allow_html=True
-                )
-                
-                # Opis
+                intens_html = render_intensity_html(row['intensity'])
+                props_info = f"&nbsp;| 🧱 {row['props']}" if row['props'] != "Brak" else ""
+                st.markdown(f"<div style='color:#555; font-size:0.9em; margin:5px 0;'>Trudność: <b>{intens_html}</b>{props_info}<br>📺 {row['channel']} | ⏱️ {row['duration']} min</div>", unsafe_allow_html=True)
                 desc = str(row['description'])
-                if desc.lower() == 'nan' or not desc:
-                    desc = "Brak opisu."
-                    
                 if len(desc) > 200:
                     st.write(desc[:200] + "...")
-                    with st.expander("Rozwiń opis"):
-                        st.write(desc)
+                    with st.expander("Więcej"): st.write(desc)
                 else:
                     st.write(desc)
-                
-                # Przycisk
                 st.link_button("▶️ Start", row['url'], use_container_width=True)
+
+
+# ==================================================
+# ZAKŁADKA 2: MOBILITY & STRETCH
+# ==================================================
+with tab_mob:
+    if df_mob.empty:
+        st.info("Brak bazy mobility (mobility.csv).")
+    else:
+        m_channels = sorted(df_mob['channel'].unique())
+        
+        # Pobieramy wszystkie unikalne tagi, które udało się wykryć
+        all_types = sorted(list(MOBILITY_KEYWORDS['types'].keys()))
+        all_body = sorted(list(MOBILITY_KEYWORDS['body_parts'].keys()))
+
+        with st.expander("🔍 Filtrowanie Mobility", expanded=True):
+            col1, col2 = st.columns(2)
+            with col1:
+                # Filtr 1: Rodzaj
+                sel_types = st.multiselect("Rodzaj treningu:", all_types, key="m_types")
+            with col2:
+                # Filtr 2: Ciało
+                sel_body = st.multiselect("Partia ciała:", all_body, key="m_body")
+            
+            st.markdown("---")
+            m_chan_sel = st.multiselect("Instruktor:", m_channels, key="m_chan")
+            
+            # Wyszukiwarka tekstowa (jako opcja dodatkowa)
+            search_query = st.text_input("Szukaj po nazwie (opcjonalne):", key="m_search")
+            
+            # Czas
+            m_dur_range = st.slider("Czas (min):", int(df_mob['duration'].min()), int(df_mob['duration'].max()), (5, 60), key="m_slider")
+
+        # --- LOGIKA FILTROWANIA MOBILITY ---
+        df_m_filt = df_mob[
+            (df_mob['duration'] >= m_dur_range[0]) & 
+            (df_mob['duration'] <= m_dur_range[1])
+        ].copy()
+
+        # 1. Filtr Kanału
+        if m_chan_sel:
+            df_m_filt = df_m_filt[df_m_filt['channel'].isin(m_chan_sel)]
+            
+        # 2. Filtr Rodzaju (OR logic - pokazuje jeśli ma chociaż jeden z wybranych)
+        if sel_types:
+            df_m_filt = df_m_filt[df_m_filt['type_tags'].apply(lambda x: bool(set(x) & set(sel_types)))]
+            
+        # 3. Filtr Ciała (OR logic)
+        if sel_body:
+            df_m_filt = df_m_filt[df_m_filt['body_tags'].apply(lambda x: bool(set(x) & set(sel_body)))]
+            
+        # 4. Wyszukiwarka tekstowa
+        if search_query:
+            df_m_filt = df_m_filt[
+                df_m_filt['title'].str.contains(search_query, case=False, na=False) | 
+                df_m_filt['description'].str.contains(search_query, case=False, na=False)
+            ]
+        
+        # Sortowanie
+        df_m_filt = df_m_filt.sort_values(by='duration')
+
+        st.caption(f"Znaleziono: {len(df_m_filt)}")
+
+        # Lista Mobility
+        for _, row in df_m_filt.iterrows():
+            with st.container():
+                st.markdown("---")
                 
-        except Exception as e:
-            st.error(f"Błąd wiersza: {e}")
+                # Tytuł
+                st.markdown(f"#### {row['title']}")
+                
+                # Renderowanie Auto-Tagów
+                tags_html = ""
+                # Tagi Rodzaju (Niebieskie)
+                for t in row['type_tags']:
+                    tags_html += f"<span class='mob-tag-type'>{t}</span>"
+                # Tagi Ciała (Zielone)
+                for t in row['body_tags']:
+                    tags_html += f"<span class='mob-tag-body'>{t}</span>"
+                
+                st.markdown(tags_html + "<br>", unsafe_allow_html=True)
+                
+                # Info
+                st.caption(f"⏱️ **{row['duration']} min** &nbsp;|&nbsp; 📺 {row['channel']}")
+                
+                # Opis
+                desc = str(row.get('description', ''))
+                if len(desc) > 150:
+                    st.write(desc[:150] + "...")
+                elif desc and desc != 'nan':
+                    st.write(desc)
+                
+                st.link_button("▶️ Oglądaj", row['url'], use_container_width=True)

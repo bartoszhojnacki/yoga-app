@@ -1,151 +1,144 @@
 import os
 import pandas as pd
 import isodate
+import re
 from googleapiclient.discovery import build
 from dotenv import load_dotenv
 
 load_dotenv()
 
-# --- KONFIGURACJA ---
 API_KEY = os.getenv("YOUTUBE_API_KEY")
-LIBRARY_FILE = "yoga_library.csv" 
-PENDING_FILE = "pending.csv"      
 
-CHANNELS = {
+# --- KONFIGURACJA 1: JOGA (Tu działa AI) ---
+YOGA_LIBRARY_FILE = "yoga_library.csv"
+PENDING_FILE = "pending.csv"
+YOGA_CHANNELS = {
     "Małgorzata Mostowska": "UCITlHzj4MUzRNM17pdWUWeQ",
     "Yoga Home": "UCUVNvkkzMrT4qMhlql2t4iQ",
-    "Malva Stretching":"UCIJA9AD3fxbDNwARNBww5mg"
 
 }
 
-# TERAZ TO ZADZIAŁA: Pobierze do 1000 filmów z KAŻDEGO kanału
-MAX_RESULTS_PER_CHANNEL = 1000 
+# --- KONFIGURACJA 2: MOBILITY (Tu pobieramy bezpośrednio) ---
+MOBILITY_FILE = "mobility.csv"
+MOBILITY_CHANNELS = {
+     "Malva Stretching":"UCIJA9AD3fxbDNwARNBww5mg"# Przykładowy kanał - zmień na swój!
+    # "Tom Merrick": "UCP_kXWao0L0L9b_15aXjE-A"
+}
 
-def get_existing_video_ids():
+MAX_RESULTS = 1000 
+
+def clean_description(text):
+    """Proste czyszczenie opisu dla mobility (usuwa linki i zbędne entery)"""
+    text = str(text)
+    # Usuń linki http/https
+    text = re.sub(r'http\S+', '', text)
+    # Zamień wielokrotne spacje/entery na spację
+    text = " ".join(text.split())
+    return text[:400] # Zwróć pierwsze 400 znaków
+
+def get_existing_ids(filepath, id_col_name='url'):
     ids = set()
-    # Sprawdź bibliotekę główną
-    if os.path.exists(LIBRARY_FILE):
+    if os.path.exists(filepath):
         try:
-            df = pd.read_csv(LIBRARY_FILE)
-            if 'url' in df.columns:
+            df = pd.read_csv(filepath)
+            # Obsługa różnych nazw kolumn w zależności od pliku
+            if id_col_name == 'url' and 'url' in df.columns:
                 ids.update(df['url'].apply(lambda x: str(x).split('v=')[-1]))
-        except Exception:
-            pass
-    # Sprawdź poczekalnię
-    if os.path.exists(PENDING_FILE):
-        try:
-            df = pd.read_csv(PENDING_FILE)
-            if 'video_id' in df.columns:
+            elif id_col_name == 'video_id' and 'video_id' in df.columns:
                 ids.update(df['video_id'].astype(str))
-        except Exception:
-            pass  
+        except:
+            pass
     return ids
 
-def main():
-    if not API_KEY:
-        print("❌ BŁĄD: Brak klucza API w pliku .env")
-        return
-
-    youtube = build('youtube', 'v3', developerKey=API_KEY)
-    
-    existing_ids = get_existing_video_ids()
-    print(f"📚 W bazie mamy już {len(existing_ids)} filmów. Szukam reszty...")
-
+def fetch_videos(youtube, channels, existing_ids, mode="yoga"):
+    """Uniwersalna funkcja pobierająca"""
     new_videos = []
-
-    for channel_name, channel_id in CHANNELS.items():
-        print(f"   🔎 Skanowanie: {channel_name}...")
-        
+    
+    for channel_name, channel_id in channels.items():
+        print(f"   🔎 [{mode.upper()}] Skanowanie: {channel_name}...")
         try:
-            # 1. ID playlisty Uploads
-            res_channel = youtube.channels().list(id=channel_id, part='contentDetails').execute()
-            if not res_channel['items']:
-                print(f"      [!] Nie znaleziono kanału {channel_id}")
-                continue
-            uploads_id = res_channel['items'][0]['contentDetails']['relatedPlaylists']['uploads']
+            res_ch = youtube.channels().list(id=channel_id, part='contentDetails').execute()
+            if not res_ch['items']: continue
+            uploads_id = res_ch['items'][0]['contentDetails']['relatedPlaylists']['uploads']
 
-            # 2. Inicjalizacja pętli dla kanału
-            request = youtube.playlistItems().list(
-                playlistId=uploads_id,
-                part='snippet',
-                maxResults=50 # To max na jedno zapytanie API
-            )
+            request = youtube.playlistItems().list(playlistId=uploads_id, part='snippet', maxResults=50)
+            fetched_count = 0
             
-            channel_fetched_count = 0 # Licznik dla obecnego kanału
-            
-            # PĘTLA: Dopóki API daje wyniki I nie przekroczyliśmy limitu na kanał
-            while request and channel_fetched_count < MAX_RESULTS_PER_CHANNEL:
+            while request and fetched_count < MAX_RESULTS:
                 response = request.execute()
                 items = response.get('items', [])
-                
-                if not items:
-                    break
-                
-                # Zbieramy ID z tej strony (page)
-                batch_ids_to_fetch = []
-                
-                for item in items:
-                    vid_id = item['snippet']['resourceId']['videoId']
-                    
-                    # Jeśli filmu nie ma w bazie -> dodajemy do listy "do pobrania detali"
-                    if vid_id not in existing_ids:
-                        batch_ids_to_fetch.append(vid_id)
-                
-                # Zwiększamy licznik przetworzonych (nawet jeśli już je mamy, to "przeskanowaliśmy" je)
-                channel_fetched_count += len(items)
+                if not items: break
 
-                # Jeśli cała paczka (50) jest już w bazie, ale chcemy szukać głębiej (backfill),
-                # to NIE przerywamy, tylko idziemy do następnej strony.
-                if not batch_ids_to_fetch:
-                    # print(f"      ...strona pusta lub już w bazie, idę dalej ({channel_fetched_count}/{MAX_RESULTS_PER_CHANNEL})")
+                batch_ids = [item['snippet']['resourceId']['videoId'] for item in items if item['snippet']['resourceId']['videoId'] not in existing_ids]
+                fetched_count += len(items)
+
+                if not batch_ids:
                     request = youtube.playlistItems().list_next(request, response)
                     continue
-                
-                # 3. Pobieranie detali (czas trwania) dla nowych ID
-                res_videos = youtube.videos().list(
-                    id=','.join(batch_ids_to_fetch),
-                    part='snippet,contentDetails'
-                ).execute()
 
-                for video in res_videos['items']:
+                res_vid = youtube.videos().list(id=','.join(batch_ids), part='snippet,contentDetails').execute()
+
+                for video in res_vid['items']:
                     vid_id = video['id']
-                    
-                    duration_iso = video['contentDetails']['duration']
-                    duration_sec = isodate.parse_duration(duration_iso).total_seconds()
+                    duration_sec = isodate.parse_duration(video['contentDetails']['duration']).total_seconds()
                     duration_min = int(duration_sec // 60)
-                    
-                    # Filtr długości (np. odrzucamy < 2 min)
-                    if duration_min < 2: 
-                        continue
 
-                    new_videos.append({
-                        "video_id": vid_id,
+                    if duration_min < 2: continue
+
+                    video_data = {
                         "title": video['snippet']['title'],
                         "channel": channel_name,
                         "duration": duration_min,
-                        "raw_description": video['snippet']['description'].replace("\n", " "),
                         "url": f"https://www.youtube.com/watch?v={vid_id}"
-                    })
+                    }
 
-                print(f"      ...pobrano partię. Znaleziono nowych: {len(new_videos)} (Przeskanowano na kanale: {channel_fetched_count})")
-                
-                # Następna strona
+                    if mode == "yoga":
+                        # Dla jogi zachowujemy surowy opis dla AI
+                        video_data["video_id"] = vid_id
+                        video_data["raw_description"] = video['snippet']['description'].replace("\n", " ")
+                    else:
+                        # Dla mobility od razu czyścimy opis
+                        video_data["description"] = clean_description(video['snippet']['description'])
+                        # Dodajemy domyślne tagi, żeby appka nie padła
+                        video_data["category"] = "Mobility, Rozciąganie" 
+                    
+                    new_videos.append(video_data)
+
                 request = youtube.playlistItems().list_next(request, response)
-                
         except Exception as e:
-            print(f"      [!] Błąd kanału: {e}")
+            print(f"      [!] Błąd: {e}")
+            
+    return new_videos
 
-    # Zapis do pending.csv
-    if new_videos:
-        df_new = pd.DataFrame(new_videos)
-        
-        # Jeśli plik istnieje, dopisz. Jeśli nie - stwórz.
-        header_mode = not os.path.exists(PENDING_FILE)
-        df_new.to_csv(PENDING_FILE, mode='a', index=False, header=header_mode, quoting=1)
-        
-        print(f"\n✅ SKOŃCZONE! Dodano {len(new_videos)} nowych filmów do '{PENDING_FILE}'.")
+def main():
+    if not API_KEY: return print("❌ Brak API KEY")
+    youtube = build('youtube', 'v3', developerKey=API_KEY)
+
+    # 1. PROCES DLA JOGI (Zapis do pending.csv)
+    yoga_ids = get_existing_ids(YOGA_LIBRARY_FILE, 'url').union(get_existing_ids(PENDING_FILE, 'video_id'))
+    print(f"🧘 Sprawdzam Jogę (w bazie: {len(yoga_ids)})...")
+    new_yoga = fetch_videos(youtube, YOGA_CHANNELS, yoga_ids, mode="yoga")
+    
+    if new_yoga:
+        df = pd.DataFrame(new_yoga)
+        mode = 'a' if os.path.exists(PENDING_FILE) else 'w'
+        df.to_csv(PENDING_FILE, mode=mode, index=False, header=(mode=='w'), quoting=1)
+        print(f"✅ Dodano {len(new_yoga)} do pending.csv")
+    
+    # 2. PROCES DLA MOBILITY (Zapis bezpośrednio do mobility.csv)
+    # Tutaj jako ID używamy URL, bo plik ma inną strukturę niż pending
+    mobility_ids = get_existing_ids(MOBILITY_FILE, 'url')
+    print(f"\n🤸 Sprawdzam Mobility (w bazie: {len(mobility_ids)})...")
+    new_mobility = fetch_videos(youtube, MOBILITY_CHANNELS, mobility_ids, mode="mobility")
+
+    if new_mobility:
+        df = pd.DataFrame(new_mobility)
+        mode = 'a' if os.path.exists(MOBILITY_FILE) else 'w'
+        # Zapiszmy z nagłówkiem tylko jeśli plik nie istnieje
+        df.to_csv(MOBILITY_FILE, mode=mode, index=False, header=(mode=='w'), quoting=1)
+        print(f"✅ Dodano {len(new_mobility)} do mobility.csv (Gotowe do użycia!)")
     else:
-        print("\n💤 Brak nowych filmów do dodania.")
+        print("💤 Brak nowości w Mobility.")
 
 if __name__ == "__main__":
     main()
