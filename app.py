@@ -1,4 +1,5 @@
 import streamlit as st
+from streamlit.components.v1 import components
 import pandas as pd
 import random
 from datetime import datetime
@@ -71,10 +72,10 @@ def load_user_stats():
         print(f"Airtable Error: {e}")
         return {"favorites": [], "usage_count": {}}
     
-def get_airtable_record(filename):
+def get_airtable_record(title):
     """Znajduje rekord dla konkretnego pliku."""
     if not at_table: return None
-    formula = f"{{Title}}='{filename}'"
+    formula = f"{{Title}}='{title}'"
     matches = at_table.all(formula=formula)
     if matches:
         return matches[0]
@@ -92,19 +93,14 @@ def toggle_favorite(filename):
         at_table.create({'Title': filename, 'Favorite': True, 'Count': 0})
     load_user_stats.clear()
     
-def increment_usage_stats(cart_items):
+def increment_usage_stats(title):
     if not at_table: return
-    
-    for item in cart_items:
-        fname = item['filename']
-        if not fname: continue # Pomijamy puste
-        
-        record = get_airtable_record(fname)
-        if record:
-            current = record['fields'].get('Count', 0)
-            at_table.update(record['id'], {'Count': current + 1})
-        else:
-            at_table.create({'Title': fname, 'Favorite': False, 'Count': 1})
+    record = get_airtable_record(title)
+    if record:
+        current = record['fields'].get('Count', 0)
+        at_table.update(record['id'], {'Count': current + 1})
+    else:
+        at_table.create({'Title': title, 'Favorite': False, 'Count': 1})
     load_user_stats.clear()
 
 
@@ -287,8 +283,18 @@ with tab_yoga:
                     key=f"fav_{row['title']}_{_}",
                     on_click=toggle_favorite,
                     args=(f"{row['title']}",)  # Tutaj przekazujemy tytuł
-)
-                st.link_button("▶️ Start", row['url'], use_container_width=True)
+                )
+                if st.button("▶️ Start", key=f"start_{row['title']}_{_}"):
+                    increment_usage_stats(row['title'])
+                    st.toast(f"Uruchamiam: {row['title']}")
+                    
+                    js_code = f"""
+                    <script>
+                    window.open("{row['url']}", "_blank");
+                    </script>
+                    """
+                    components.html(js_code, height=0)
+                # st.link_button("▶️ Start", row['url'], use_container_width=True)
 
 
 # ==================================================
