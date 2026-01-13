@@ -3,6 +3,110 @@ import pandas as pd
 import random
 from datetime import datetime
 import os
+from pyairtable import Api
+
+try:
+    AT_API_KEY = st.secrets["AIRTABLE_API_KEY"]
+    AT_BASE_ID = st.secrets["AIRTABLE_BASE_ID"]
+    AT_TABLE_NAME = st.secrets["AIRTABLE_TABLE_NAME"]
+    at_api = Api(AT_API_KEY)
+    at_table = at_api.table(AT_BASE_ID, AT_TABLE_NAME)
+except Exception:
+    # Fallback, żeby aplikacja nie wybuchła bez kluczy
+    at_table = None
+
+
+
+if st.button("Testuj połączenie z bazą"):
+    try:
+        # 1. Sprawdzamy czy są sekrety
+        st.write("Sprawdzam klucze...")
+        k = st.secrets["AIRTABLE_API_KEY"]
+        b = st.secrets["AIRTABLE_BASE_ID"]
+        t = st.secrets["AIRTABLE_TABLE_NAME"]
+        st.write(f"Baza: {b}, Tabela: {t}")
+        
+        # 2. Próba połączenia
+        from pyairtable import Api
+        api = Api(k)
+        table = api.table(b, t)
+        
+        # 3. Próba zapisu
+        st.write("Próbuję zapisać rekord testowy...")
+        table.create({"Title": "TEST_POŁĄCZENIA", "Favorite": True, "Count": 1})
+        
+        st.success("✅ SUKCES! Rekord dodany. Sprawdź Airtable.")
+    except Exception as e:
+        st.error(f"❌ BŁĄD: {e}")
+        st.info("Podpowiedź: Sprawdź uprawnienia tokena, ID bazy i nazwy kolumn.")
+
+
+
+
+@st.cache_data(ttl=10)
+def load_user_stats():
+    if not at_table: return {"favorites": [], "usage_count": {}}
+    
+    try:
+        records = at_table.all()
+        favs = []
+        counts = {}
+        
+        for r in records:
+            fields = r.get('fields', {})
+            rid = fields.get('Title')
+            if not rid: continue
+            
+            # Zbieramy ulubione
+            if fields.get('Favorite'):
+                favs.append(rid)
+            
+            # Zbieramy liczniki
+            cnt = fields.get('Count', 0)
+            if cnt > 0:
+                counts[rid] = cnt
+                
+        return {"favorites": favs, "usage_count": counts}
+    except Exception as e:
+        print(f"Airtable Error: {e}")
+        return {"favorites": [], "usage_count": {}}
+    
+def get_airtable_record(filename):
+    """Znajduje rekord dla konkretnego pliku."""
+    if not at_table: return None
+    formula = f"{{Title}}='{filename}'"
+    matches = at_table.all(formula=formula)
+    if matches:
+        return matches[0]
+    return None
+
+
+def toggle_favorite(filename):
+    if not at_table or not filename: return # Guard clause
+    
+    record = get_airtable_record(filename)
+    if record:
+        current = record['fields'].get('Favorite', False)
+        at_table.update(record['id'], {'Favorite': not current})
+    else:
+        at_table.create({'Title': filename, 'Favorite': True, 'Count': 0})
+    load_user_stats.clear()
+    
+def increment_usage_stats(cart_items):
+    if not at_table: return
+    
+    for item in cart_items:
+        fname = item['filename']
+        if not fname: continue # Pomijamy puste
+        
+        record = get_airtable_record(fname)
+        if record:
+            current = record['fields'].get('Count', 0)
+            at_table.update(record['id'], {'Count': current + 1})
+        else:
+            at_table.create({'Title': fname, 'Favorite': False, 'Count': 1})
+    load_user_stats.clear()
+
 
 # 1. Konfiguracja strony
 st.set_page_config(page_title="Joga & Mobility", page_icon="🧘‍♀️", layout="centered")
@@ -132,7 +236,7 @@ with tab_yoga:
             y_tags = st.multiselect("Cel:", all_tags, key="y_tags")
             y_chan = st.multiselect("Kanał:", all_channels, key="y_chan")
             st.markdown("---")
-            TIME_RANGES = {"Wszystkie": (0, 999), "⚡ Do 15 min": (0, 15), "🧘 15-30 min": (15, 30), "💪 30-45 min": (30, 45), "🛌 45+ min": (45, 999)}
+            TIME_RANGES = {"Wszystkie": (0, 999), "⚡ Do 5 min": (0, 6),"⚡ Do 10 min": (6, 10),"⚡ Do 20 min": (10, 20), "🧘 20-30 min": (20, 30), "💪 30-45 min": (30, 45), "🛌 45+ min": (45, 999)}
             y_time_choice = st.pills("Czas:", list(TIME_RANGES.keys()), default="Wszystkie", key="y_time")
             y_min, y_max = TIME_RANGES.get(y_time_choice, (0, 999))
             st.markdown("---")
@@ -172,6 +276,12 @@ with tab_yoga:
                     with st.expander("Więcej"): st.write(desc)
                 else:
                     st.write(desc)
+                st.button(
+                    label="Dodaj do ulubionych",
+                    key=f"fav_{row['title']}_{_}",
+                    on_click=toggle_favorite,
+                    args=(f"{row['title']}",)  # Tutaj przekazujemy tytuł
+)
                 st.link_button("▶️ Start", row['url'], use_container_width=True)
 
 
