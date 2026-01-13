@@ -380,5 +380,18 @@ with tab_mob:
                     st.write(desc[:150] + "...")
                 elif desc and desc != 'nan':
                     st.write(desc)
+                    
+                    
+                if row['title'] in user_stats['favorites']:
+                    label = "Usuń z ulubionych"
+                else:
+                    label = "Dodaj do ulubionych"
+                    
+                st.button(
+                    label=label,
+                    key=f"fav_{row['title']}_{_}",
+                    on_click=toggle_favorite,
+                    args=(f"{row['title']}",)
+                )
                 
                 st.link_button("▶️ Oglądaj", row['url'], use_container_width=True)
