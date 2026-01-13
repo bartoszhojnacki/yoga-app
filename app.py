@@ -400,4 +400,13 @@ with tab_mob:
                     args=(f"{row['title']}",)
                 )
                 
-                st.link_button("▶️ Oglądaj", row['url'], use_container_width=True)
+                if st.button("▶️ Start", key=f"start_{row['title']}_{_}"):
+                    increment_usage_stats(row['title'])
+                    st.toast(f"Uruchamiam: {row['title']}")
+                    
+                    js_code = f"""
+                    <script>
+                    window.open("{row['url']}", "_blank");
+                    </script>
+                    """
+                    components.html(js_code, height=0)
