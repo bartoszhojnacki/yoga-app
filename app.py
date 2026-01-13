@@ -221,7 +221,7 @@ st.title("Studio Ruchu")
 
 # --- ZAKŁADKI ---
 tab_yoga, tab_mob = st.tabs(["🧘‍♀️ Joga", "🤸‍♂️ Mobility & Stretch"])
-
+user_stats = load_user_stats()
 # ==================================================
 # ZAKŁADKA 1: JOGA
 # ==================================================
@@ -276,8 +276,14 @@ with tab_yoga:
                     with st.expander("Więcej"): st.write(desc)
                 else:
                     st.write(desc)
+                
+                if row['title'] in user_stats['favorites']:
+                    label = "Usuń z ulubionych"
+                else:
+                    label = "Dodaj do ulubionych"
+                    
                 st.button(
-                    label="Dodaj do ulubionych",
+                    label=label,
                     key=f"fav_{row['title']}_{_}",
                     on_click=toggle_favorite,
                     args=(f"{row['title']}",)  # Tutaj przekazujemy tytuł
