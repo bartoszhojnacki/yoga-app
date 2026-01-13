@@ -1,5 +1,5 @@
 import streamlit as st
-from streamlit.components.v1 import components
+import streamlit.components.v1 as components
 import pandas as pd
 import random
 from datetime import datetime
