@@ -1,7 +1,0 @@
-streamlit
-pandas
-google-api-python-client
-isodate
-openai
-python-dotenv
-pyairtable

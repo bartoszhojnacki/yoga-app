@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#0f172a" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <title>Studio Ruchu</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <script defer src="https://unpkg.com/alpinejs@3.14.3/dist/cdn.min.js"></script>
+  <script defer src="assets/app.js"></script>
+</head>
+<body x-data="studio()" x-init="init()" x-cloak>
+
+  <header class="topbar">
+    <h1>🧘 Studio Ruchu</h1>
+    <div class="meta" x-show="loaded">
+      <span x-text="`${counts[activeTab]} / ${totalCount}`"></span> filmów
+    </div>
+  </header>
+
+  <nav class="tabs">
+    <button :class="{ active: activeTab === 'yoga' }" @click="setTab('yoga')">🧘‍♀️ Joga</button>
+    <button :class="{ active: activeTab === 'mobility' }" @click="setTab('mobility')">🤸‍♂️ Mobility</button>
+  </nav>
+
+  <section class="presets">
+    <div class="presets-header">Szybki wybór</div>
+    <div class="chip-row">
+      <template x-for="p in availablePresets()" :key="p.id">
+        <button class="chip" :class="{ active: activePreset === p.id }" @click="togglePreset(p.id)">
+          <span x-text="p.icon"></span> <span x-text="p.label"></span>
+        </button>
+      </template>
+      <button class="chip chip-random" @click="randomFromCurrent()">💫 Losuj</button>
+    </div>
+  </section>
+
+  <details class="advanced">
+    <summary>Filtry zaawansowane</summary>
+
+    <div class="filter-grid" x-show="activeTab === 'yoga'">
+      <label>
+        Styl
+        <select multiple x-model="filters.yoga.style" size="4">
+          <template x-for="s in taxonomy.yogaStyle" :key="s">
+            <option :value="s" x-text="s"></option>
+          </template>
+        </select>
+      </label>
+      <label>
+        Na co
+        <select multiple x-model="filters.yoga.focus" size="4">
+          <template x-for="f in taxonomy.yogaFocus" :key="f">
+            <option :value="f" x-text="f"></option>
+          </template>
+        </select>
+      </label>
+      <label>
+        Kanał
+        <select multiple x-model="filters.yoga.channel" size="3">
+          <template x-for="c in channels.yoga" :key="c">
+            <option :value="c" x-text="c"></option>
+          </template>
+        </select>
+      </label>
+      <label>
+        Czas: <output x-text="`${filters.yoga.minDur}–${filters.yoga.maxDur} min`"></output>
+        <div class="range-pair">
+          <input type="range" min="0" max="120" step="5" x-model.number="filters.yoga.minDur" />
+          <input type="range" min="0" max="120" step="5" x-model.number="filters.yoga.maxDur" />
+        </div>
+      </label>
+      <label>
+        Trudność: <output x-text="`${filters.yoga.minInt}–${filters.yoga.maxInt}`"></output>
+        <div class="range-pair">
+          <input type="range" min="1" max="5" step="1" x-model.number="filters.yoga.minInt" />
+          <input type="range" min="1" max="5" step="1" x-model.number="filters.yoga.maxInt" />
+        </div>
+      </label>
+    </div>
+
+    <div class="filter-grid" x-show="activeTab === 'mobility'">
+      <label>
+        Rodzaj
+        <select multiple x-model="filters.mobility.type" size="4">
+          <template x-for="t in taxonomy.mobilityType" :key="t">
+            <option :value="t" x-text="t"></option>
+          </template>
+        </select>
+      </label>
+      <label>
+        Partia ciała
+        <select multiple x-model="filters.mobility.body" size="4">
+          <template x-for="b in taxonomy.mobilityBody" :key="b">
+            <option :value="b" x-text="b"></option>
+          </template>
+        </select>
+      </label>
+      <label>
+        Kanał
+        <select multiple x-model="filters.mobility.channel" size="3">
+          <template x-for="c in channels.mobility" :key="c">
+            <option :value="c" x-text="c"></option>
+          </template>
+        </select>
+      </label>
+      <label>
+        Czas: <output x-text="`${filters.mobility.minDur}–${filters.mobility.maxDur} min`"></output>
+        <div class="range-pair">
+          <input type="range" min="0" max="90" step="5" x-model.number="filters.mobility.minDur" />
+          <input type="range" min="0" max="90" step="5" x-model.number="filters.mobility.maxDur" />
+        </div>
+      </label>
+    </div>
+
+    <label class="search">
+      Szukaj po tytule / opisie
+      <input type="search" x-model="filters[activeTab].search" placeholder="np. biodra, vinyasa, rolowanie…" />
+    </label>
+
+    <div class="actions">
+      <button class="btn-ghost" @click="resetFilters()">Wyczyść filtry</button>
+      <button class="btn-ghost" @click="toggleOnlyFavs()" :class="{ active: onlyFavorites }">
+        <span x-text="onlyFavorites ? '★' : '☆'"></span> Tylko ulubione
+      </button>
+      <label class="sort-pick">
+        Sortuj:
+        <select x-model="sort">
+          <option value="duration_asc">Czas ↑</option>
+          <option value="duration_desc">Czas ↓</option>
+          <option value="title_asc">Tytuł A→Z</option>
+          <option value="usage_desc">Najczęściej odpalane</option>
+        </select>
+      </label>
+    </div>
+  </details>
+
+  <main class="results" x-show="loaded">
+    <div class="results-meta">
+      <span x-text="`${filteredVideos().length} wyników`"></span>
+      <button class="btn-link" @click="visibleLimit += 30" x-show="filteredVideos().length > visibleLimit">
+        Pokaż więcej ▾
+      </button>
+    </div>
+
+    <ul class="cards">
+      <template x-for="v in filteredVideos().slice(0, visibleLimit)" :key="v.id">
+        <li class="card">
+          <header>
+            <h3 x-text="v.title"></h3>
+            <button class="fav" @click="toggleFavorite(v.id)" :aria-pressed="isFavorite(v.id)">
+              <span x-text="isFavorite(v.id) ? '★' : '☆'"></span>
+            </button>
+          </header>
+
+          <div class="tags">
+            <template x-if="activeTab === 'yoga'">
+              <span class="tag-group">
+                <template x-for="t in v.style" :key="t"><span class="tag tag-style" x-text="t"></span></template>
+                <template x-for="t in v.focus" :key="t"><span class="tag tag-focus" x-text="t"></span></template>
+              </span>
+            </template>
+            <template x-if="activeTab === 'mobility'">
+              <span class="tag-group">
+                <template x-for="t in v.type_tags" :key="t"><span class="tag tag-type" x-text="t"></span></template>
+                <template x-for="t in v.body_tags" :key="t"><span class="tag tag-body" x-text="t"></span></template>
+              </span>
+            </template>
+          </div>
+
+          <div class="meta-row">
+            <span>⏱️ <strong x-text="v.duration"></strong> min</span>
+            <span>📺 <span x-text="v.channel"></span></span>
+            <template x-if="activeTab === 'yoga'">
+              <span class="intensity" :title="`Intensywność ${v.intensity}/5`" x-text="intensityDots(v.intensity)"></span>
+            </template>
+            <template x-if="activeTab === 'yoga' && v.props && v.props !== 'Brak'">
+              <span>🧱 <span x-text="v.props"></span></span>
+            </template>
+            <template x-if="usageCount(v.id) > 0">
+              <span class="usage">▶︎ <span x-text="usageCount(v.id)"></span>×</span>
+            </template>
+          </div>
+
+          <p class="desc" x-text="truncate(v.description, 180)"></p>
+
+          <a class="btn-play" :href="v.url" target="_blank" rel="noopener" @click="incrementUsage(v.id)">
+            ▶ Oglądaj
+          </a>
+        </li>
+      </template>
+    </ul>
+
+    <p class="empty" x-show="filteredVideos().length === 0">
+      Brak filmów dla wybranych kryteriów. Spróbuj rozluźnić filtry albo użyj 💫 Losuj.
+    </p>
+  </main>
+
+  <footer class="appfoot" x-show="loaded">
+    <span x-text="`Joga: ${counts.yoga} · Mobility: ${counts.mobility}`"></span>
+    <span x-show="lastUpdate" x-text="`Aktualizacja: ${lastUpdate}`"></span>
+  </footer>
+
+  <div class="loader" x-show="!loaded">Ładuję bibliotekę…</div>
+</body>
+</html>
