@@ -30,8 +30,8 @@ function defaultFilters() {
   };
 }
 
-function studio() {
-  return {
+document.addEventListener("alpine:init", () => {
+  Alpine.data("studio", () => ({
     loaded: false,
     activeTab: localStorage.getItem("studio.tab") || "yoga",
     data: { yoga: [], mobility: [] },
@@ -185,5 +185,5 @@ function studio() {
       if (!text) return "";
       return text.length > n ? text.slice(0, n).trim() + "…" : text;
     },
-  };
-}
+  }));
+});
