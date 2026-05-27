@@ -4,14 +4,17 @@ Uruchamiane przez .github/workflows/update-data.yml lub lokalnie:
     python scripts/update_data.py
 
 Pipeline:
-    1. Wczytaj istniejące data/*.json (dedup po video_id).
-    2. Pobierz nowe filmy z YOGA / MOBILITY / MOVEMENT channels.
+    1. Wczytaj istniejące data/*.json (dedup po video_id) + data/_rejected.json
+       (cache filmów wcześniej odrzuconych przez AI).
+    2. Pobierz nowe filmy z YOGA / MOBILITY / MOVEMENT channels, pomijając
+       zarówno te już w bazie jak i te w cache odrzuceń (oszczędza OpenAI).
        Trick UC→UU eliminuje channels.list() call (uploads playlist ID
        to channel ID z 'UC' zamienionym na 'UU').
     3. Joga + Movement: enrichment przez OpenAI (is_practice + intensity
-       + clean_description + props), z dedykowanymi promptami.
+       + clean_description + props), z dedykowanymi promptami. Filmy z
+       is_practice=false trafiają do cache odrzuceń.
     4. Mobility (Malva): tagowanie keyword-based bez AI.
-    5. Zapisz data/*.json.
+    5. Zapisz data/*.json oraz data/_rejected.json (jeśli urósł).
 """
 
 import json
@@ -48,6 +51,7 @@ DATA_DIR = REPO_ROOT / "data"
 YOGA_JSON = DATA_DIR / "yoga.json"
 MOBILITY_JSON = DATA_DIR / "mobility.json"
 MOVEMENT_JSON = DATA_DIR / "movement.json"
+REJECTED_JSON = DATA_DIR / "_rejected.json"
 
 YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")
 OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
@@ -109,6 +113,24 @@ def save_json(path: Path, payload: dict) -> None:
 
 def existing_ids(data: dict) -> set[str]:
     return {v["id"] for v in data.get("videos", []) if v.get("id")}
+
+
+def load_rejected() -> set[str]:
+    if REJECTED_JSON.exists():
+        with REJECTED_JSON.open(encoding="utf-8") as f:
+            return set(json.load(f).get("ids", []))
+    return set()
+
+
+def save_rejected(ids: set[str]) -> None:
+    REJECTED_JSON.parent.mkdir(parents=True, exist_ok=True)
+    payload = {
+        "updated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "note": "Video IDs AI judged not a practice (is_practice=false). Skipped on future runs to save OpenAI calls.",
+        "ids": sorted(ids),
+    }
+    with REJECTED_JSON.open("w", encoding="utf-8") as f:
+        json.dump(payload, f, ensure_ascii=False, indent=2)
 
 
 def clean_description(text: str) -> str:
@@ -231,9 +253,11 @@ def curate(
     secondary_key: str,
     fallback_primary: str,
     fallback_secondary: str,
+    rejected_out: set[str],
 ) -> list[dict]:
     """Generic AI enrichment. Stosuje match_tags na dwóch taksonomiach
-    (np. style+focus dla jogi, type+body dla movement)."""
+    (np. style+focus dla jogi, type+body dla movement). Filmy z
+    is_practice=false dopisuje do rejected_out (cache odrzuceń)."""
     if not raw_videos:
         return []
     if not OPENAI_API_KEY:
@@ -247,9 +271,12 @@ def curate(
         ai_items = curate_batch(client, batch, system_prompt)
         for item in ai_items:
             idx = item.get("id")
-            if idx is None or idx >= len(batch) or not item.get("is_practice", False):
+            if idx is None or idx >= len(batch):
                 continue
             original = batch[idx]
+            if not item.get("is_practice", False):
+                rejected_out.add(original["id"])
+                continue
             text = f"{original['title']} {original.get('raw_description', '')}".lower()
             enriched.append(
                 {
@@ -273,16 +300,18 @@ def process_channels(
     label: str,
     channels: dict,
     existing: set[str],
+    rejected: set[str],
     enrich_fn,
     out_path: Path,
     out_data: dict,
 ) -> int:
-    print(f"\n{label} w bazie: {len(existing)}", flush=True)
+    print(f"\n{label} w bazie: {len(existing)} | cache odrzuceń: {len(rejected)}", flush=True)
+    skip = existing | rejected
     raw = []
     for name, cid, cap in channel_iter(channels):
-        raw.extend(fetch_channel_videos(youtube, name, cid, existing, cap))
+        raw.extend(fetch_channel_videos(youtube, name, cid, skip, cap))
     print(f"   nowych do enrichment: {len(raw)}", flush=True)
-    enriched = enrich_fn(raw)
+    enriched = enrich_fn(raw, rejected)
     if enriched:
         out_data["videos"].extend(enriched)
         save_json(out_path, out_data)
@@ -302,6 +331,8 @@ def main() -> int:
     yoga_data = load_json(YOGA_JSON)
     mobility_data = load_json(MOBILITY_JSON)
     movement_data = load_json(MOVEMENT_JSON)
+    rejected = load_rejected()
+    rejected_before = len(rejected)
 
     # JOGA — AI enrichment (style + focus)
     process_channels(
@@ -309,17 +340,19 @@ def main() -> int:
         "🧘 Joga",
         YOGA_CHANNELS,
         existing_ids(yoga_data),
-        lambda raw: curate(
+        rejected,
+        lambda raw, rej: curate(
             raw, YOGA_PROMPT,
             YOGA_STYLE, "style",
             YOGA_FOCUS, "focus",
             "Spokojna / Yin", "Całe ciało",
+            rej,
         ),
         YOGA_JSON,
         yoga_data,
     )
 
-    # MOBILITY (Malva) — keyword tagging, bez AI
+    # MOBILITY (Malva) — keyword tagging, bez AI (brak rejected)
     print(f"\n🤸 Mobility (Malva) w bazie: {len(existing_ids(mobility_data))}", flush=True)
     raw_mobility = []
     for name, cid, _ in channel_iter(MOBILITY_CHANNELS):
@@ -338,15 +371,21 @@ def main() -> int:
         "🦾 Movement / (P)rehab",
         MOVEMENT_CHANNELS,
         existing_ids(movement_data),
-        lambda raw: curate(
+        rejected,
+        lambda raw, rej: curate(
             raw, MOVEMENT_PROMPT,
             MOVEMENT_TYPE, "type_tags",
             MOVEMENT_BODY, "body_tags",
             "Mobility", "Całe ciało / Full body",
+            rej,
         ),
         MOVEMENT_JSON,
         movement_data,
     )
+
+    if len(rejected) != rejected_before:
+        save_rejected(rejected)
+        print(f"\n🗃️  Cache odrzuceń: {rejected_before} → {len(rejected)} (+{len(rejected) - rejected_before})", flush=True)
 
     return 0
 

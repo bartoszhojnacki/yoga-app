@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-26T19:20:33+00:00",
+  "updated_at": "2026-05-27T08:01:39+00:00",
   "videos": [
     {
       "id": "3j0qqpLed5k",
@@ -19539,6 +19539,103 @@
       ],
       "focus": [
         "Biodra"
+      ]
+    },
+    {
+      "id": "0kwKU9ZsAG8",
+      "title": "10 minut NOWE Powitanie Słońca - Flow",
+      "channel": "Małgorzata Mostowska",
+      "duration": 11,
+      "url": "https://www.youtube.com/watch?v=0kwKU9ZsAG8",
+      "description": "Sesja 10 minut nowego powitania słońca w stylu flow, skupiająca się na płynnych przejściach i rozgrzewce ciała.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Dynamiczna / Vinyasa",
+        "Poranna"
+      ],
+      "focus": [
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "JZsm8bjMdI8",
+      "title": "Joga dla Początkujących - Jak wygląda lekcja jogi?",
+      "channel": "Yoga Home",
+      "duration": 24,
+      "url": "https://www.youtube.com/watch?v=JZsm8bjMdI8",
+      "description": "Lekcja jogi dla początkujących, pokazująca, jak wygląda typowa lekcja.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "MCSXkQT9rBM",
+      "title": "Joga dla Początkujących - Jak wykonać Powitanie Słońca A?",
+      "channel": "Yoga Home",
+      "duration": 16,
+      "url": "https://www.youtube.com/watch?v=MCSXkQT9rBM",
+      "description": "Wprowadzenie do Powitania Słońca A w praktyce jogi dla początkujących.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "F94LjQVW95o",
+      "title": "Joga dla Początkujących - Jak poprawnie wykonać pozycję Psa z Głową w Dół?",
+      "channel": "Yoga Home",
+      "duration": 22,
+      "url": "https://www.youtube.com/watch?v=F94LjQVW95o",
+      "description": "Instrukcja poprawnego wykonania pozycji Psa z Głową w Dół.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "byE4d8gNGHU",
+      "title": "Joga dla Początkujących - Jak oddychać podczas praktyki?",
+      "channel": "Yoga Home",
+      "duration": 19,
+      "url": "https://www.youtube.com/watch?v=byE4d8gNGHU",
+      "description": "Poradnik na temat oddychania podczas praktyki jogi.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "Gely4MU9ylo",
+      "title": "Joga dla Początkujących - Od czego zacząć? Jaką matę do jogi wybrać?",
+      "channel": "Yoga Home",
+      "duration": 25,
+      "url": "https://www.youtube.com/watch?v=Gely4MU9ylo",
+      "description": "Wskazówki dla początkujących, jak zacząć praktykę jogi i wybór maty.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Całe ciało"
       ]
     }
   ]

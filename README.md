@@ -71,12 +71,14 @@ git checkout v1-streamlit      # stan v1 bez WIP
 ## Struktura
 
 ```
-.github/workflows/update-data.yml   # cron Action
+.github/workflows/update-data.yml   # cron Action (niedziela 06:00 UTC) + manual
 data/
   yoga.json                         # auto-generated
   mobility.json                     # auto-generated
+  movement.json                     # auto-generated ((p)rehab / movement)
+  _rejected.json                    # cache: ID odrzucone przez AI (is_practice=false)
 scripts/
-  sources.py                        # konfiguracja kanałów + taksonomia tagów
+  sources.py                        # kanały (YOGA/MOBILITY/MOVEMENT) + taksonomia
   update_data.py                    # pipeline (YouTube → OpenAI → JSON)
   migrate_csv.py                    # jednorazowa migracja v1 CSV → JSON
   requirements.txt
@@ -85,3 +87,14 @@ assets/
   style.css
 index.html
 ```
+
+## Cache odrzuceń (`data/_rejected.json`)
+
+Filmy, które AI oznaczy jako nie-praktykę (`is_practice=false` — vlogi, tutoriale,
+zapowiedzi), lądują w `data/_rejected.json`. Przy każdym kolejnym uruchomieniu
+pipeline pomija te ID, więc **nie płacisz drugi raz za OpenAI** na tych samych
+śmieciach i klasyfikacja jest deterministyczna (nie wpadają losowo przy re-skanie).
+
+Plik jest commitowany do repo (cron na świeżym checkoucie też musi go widzieć).
+Jeśli chcesz wymusić ponowną ocenę odrzuconych (np. po zmianie promptu), usuń
+`data/_rejected.json` i odpal pipeline ponownie.
