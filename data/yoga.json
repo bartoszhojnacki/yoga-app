@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-26T18:51:52+00:00",
+  "updated_at": "2026-05-26T19:20:33+00:00",
   "videos": [
     {
       "id": "3j0qqpLed5k",
@@ -19210,6 +19210,335 @@
       ],
       "focus": [
         "Całe ciało"
+      ]
+    },
+    {
+      "id": "IzyICLfG038",
+      "title": "Medytacja na Lęk i Natłok Myśli I Uwolnienie i Zaufanie",
+      "channel": "Małgorzata Mostowska",
+      "duration": 15,
+      "url": "https://www.youtube.com/watch?v=IzyICLfG038",
+      "description": "Medytacja koncentrująca się na oddaniu ciężaru i ufności, pomagająca w relaksacji i oddechu.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Dynamiczna / Vinyasa"
+      ],
+      "focus": [
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "QASdJ28hLr4",
+      "title": "Na Trudny Dzień - Medytacja gdy jest Za Dużo",
+      "channel": "Małgorzata Mostowska",
+      "duration": 16,
+      "url": "https://www.youtube.com/watch?v=QASdJ28hLr4",
+      "description": "Medytacja wspierająca w trudnych chwilach za pomocą technik oddechowych i wizualizacji.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin"
+      ],
+      "focus": [
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "L_dyUATvRrc",
+      "title": "Medytacja na Nowe Początki i Wewnętrzny Spokój",
+      "channel": "Małgorzata Mostowska",
+      "duration": 15,
+      "url": "https://www.youtube.com/watch?v=L_dyUATvRrc",
+      "description": "Medytacja na nowy początek, skupiająca się na spokoju i zaufaniu.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Dynamiczna / Vinyasa"
+      ],
+      "focus": [
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "0yMxOnSdGvA",
+      "title": "Medytacja dla Dzieci przed Snem #5",
+      "channel": "Małgorzata Mostowska",
+      "duration": 15,
+      "url": "https://www.youtube.com/watch?v=0yMxOnSdGvA",
+      "description": "Medytacja dla dzieci przed snem, wprowadzająca w świat przyjemnych wyobrażeń.",
+      "intensity": 1,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin"
+      ],
+      "focus": [
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "CjUwgF2wXzg",
+      "title": "Medytacja dla Dzieci przed Snem - Relaksacja do Snu",
+      "channel": "Małgorzata Mostowska",
+      "duration": 15,
+      "url": "https://www.youtube.com/watch?v=CjUwgF2wXzg",
+      "description": "Medytacja dla dzieci przed snem, która pomaga w relaksacji i wprowadza w stan spokoju. Ta praktyka niesie spokój nie tylko dla najmłodszych, ale i dla dorosłych.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin"
+      ],
+      "focus": [
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "ruNzVWGeArw",
+      "title": "Medytacja Miłującej Dobroci - Metta",
+      "channel": "Małgorzata Mostowska",
+      "duration": 15,
+      "url": "https://www.youtube.com/watch?v=ruNzVWGeArw",
+      "description": "Medytacja miłującej dobroci (metta), praktyka, która wprowadza w świat miłości i dobroci, idealna na każdą porę dnia.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "Eo9CuroK1-k",
+      "title": "Medytacja prowadzona w 5 minut - Reset dla Umysłu",
+      "channel": "Małgorzata Mostowska",
+      "duration": 5,
+      "url": "https://www.youtube.com/watch?v=Eo9CuroK1-k",
+      "description": "Krótka medytacja w 5 minut, idealna dla początkujących, pomagająca w znalezieniu chwili spokoju w ciągu dnia.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "VuPMQNT54Jk",
+      "title": "Medytacja dla Dzieci przed Snem",
+      "channel": "Małgorzata Mostowska",
+      "duration": 12,
+      "url": "https://www.youtube.com/watch?v=VuPMQNT54Jk",
+      "description": "Medytacja dla dzieci przed snem, podobna do poprzedniej, oferująca spokojny relaks przed snem.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin"
+      ],
+      "focus": [
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "Ljn2ewlbw1M",
+      "title": "Medytacja na Trudny Czas - Pozytywne Afirmacje i Spokój",
+      "channel": "Małgorzata Mostowska",
+      "duration": 16,
+      "url": "https://www.youtube.com/watch?v=Ljn2ewlbw1M",
+      "description": "Medytacja na trudny czas, koncentrująca się na pozytywnych afirmacjach i wprowadzeniu spokoju przez medytację.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "rbnnXb_Frrc",
+      "title": "Medytacja dla Początkujących - Oddech i Uważność",
+      "channel": "Małgorzata Mostowska",
+      "duration": 11,
+      "url": "https://www.youtube.com/watch?v=rbnnXb_Frrc",
+      "description": "Medytacja dla początkujących, skoncentrowana na oddechu i uważności, przydatna przez cały dzień jako moment zatrzymania się.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "E5g1bxMpAhE",
+      "title": "Medytacja na Stres - Spokój i Wdzięczność",
+      "channel": "Małgorzata Mostowska",
+      "duration": 15,
+      "url": "https://www.youtube.com/watch?v=E5g1bxMpAhE",
+      "description": "Medytacja na stres, podczas której skupiamy się na głębokim oddechu i uczuciu wdzięczności.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Poranna",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "Y9q5QBrBBRU",
+      "title": "Medytacja Uzdrawiająca - Medytacja Prowadzona dla Wszystkich",
+      "channel": "Małgorzata Mostowska",
+      "duration": 17,
+      "url": "https://www.youtube.com/watch?v=Y9q5QBrBBRU",
+      "description": "Prowadzona medytacja uzdrawiająca, która pomoże w nawiązaniu głębszej relacji ze sobą.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "3JVKNtbXreY",
+      "title": "Medytacja Miłości ❤️ Pokochaj Siebie",
+      "channel": "Małgorzata Mostowska",
+      "duration": 22,
+      "url": "https://www.youtube.com/watch?v=3JVKNtbXreY",
+      "description": "Sesja medytacji miłości, skoncentrowana na akceptacji siebie oraz innych.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Dynamiczna / Vinyasa",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "U-H66NArYMY",
+      "title": "Inspiracje Jogowe #6",
+      "channel": "Małgorzata Mostowska",
+      "duration": 2,
+      "url": "https://www.youtube.com/watch?v=U-H66NArYMY",
+      "description": "Inspiracje do jogowej praktyki w formie przyspieszonego filmu.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin"
+      ],
+      "focus": [
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "G5OSjPMubig",
+      "title": "Joga i Ćwiczenia w Ciąży - Jak Bezpiecznie Ćwiczyć?",
+      "channel": "Małgorzata Mostowska",
+      "duration": 13,
+      "url": "https://www.youtube.com/watch?v=G5OSjPMubig",
+      "description": "Film zawiera informacje na temat bezpiecznych ćwiczeń jogi i ogólnych zasad praktykowania w czasie ciąży.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin"
+      ],
+      "focus": [
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "PSTTeT0-Zio",
+      "title": "Sposoby na Stres - Medytacja dla Początkujących",
+      "channel": "Małgorzata Mostowska",
+      "duration": 10,
+      "url": "https://www.youtube.com/watch?v=PSTTeT0-Zio",
+      "description": "Króka medytacja dla początkujących, koncentrująca się na obserwacji i relaksie.",
+      "intensity": 1,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "bD5R85mB5II",
+      "title": "SILENT YOGA - Open Your Chest - music only",
+      "channel": "Yoga Home",
+      "duration": 18,
+      "url": "https://www.youtube.com/watch?v=bD5R85mB5II",
+      "description": "Cisza jogi z timerem, obejmująca ćwiczenia bez słów, z muzyką jako przewodnikiem.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin"
+      ],
+      "focus": [
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "8i1MEM50680",
+      "title": "SILENT YOGA with yoga blocks - 12 min lesson from Norway - music only",
+      "channel": "Yoga Home",
+      "duration": 11,
+      "url": "https://www.youtube.com/watch?v=8i1MEM50680",
+      "description": "W tej sesji jogi w milczeniu wykonujemy różne asany, korzystając z bloków do wsparcia. Sesja składa się z 45-sekundowych interwałów ćwiczeń oraz 10-sekundowych przerw.",
+      "intensity": 2,
+      "props": "Klocki",
+      "style": [
+        "Spokojna / Yin"
+      ],
+      "focus": [
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "tCxWR0NjyHA",
+      "title": "Wycisz Umysł - Krótka Medytacja",
+      "channel": "Yoga Home",
+      "duration": 10,
+      "url": "https://www.youtube.com/watch?v=tCxWR0NjyHA",
+      "description": "Krótka medytacja skoncentrowana na oddechu i wyciszeniu umysłu.",
+      "intensity": 1,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Biodra"
+      ]
+    },
+    {
+      "id": "zbYQrgT-cRU",
+      "title": "Trening autogenny Schultza - technika relaksacji",
+      "channel": "Yoga Home",
+      "duration": 27,
+      "url": "https://www.youtube.com/watch?v=zbYQrgT-cRU",
+      "description": "Technika relaksacji neuromięśniowej, która wykorzystuje autosugestię do uzyskania stanu głębokiego relaksu.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Biodra"
       ]
     }
   ]

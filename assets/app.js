@@ -1,16 +1,32 @@
 const PRESETS = [
+  // Joga
   { id: "morning", tab: "yoga", icon: "🌅", label: "Poranek",
     apply: (f) => Object.assign(f.yoga, { style: ["Poranna"], minDur: 0, maxDur: 30, minInt: 2, maxInt: 3 }) },
   { id: "evening", tab: "yoga", icon: "🌙", label: "Wyciszenie",
     apply: (f) => Object.assign(f.yoga, { style: ["Spokojna / Yin"], minDur: 15, maxDur: 90, minInt: 1, maxInt: 2 }) },
   { id: "power", tab: "yoga", icon: "💪", label: "Energia",
     apply: (f) => Object.assign(f.yoga, { style: ["Dynamiczna / Vinyasa"], minDur: 20, maxDur: 90, minInt: 4, maxInt: 5 }) },
-  { id: "hips", tab: "mobility", icon: "🔓", label: "Biodra",
+  // Mobility (Malva)
+  { id: "hips-mob", tab: "mobility", icon: "🔓", label: "Biodra",
     apply: (f) => Object.assign(f.mobility, { body: ["Biodra"], minDur: 0, maxDur: 60 }) },
-  { id: "back", tab: "mobility", icon: "🧱", label: "Plecy",
+  { id: "back-mob", tab: "mobility", icon: "🧱", label: "Plecy",
     apply: (f) => Object.assign(f.mobility, { body: ["Kręgosłup"], minDur: 0, maxDur: 30 }) },
+  // Movement / (P)rehab
+  { id: "knee", tab: "movement", icon: "🦵", label: "Kolana",
+    apply: (f) => Object.assign(f.movement, { body: ["Kolana / Knees"], minDur: 0, maxDur: 60 }) },
+  { id: "lower-back", tab: "movement", icon: "🫀", label: "Lower back",
+    apply: (f) => Object.assign(f.movement, { body: ["Plecy / Back"], minDur: 0, maxDur: 30 }) },
+  { id: "shoulders", tab: "movement", icon: "🤷", label: "Barki",
+    apply: (f) => Object.assign(f.movement, { body: ["Barki / Shoulders"], minDur: 0, maxDur: 30 }) },
+  { id: "hips-mov", tab: "movement", icon: "🔓", label: "Hips",
+    apply: (f) => Object.assign(f.movement, { body: ["Biodra / Hips"], minDur: 0, maxDur: 60 }) },
+  { id: "prehab", tab: "movement", icon: "🩹", label: "(P)rehab",
+    apply: (f) => Object.assign(f.movement, { type: ["(P)rehab"], minDur: 0, maxDur: 60 }) },
+  { id: "strength", tab: "movement", icon: "💪", label: "Siła",
+    apply: (f) => Object.assign(f.movement, { type: ["Strength"], minDur: 0, maxDur: 60, minInt: 3, maxInt: 5 }) },
+  // Cross-tab
   { id: "quick", tab: null, icon: "⚡", label: "Krótkie",
-    apply: (f) => { f.yoga.maxDur = 15; f.mobility.maxDur = 15; } },
+    apply: (f) => { f.yoga.maxDur = 15; f.mobility.maxDur = 15; f.movement.maxDur = 15; } },
 ];
 
 const TAXONOMY = {
@@ -18,6 +34,9 @@ const TAXONOMY = {
   yogaFocus: ["Kręgosłup", "Biodra", "Brzuch / Core", "Całe ciało"],
   mobilityType: ["Stretching", "Mobility", "Rolowanie", "Wzmacnianie"],
   mobilityBody: ["Biodra", "Barki & Szyja", "Kręgosłup", "Nogi", "Nadgarstki", "Całe ciało"],
+  movementType: ["Mobility", "Stretching", "(P)rehab", "Strength", "Movement / Flow"],
+  movementBody: ["Biodra / Hips", "Kolana / Knees", "Plecy / Back", "Barki / Shoulders",
+                 "Szyja / Neck", "Kostki / Ankles", "Nadgarstki / Wrists", "Całe ciało / Full body"],
 };
 
 const FAV_KEY = "studio.favorites.v1";
@@ -27,6 +46,7 @@ function defaultFilters() {
   return {
     yoga: { style: [], focus: [], channel: [], minDur: 0, maxDur: 120, minInt: 1, maxInt: 5, search: "" },
     mobility: { type: [], body: [], channel: [], minDur: 0, maxDur: 90, search: "" },
+    movement: { type: [], body: [], channel: [], minDur: 0, maxDur: 120, minInt: 1, maxInt: 5, search: "" },
   };
 }
 
@@ -34,11 +54,11 @@ document.addEventListener("alpine:init", () => {
   Alpine.data("studio", () => ({
     loaded: false,
     activeTab: localStorage.getItem("studio.tab") || "yoga",
-    data: { yoga: [], mobility: [] },
-    counts: { yoga: 0, mobility: 0 },
+    data: { yoga: [], mobility: [], movement: [] },
+    counts: { yoga: 0, mobility: 0, movement: 0 },
     totalCount: 0,
     lastUpdate: "",
-    channels: { yoga: [], mobility: [] },
+    channels: { yoga: [], mobility: [], movement: [] },
     taxonomy: TAXONOMY,
     presets: PRESETS,
     activePreset: null,
@@ -53,21 +73,31 @@ document.addEventListener("alpine:init", () => {
       this.favorites = new Set(JSON.parse(localStorage.getItem(FAV_KEY) || "[]"));
       this.usage = JSON.parse(localStorage.getItem(USAGE_KEY) || "{}");
 
+      const safeFetch = async (url) => {
+        try {
+          const r = await fetch(url);
+          if (!r.ok) return { videos: [], updated_at: null };
+          return await r.json();
+        } catch { return { videos: [], updated_at: null }; }
+      };
+
       try {
-        const [yogaRes, mobRes] = await Promise.all([
-          fetch("data/yoga.json"),
-          fetch("data/mobility.json"),
+        const [yoga, mob, mov] = await Promise.all([
+          safeFetch("data/yoga.json"),
+          safeFetch("data/mobility.json"),
+          safeFetch("data/movement.json"),
         ]);
-        const yoga = await yogaRes.json();
-        const mob = await mobRes.json();
         this.data.yoga = yoga.videos || [];
         this.data.mobility = mob.videos || [];
+        this.data.movement = mov.videos || [];
         this.counts.yoga = this.data.yoga.length;
         this.counts.mobility = this.data.mobility.length;
-        this.totalCount = this.counts.yoga + this.counts.mobility;
+        this.counts.movement = this.data.movement.length;
+        this.totalCount = this.counts.yoga + this.counts.mobility + this.counts.movement;
         this.channels.yoga = [...new Set(this.data.yoga.map(v => v.channel))].sort();
         this.channels.mobility = [...new Set(this.data.mobility.map(v => v.channel))].sort();
-        const upd = yoga.updated_at || mob.updated_at;
+        this.channels.movement = [...new Set(this.data.movement.map(v => v.channel))].sort();
+        const upd = mov.updated_at || yoga.updated_at || mob.updated_at;
         this.lastUpdate = upd ? new Date(upd).toLocaleDateString("pl-PL") : "";
         this.loaded = true;
       } catch (e) {
@@ -131,6 +161,12 @@ document.addEventListener("alpine:init", () => {
           if (v.intensity < intMin || v.intensity > intMax) return false;
           if (f.style.length && !f.style.some(s => v.style.includes(s))) return false;
           if (f.focus.length && !f.focus.some(s => v.focus.includes(s))) return false;
+        } else if (tab === "movement") {
+          const intMin = Math.min(f.minInt, f.maxInt);
+          const intMax = Math.max(f.minInt, f.maxInt);
+          if (v.intensity < intMin || v.intensity > intMax) return false;
+          if (f.type.length && !f.type.some(s => v.type_tags.includes(s))) return false;
+          if (f.body.length && !f.body.some(s => v.body_tags.includes(s))) return false;
         } else {
           if (f.type.length && !f.type.some(s => v.type_tags.includes(s))) return false;
           if (f.body.length && !f.body.some(s => v.body_tags.includes(s))) return false;
