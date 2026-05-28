@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-27T08:19:41+00:00",
+  "updated_at": "2026-05-28T08:59:10+00:00",
   "videos": [
     {
       "id": "eGcLZd8xtg0",
@@ -19364,6 +19364,28 @@
         "Plecy / Back",
         "Barki / Shoulders",
         "Całe ciało / Full body"
+      ]
+    },
+    {
+      "id": "x89cWTryY6M",
+      "title": "15 Min. Daily Routine That Keeps Me Running Injury Free",
+      "channel": "mobility by julia reppel",
+      "duration": 16,
+      "url": "https://www.youtube.com/watch?v=x89cWTryY6M",
+      "description": "A 15-minute bodyweight routine that combines mobility, strength, and stretching to target common weaknesses for runners and athletes.",
+      "intensity": 3,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "Stretching",
+        "(P)rehab",
+        "Strength",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Biodra / Hips",
+        "Kolana / Knees",
+        "Kostki / Ankles"
       ]
     }
   ]
