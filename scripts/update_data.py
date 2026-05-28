@@ -30,6 +30,9 @@ from googleapiclient.discovery import build
 from openai import OpenAI
 
 from sources import (
+    BAND_BODY,
+    BAND_CHANNELS,
+    BAND_TYPE,
     MIN_DURATION_MIN,
     MOBILITY_BODY,
     MOBILITY_CHANNELS,
@@ -51,6 +54,7 @@ DATA_DIR = REPO_ROOT / "data"
 YOGA_JSON = DATA_DIR / "yoga.json"
 MOBILITY_JSON = DATA_DIR / "mobility.json"
 MOVEMENT_JSON = DATA_DIR / "movement.json"
+BAND_JSON = DATA_DIR / "band.json"
 REJECTED_JSON = DATA_DIR / "_rejected.json"
 
 YOUTUBE_API_KEY = os.getenv("YOUTUBE_API_KEY")
@@ -94,6 +98,30 @@ Return JSON with these fields per video:
    - 5: High exertion (full strength workout, conditioning, intense flow)
 4. "props" (string): Required equipment, e.g. "Resistance band", "Foam roller",
    "Yoga blocks", "Pull-up bar". If nothing needed, write "Brak".
+"""
+
+BAND_PROMPT = """You are an expert in resistance-band training (loop bands, tube
+bands, mini-bands). You analyze YouTube videos for a personal practice app.
+For each video you receive: Title, Duration (minutes), Description (English).
+Return JSON with these fields per video:
+1. "is_practice" (boolean): True ONLY if this is an actual follow-along workout
+   using resistance bands (full-body, upper, lower, glutes, core, HIIT with bands,
+   band warm-up). False for:
+   - Pure tutorials / "5 best band exercises for X" without follow-along structure
+   - Form breakdowns, technique explainers
+   - Vlogs, podcasts, reviews ("best bands 2024"), Q&A, channel intros
+   - Educational content ("STOP doing this", "mistakes...")
+   - Workouts that do NOT use bands (bodyweight-only, dumbbell-only, barbell)
+   Borderline: short follow-along band routine with brief explanation = True.
+2. "clean_description" (string): 1-2 sentences, English OK, what the viewer will do.
+3. "intensity" (integer 1-5):
+   - 1: Very gentle (rehab activation, mini-band warm-up)
+   - 2: Gentle (beginner band routine, low-load mobility)
+   - 3: Moderate (standard band workout, hypertrophy pace)
+   - 4: Demanding (heavy-band strength, dense circuits)
+   - 5: High exertion (band HIIT, conditioning, AMRAP, metabolic finishers)
+4. "props" (string): Required equipment beyond bands, e.g. "Loop band", "Tube band",
+   "Mini-band", "Door anchor", "Mat". If just bands and floor needed, write "Bands".
 """
 
 
@@ -331,6 +359,7 @@ def main() -> int:
     yoga_data = load_json(YOGA_JSON)
     mobility_data = load_json(MOBILITY_JSON)
     movement_data = load_json(MOVEMENT_JSON)
+    band_data = load_json(BAND_JSON)
     rejected = load_rejected()
     rejected_before = len(rejected)
 
@@ -381,6 +410,24 @@ def main() -> int:
         ),
         MOVEMENT_JSON,
         movement_data,
+    )
+
+    # BAND — AI enrichment (type + body)
+    process_channels(
+        youtube,
+        "💪 Band",
+        BAND_CHANNELS,
+        existing_ids(band_data),
+        rejected,
+        lambda raw, rej: curate(
+            raw, BAND_PROMPT,
+            BAND_TYPE, "type_tags",
+            BAND_BODY, "body_tags",
+            "Full body", "Full body / Całe ciało",
+            rej,
+        ),
+        BAND_JSON,
+        band_data,
     )
 
     if len(rejected) != rejected_before:

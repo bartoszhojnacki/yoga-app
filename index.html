@@ -24,6 +24,7 @@
     <button :class="{ active: activeTab === 'yoga' }" @click="setTab('yoga')">🧘‍♀️ Joga</button>
     <button :class="{ active: activeTab === 'mobility' }" @click="setTab('mobility')">🤸‍♂️ Mobility</button>
     <button :class="{ active: activeTab === 'movement' }" @click="setTab('movement')">🦾 (P)rehab</button>
+    <button :class="{ active: activeTab === 'band' }" @click="setTab('band')">💪 Gumy</button>
   </nav>
 
   <section class="presets">
@@ -157,6 +158,47 @@
       </label>
     </div>
 
+    <div class="filter-grid" x-show="activeTab === 'band'">
+      <label>
+        Rodzaj
+        <select multiple x-model="filters.band.type" size="5">
+          <template x-for="t in taxonomy.bandType" :key="t">
+            <option :value="t" x-text="t"></option>
+          </template>
+        </select>
+      </label>
+      <label>
+        Partia ciała
+        <select multiple x-model="filters.band.body" size="5">
+          <template x-for="b in taxonomy.bandBody" :key="b">
+            <option :value="b" x-text="b"></option>
+          </template>
+        </select>
+      </label>
+      <label>
+        Kanał
+        <select multiple x-model="filters.band.channel" size="3">
+          <template x-for="c in channels.band" :key="c">
+            <option :value="c" x-text="c"></option>
+          </template>
+        </select>
+      </label>
+      <label>
+        Czas: <output x-text="`${filters.band.minDur}–${filters.band.maxDur} min`"></output>
+        <div class="range-pair">
+          <input type="range" min="0" max="120" step="5" x-model.number="filters.band.minDur" />
+          <input type="range" min="0" max="120" step="5" x-model.number="filters.band.maxDur" />
+        </div>
+      </label>
+      <label>
+        Intensywność: <output x-text="`${filters.band.minInt}–${filters.band.maxInt}`"></output>
+        <div class="range-pair">
+          <input type="range" min="1" max="5" step="1" x-model.number="filters.band.minInt" />
+          <input type="range" min="1" max="5" step="1" x-model.number="filters.band.maxInt" />
+        </div>
+      </label>
+    </div>
+
     <label class="search">
       Szukaj po tytule / opisie
       <input type="search" x-model="filters[activeTab].search" placeholder="np. biodra, vinyasa, knee pain, rolowanie…" />
@@ -204,7 +246,7 @@
                 <template x-for="t in v.focus" :key="t"><span class="tag tag-focus" x-text="t"></span></template>
               </span>
             </template>
-            <template x-if="activeTab === 'mobility' || activeTab === 'movement'">
+            <template x-if="activeTab === 'mobility' || activeTab === 'movement' || activeTab === 'band'">
               <span class="tag-group">
                 <template x-for="t in v.type_tags" :key="t"><span class="tag tag-type" x-text="t"></span></template>
                 <template x-for="t in v.body_tags" :key="t"><span class="tag tag-body" x-text="t"></span></template>
@@ -215,10 +257,10 @@
           <div class="meta-row">
             <span>⏱️ <strong x-text="v.duration"></strong> min</span>
             <span>📺 <span x-text="v.channel"></span></span>
-            <template x-if="activeTab === 'yoga' || (activeTab === 'movement' && v.intensity)">
+            <template x-if="activeTab === 'yoga' || ((activeTab === 'movement' || activeTab === 'band') && v.intensity)">
               <span class="intensity" :title="`Intensywność ${v.intensity}/5`" x-text="intensityDots(v.intensity)"></span>
             </template>
-            <template x-if="(activeTab === 'yoga' || activeTab === 'movement') && v.props && v.props !== 'Brak'">
+            <template x-if="(activeTab === 'yoga' || activeTab === 'movement' || activeTab === 'band') && v.props && v.props !== 'Brak'">
               <span>🧱 <span x-text="v.props"></span></span>
             </template>
             <template x-if="usageCount(v.id) > 0">
@@ -241,7 +283,7 @@
   </main>
 
   <footer class="appfoot" x-show="loaded">
-    <span x-text="`Joga: ${counts.yoga} · Mobility: ${counts.mobility} · (P)rehab: ${counts.movement}`"></span>
+    <span x-text="`Joga: ${counts.yoga} · Mobility: ${counts.mobility} · (P)rehab: ${counts.movement} · Gumy: ${counts.band}`"></span>
     <span x-show="lastUpdate" x-text="`Aktualizacja: ${lastUpdate}`"></span>
   </footer>
 

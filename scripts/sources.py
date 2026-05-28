@@ -28,6 +28,15 @@ MOVEMENT_CHANNELS = {
     "MovementbyDavid": "UCM2ra7Od2jliHB9TLPKt76w",
 }
 
+# Band / resistance-band training — EN, AI klasyfikuje is_practice + intensity.
+# Handles: @TheZeusFitness, @ACHVPEAK (resolved 2026-05-28; @ZeusFitness to pusty
+# kanał, właściwy brand Zeus Fitness siedzi pod @TheZeusFitness). AI prompt
+# odrzuca workouts bez gum (Zeus publikuje też dumbbell content).
+BAND_CHANNELS = {
+    "Zeus Fitness": "UCnFtNz3OSXYaRJ6CPUIMQag",
+    "ACHV PEAK": "UCiO1SkxDa6Q3Vik7HQ7GrBA",
+}
+
 MIN_DURATION_MIN = 2
 
 YOGA_STYLE = {
@@ -78,6 +87,29 @@ MOVEMENT_BODY = {
     "Kostki / Ankles": ["ankle", "ankles", "kostka", "kostki", "foot", "feet", "stopy", "stopa", "calf"],
     "Nadgarstki / Wrists": ["wrist", "wrists", "nadgarstki", "elbow", "łokieć"],
     "Całe ciało / Full body": ["full body", "całe ciało", "total body", "head to toe", "everything"],
+}
+
+
+# Band taxonomy — pełnotreningowe sesje z gumami oporowymi (EN-first).
+BAND_TYPE = {
+    "Full body": ["full body", "total body", "head to toe", "całe ciało"],
+    "Upper body": ["upper body", "upper", "push", "pull", "chest", "back", "arms", "shoulders"],
+    "Lower body": ["lower body", "legs", "leg day", "glutes", "glute", "booty", "hamstrings", "quads"],
+    "Core / Abs": ["core", "abs", "ab workout", "six pack", "obliques", "brzuch"],
+    "Cardio / HIIT": ["cardio", "hiit", "conditioning", "fat burn", "metabolic", "burn"],
+    "Strength": ["strength", "muscle", "hypertrophy", "build", "wzmacnianie", "siła"],
+    "Mobility / Warmup": ["mobility", "warmup", "warm-up", "warm up", "activation", "prep"],
+}
+
+BAND_BODY = {
+    "Glutes / Pośladki": ["glute", "glutes", "booty", "hip thrust", "pośladki"],
+    "Legs / Nogi": ["leg", "legs", "quad", "hamstring", "calf", "nogi"],
+    "Back / Plecy": ["back", "lat", "row", "pull", "plecy"],
+    "Chest / Klatka": ["chest", "press", "push", "klatka"],
+    "Shoulders / Barki": ["shoulder", "delts", "barki"],
+    "Arms / Ramiona": ["arm", "arms", "biceps", "triceps", "ramiona"],
+    "Core / Brzuch": ["core", "abs", "ab ", "obliques", "brzuch"],
+    "Full body / Całe ciało": ["full body", "total body", "całe ciało", "head to toe"],
 }
 
 

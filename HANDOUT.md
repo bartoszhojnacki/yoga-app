@@ -8,15 +8,16 @@ na co uważać. Setup od zera jest w [README.md](README.md) — tu jest obsługa
 ## 1. Co to jest
 
 Statyczna aplikacja webowa (HTML + Alpine.js, **bez backendu**) do wybierania
-treningów jogi / mobility / (p)rehab z biblioteki filmów YouTube. Trzy zakładki,
-filtry, presety „szybki wybór”, losowanie, ulubione. Hostowana na GitHub Pages.
-Dane (lista filmów + tagi) generuje cykliczny GitHub Action z YouTube + OpenAI.
+treningów jogi / mobility / (p)rehab / band z biblioteki filmów YouTube. Cztery
+zakładki, filtry, presety „szybki wybór”, losowanie, ulubione. Hostowana na
+GitHub Pages. Dane (lista filmów + tagi) generuje cykliczny GitHub Action z
+YouTube + OpenAI.
 
 **Filozofia:** zero serwera, zero bazy, zero kosztów stałych. Wszystko to pliki
 JSON commitowane do repo; przeglądarka je czyta. Ulubione/licznik użycia żyją w
 `localStorage` urządzenia (single-user, brak logowania).
 
-Stan na 2026-05-27: **Joga 1187 · Mobility 46 · (P)rehab 1015** (+ ~718 ID w cache odrzuceń).
+Stan na 2026-05-28: **Joga 1187 · Mobility 46 · (P)rehab 1016 · Gumy 314** (+ ~1541 ID w cache odrzuceń).
 
 ---
 
@@ -36,20 +37,21 @@ Stan na 2026-05-27: **Joga 1187 · Mobility 46 · (P)rehab 1015** (+ ~718 ID w c
 ## 3. Jak działa pipeline danych
 
 ```
-YouTube (8 kanałów)
+YouTube (10 kanałów)
    │  fetch przez playlistItems (trick UC→UU = uploads playlist, tanie)
    │  pomija: ID już w bazie  ∪  ID w data/_rejected.json
    ▼
 nowe filmy (>2 min)
    │
-   ├─ Joga + (P)rehab → OpenAI (gpt-4o-mini):
+   ├─ Joga + (P)rehab + Band → OpenAI (gpt-4o-mini):
    │     is_practice? intensity 1-5? czysty opis? sprzęt?
    │     • is_practice=false → ląduje w data/_rejected.json (cache)
    │     • is_practice=true  → + tagi keyword (style/focus lub type/body)
+   │     Band: prompt explicit odrzuca workouts BEZ gum (dumbbell, bodyweight)
    │
    └─ Mobility (Malva) → tylko tagi keyword, bez AI
    ▼
-data/{yoga,mobility,movement}.json  +  data/_rejected.json
+data/{yoga,mobility,movement,band}.json  +  data/_rejected.json
    │  git commit + push (robi to Action albo Ty lokalnie)
    ▼
 GitHub Pages rebuild → appka świeża
@@ -88,12 +90,12 @@ git add data/ && git commit -m "data: refresh" && git push
 
 ### Dodać / usunąć kanał YouTube
 Edytuj `scripts/sources.py`:
-- Joga → `YOGA_CHANNELS`, Malva-style → `MOBILITY_CHANNELS`, (p)rehab/movement → `MOVEMENT_CHANNELS`.
+- Joga → `YOGA_CHANNELS`, Malva-style → `MOBILITY_CHANNELS`, (p)rehab/movement → `MOVEMENT_CHANNELS`, gumy → `BAND_CHANNELS`.
 - Wartość: `"Nazwa": "UCxxxx"` albo z limitem `"Nazwa": ("UCxxxx", 500)` (ostatnie N filmów).
-- Channel ID bierzesz z URL kanału lub przez API. Commit + push → następny run zassie.
+- Channel ID bierzesz z URL kanału lub przez API (handle `@xxx` → ID: `youtube.channels().list(forHandle="xxx")`, patrz §9). Commit + push → następny run zassie.
 
 ### Zmienić sposób klasyfikacji AI
-Prompty w `scripts/update_data.py`: `YOGA_PROMPT` i `MOVEMENT_PROMPT`.
+Prompty w `scripts/update_data.py`: `YOGA_PROMPT`, `MOVEMENT_PROMPT`, `BAND_PROMPT`.
 Jeśli chcesz, żeby zmiana dotknęła też filmów już odrzuconych — skasuj
 `data/_rejected.json` i odpal pipeline (przeklasyfikuje wszystko od nowa).
 
@@ -137,7 +139,7 @@ assets/
   style.css                         # styl (dark/light auto, tablet-first)
   alpine.min.js                     # Alpine.js inline (NIE z CDN — patrz §9)
 data/
-  yoga.json / mobility.json / movement.json   # biblioteki (auto-gen)
+  yoga.json / mobility.json / movement.json / band.json   # biblioteki (auto-gen)
   _rejected.json                    # cache ID odrzuconych przez AI
 scripts/
   sources.py                        # kanały + taksonomia tagów (EDYTUJESZ TU)
@@ -169,6 +171,11 @@ HANDOUT.md                          # ten plik
   przeszkadzać: niższa temperatura, model gpt-4o, albo ręczna korekta JSON.
 - **Squat University = 2 filmy celowo** — to kanał edukacyjny (tutoriale, nie
   follow-along), filtr is_practice słusznie odrzuca ~wszystko. Nie „naprawiaj”.
+- **Handle `@xxx` ≠ channel ID** — żeby z handle dostać UC..., użyj
+  `yt.channels().list(part=”id”, forHandle=”xxx”)` (bez `@`). Uwaga: niektóre
+  handles wskazują puste kanały (np. `@ZeusFitness` → „Jesus Fregoso”, 0 vids).
+  Sprawdź `statistics.videoCount` przed dorzuceniem do `BAND_CHANNELS`/itp.
+  Właściwy Zeus Fitness brand siedzi pod `@TheZeusFitness`.
 
 ---
 

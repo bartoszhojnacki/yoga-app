@@ -24,9 +24,18 @@ const PRESETS = [
     apply: (f) => Object.assign(f.movement, { type: ["(P)rehab"], minDur: 0, maxDur: 60 }) },
   { id: "strength", tab: "movement", icon: "💪", label: "Siła",
     apply: (f) => Object.assign(f.movement, { type: ["Strength"], minDur: 0, maxDur: 60, minInt: 3, maxInt: 5 }) },
+  // Band / Gumy
+  { id: "band-full", tab: "band", icon: "🏋️", label: "Full body",
+    apply: (f) => Object.assign(f.band, { type: ["Full body"], minDur: 15, maxDur: 60 }) },
+  { id: "band-glutes", tab: "band", icon: "🍑", label: "Pośladki",
+    apply: (f) => Object.assign(f.band, { body: ["Glutes / Pośladki"], minDur: 0, maxDur: 45 }) },
+  { id: "band-hiit", tab: "band", icon: "🔥", label: "HIIT",
+    apply: (f) => Object.assign(f.band, { type: ["Cardio / HIIT"], minDur: 0, maxDur: 45, minInt: 4, maxInt: 5 }) },
+  { id: "band-upper", tab: "band", icon: "💪", label: "Upper body",
+    apply: (f) => Object.assign(f.band, { type: ["Upper body"], minDur: 0, maxDur: 60 }) },
   // Cross-tab
   { id: "quick", tab: null, icon: "⚡", label: "Krótkie",
-    apply: (f) => { f.yoga.maxDur = 15; f.mobility.maxDur = 15; f.movement.maxDur = 15; } },
+    apply: (f) => { f.yoga.maxDur = 15; f.mobility.maxDur = 15; f.movement.maxDur = 15; f.band.maxDur = 15; } },
 ];
 
 const TAXONOMY = {
@@ -37,6 +46,10 @@ const TAXONOMY = {
   movementType: ["Mobility", "Stretching", "(P)rehab", "Strength", "Movement / Flow"],
   movementBody: ["Biodra / Hips", "Kolana / Knees", "Plecy / Back", "Barki / Shoulders",
                  "Szyja / Neck", "Kostki / Ankles", "Nadgarstki / Wrists", "Całe ciało / Full body"],
+  bandType: ["Full body", "Upper body", "Lower body", "Core / Abs",
+             "Cardio / HIIT", "Strength", "Mobility / Warmup"],
+  bandBody: ["Glutes / Pośladki", "Legs / Nogi", "Back / Plecy", "Chest / Klatka",
+             "Shoulders / Barki", "Arms / Ramiona", "Core / Brzuch", "Full body / Całe ciało"],
 };
 
 const FAV_KEY = "studio.favorites.v1";
@@ -47,6 +60,7 @@ function defaultFilters() {
     yoga: { style: [], focus: [], channel: [], minDur: 0, maxDur: 120, minInt: 1, maxInt: 5, search: "" },
     mobility: { type: [], body: [], channel: [], minDur: 0, maxDur: 90, search: "" },
     movement: { type: [], body: [], channel: [], minDur: 0, maxDur: 120, minInt: 1, maxInt: 5, search: "" },
+    band: { type: [], body: [], channel: [], minDur: 0, maxDur: 120, minInt: 1, maxInt: 5, search: "" },
   };
 }
 
@@ -54,11 +68,11 @@ document.addEventListener("alpine:init", () => {
   Alpine.data("studio", () => ({
     loaded: false,
     activeTab: localStorage.getItem("studio.tab") || "yoga",
-    data: { yoga: [], mobility: [], movement: [] },
-    counts: { yoga: 0, mobility: 0, movement: 0 },
+    data: { yoga: [], mobility: [], movement: [], band: [] },
+    counts: { yoga: 0, mobility: 0, movement: 0, band: 0 },
     totalCount: 0,
     lastUpdate: "",
-    channels: { yoga: [], mobility: [], movement: [] },
+    channels: { yoga: [], mobility: [], movement: [], band: [] },
     taxonomy: TAXONOMY,
     presets: PRESETS,
     activePreset: null,
@@ -82,22 +96,26 @@ document.addEventListener("alpine:init", () => {
       };
 
       try {
-        const [yoga, mob, mov] = await Promise.all([
+        const [yoga, mob, mov, band] = await Promise.all([
           safeFetch("data/yoga.json"),
           safeFetch("data/mobility.json"),
           safeFetch("data/movement.json"),
+          safeFetch("data/band.json"),
         ]);
         this.data.yoga = yoga.videos || [];
         this.data.mobility = mob.videos || [];
         this.data.movement = mov.videos || [];
+        this.data.band = band.videos || [];
         this.counts.yoga = this.data.yoga.length;
         this.counts.mobility = this.data.mobility.length;
         this.counts.movement = this.data.movement.length;
-        this.totalCount = this.counts.yoga + this.counts.mobility + this.counts.movement;
+        this.counts.band = this.data.band.length;
+        this.totalCount = this.counts.yoga + this.counts.mobility + this.counts.movement + this.counts.band;
         this.channels.yoga = [...new Set(this.data.yoga.map(v => v.channel))].sort();
         this.channels.mobility = [...new Set(this.data.mobility.map(v => v.channel))].sort();
         this.channels.movement = [...new Set(this.data.movement.map(v => v.channel))].sort();
-        const upd = mov.updated_at || yoga.updated_at || mob.updated_at;
+        this.channels.band = [...new Set(this.data.band.map(v => v.channel))].sort();
+        const upd = band.updated_at || mov.updated_at || yoga.updated_at || mob.updated_at;
         this.lastUpdate = upd ? new Date(upd).toLocaleDateString("pl-PL") : "";
         this.loaded = true;
       } catch (e) {
@@ -161,7 +179,7 @@ document.addEventListener("alpine:init", () => {
           if (v.intensity < intMin || v.intensity > intMax) return false;
           if (f.style.length && !f.style.some(s => v.style.includes(s))) return false;
           if (f.focus.length && !f.focus.some(s => v.focus.includes(s))) return false;
-        } else if (tab === "movement") {
+        } else if (tab === "movement" || tab === "band") {
           const intMin = Math.min(f.minInt, f.maxInt);
           const intMax = Math.max(f.minInt, f.maxInt);
           if (v.intensity < intMin || v.intensity > intMax) return false;
