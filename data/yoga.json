@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-27T08:01:39+00:00",
+  "updated_at": "2026-05-31T08:34:48+00:00",
   "videos": [
     {
       "id": "3j0qqpLed5k",
@@ -19632,6 +19632,23 @@
       "intensity": 2,
       "props": "Brak",
       "style": [
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "J3LbCfqGY84",
+      "title": "20 min JOGA o poranku ★☆☆☆ łagodny start dnia + energia i mobilność",
+      "channel": "Yoga Home",
+      "duration": 22,
+      "url": "https://www.youtube.com/watch?v=J3LbCfqGY84",
+      "description": "Łagodna praktyka jogi na rozbudzenie ciała i uspokojenie umysłu z porannym stretchingiem i płynnością ruchu.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Dynamiczna / Vinyasa",
         "Dla początkujących"
       ],
       "focus": [

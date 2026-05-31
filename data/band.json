@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-28T11:56:54+00:00",
+  "updated_at": "2026-05-31T08:36:37+00:00",
   "videos": [
     {
       "id": "IHQxFS-HEu0",
@@ -6557,6 +6557,40 @@
       "body_tags": [
         "Core / Brzuch",
         "Full body / Całe ciało"
+      ]
+    },
+    {
+      "id": "d2Bh0ukDHwY",
+      "title": "Fun Family Workout At Home (PE for everyone)",
+      "channel": "Zeus Fitness",
+      "duration": 15,
+      "url": "https://www.youtube.com/watch?v=d2Bh0ukDHwY",
+      "description": "Join this fun family workout designed for kids to keep them active and entertained at home. Get ready to move and enjoy a workout suitable for everyone.",
+      "intensity": 2,
+      "props": "Bands",
+      "type_tags": [
+        "Full body"
+      ],
+      "body_tags": [
+        "Back / Plecy",
+        "Chest / Klatka"
+      ]
+    },
+    {
+      "id": "bXBFe1yOapc",
+      "title": "Six pack Abs Summer Workout - 10 MINUTES ONLY",
+      "channel": "Zeus Fitness",
+      "duration": 13,
+      "url": "https://www.youtube.com/watch?v=bXBFe1yOapc",
+      "description": "Join this quick 10-minute routine to engage and strengthen your core with an effective abs workout.",
+      "intensity": 3,
+      "props": "Bands",
+      "type_tags": [
+        "Core / Abs",
+        "Cardio / HIIT"
+      ],
+      "body_tags": [
+        "Core / Brzuch"
       ]
     }
   ]
