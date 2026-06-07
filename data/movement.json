@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-28T08:59:10+00:00",
+  "updated_at": "2026-06-07T08:45:04+00:00",
   "videos": [
     {
       "id": "eGcLZd8xtg0",
@@ -19386,6 +19386,69 @@
         "Biodra / Hips",
         "Kolana / Knees",
         "Kostki / Ankles"
+      ]
+    },
+    {
+      "id": "Un2uT__Kggc",
+      "title": "22 Minute Core & Flexibility Routine V2! (FOLLOW ALONG)",
+      "channel": "Tom Merrick",
+      "duration": 22,
+      "url": "https://www.youtube.com/watch?v=Un2uT__Kggc",
+      "description": "Follow along with a 22-minute core and flexibility routine to improve your strength and mobility.",
+      "intensity": 3,
+      "props": "Brak",
+      "type_tags": [
+        "Stretching",
+        "Strength",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Biodra / Hips"
+      ]
+    },
+    {
+      "id": "M8hiLm2qQYQ",
+      "title": "The BEST 10 Minute Stretching Reset for Cyclists (Post-Ride)",
+      "channel": "mobility by julia reppel",
+      "duration": 12,
+      "url": "https://www.youtube.com/watch?v=M8hiLm2qQYQ",
+      "description": "A 10-minute post-ride stretching routine to cool down and release tension in key areas.",
+      "intensity": 2,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "Stretching",
+        "(P)rehab",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Biodra / Hips",
+        "Kolana / Knees",
+        "Plecy / Back",
+        "Barki / Shoulders",
+        "Nadgarstki / Wrists"
+      ]
+    },
+    {
+      "id": "Eu_GUhKfIIE",
+      "title": "30 Min. Full Body Mobility Workout + Core | Primal-Inspired",
+      "channel": "mobility by julia reppel",
+      "duration": 31,
+      "url": "https://www.youtube.com/watch?v=Eu_GUhKfIIE",
+      "description": "Engage in a 30-minute full body workout that enhances mobility, core stability, and bodyweight strength.",
+      "intensity": 3,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "(P)rehab",
+        "Strength",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Biodra / Hips",
+        "Plecy / Back",
+        "Barki / Shoulders",
+        "Całe ciało / Full body"
       ]
     }
   ]

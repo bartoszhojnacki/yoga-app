@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-31T08:34:48+00:00",
+  "updated_at": "2026-06-07T08:44:34+00:00",
   "videos": [
     {
       "id": "3j0qqpLed5k",
@@ -19646,6 +19646,23 @@
       "url": "https://www.youtube.com/watch?v=J3LbCfqGY84",
       "description": "Łagodna praktyka jogi na rozbudzenie ciała i uspokojenie umysłu z porannym stretchingiem i płynnością ruchu.",
       "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Dynamiczna / Vinyasa",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "yp5GdGRmJKo",
+      "title": "45min Choreo Vinyasa ★★☆☆ Płynna sekwencja krok po kroku",
+      "channel": "Yoga Home",
+      "duration": 46,
+      "url": "https://www.youtube.com/watch?v=yp5GdGRmJKo",
+      "description": "Płynna sekwencja jogi, budowana krok po kroku z synchronizacją oddechu. Sesja zakończona powtórzeniem całości, tworząc rytmiczny taniec wdechów i wydechów.",
+      "intensity": 3,
       "props": "Brak",
       "style": [
         "Dynamiczna / Vinyasa",
