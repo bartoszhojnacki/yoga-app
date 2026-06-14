@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-07T08:44:34+00:00",
+  "updated_at": "2026-06-14T09:18:41+00:00",
   "videos": [
     {
       "id": "3j0qqpLed5k",
@@ -19670,6 +19670,23 @@
       ],
       "focus": [
         "Całe ciało"
+      ]
+    },
+    {
+      "id": "WZVlTh78Ez0",
+      "title": "Joga dla początkujących 20 min ★☆☆☆ rozciąganie boków tułowia i oddech",
+      "channel": "Yoga Home",
+      "duration": 21,
+      "url": "https://www.youtube.com/watch?v=WZVlTh78Ez0",
+      "description": "Sesja jogi dla początkujących, skoncentrowana na rozciąganiu boków tułowia poprzez łagodne skłony boczne i płynny ruch.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Kręgosłup"
       ]
     }
   ]

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-07T08:45:13+00:00",
+  "updated_at": "2026-06-14T09:19:18+00:00",
   "note": "Video IDs AI judged not a practice (is_practice=false). Skipped on future runs to save OpenAI calls.",
   "ids": [
     "-39KHTUc7l0",
@@ -523,6 +523,7 @@
     "L6EfXNHMooM",
     "L89ZDPc7loc",
     "LBExOX3asqo",
+    "LBhaLLc153A",
     "LGZLAn2jwlc",
     "LL8u3ORXeY4",
     "LN0QhsjV844",

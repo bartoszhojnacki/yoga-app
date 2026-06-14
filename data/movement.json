@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-07T08:45:04+00:00",
+  "updated_at": "2026-06-14T09:19:11+00:00",
   "videos": [
     {
       "id": "eGcLZd8xtg0",
@@ -19442,6 +19442,47 @@
         "Mobility",
         "(P)rehab",
         "Strength",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Biodra / Hips",
+        "Plecy / Back",
+        "Barki / Shoulders",
+        "Całe ciało / Full body"
+      ]
+    },
+    {
+      "id": "mQiDnFY5Tag",
+      "title": "30 Min. Mobility Workout to Follow Along (Not Just Stretching)",
+      "channel": "mobility by julia reppel",
+      "duration": 33,
+      "url": "https://www.youtube.com/watch?v=mQiDnFY5Tag",
+      "description": "A 30-minute intermediate mobility workout featuring dynamic movements to enhance full body mobility, with emphasis on the spine. It includes a warm-up and cool down.",
+      "intensity": 3,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "Stretching",
+        "(P)rehab",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Plecy / Back",
+        "Całe ciało / Full body"
+      ]
+    },
+    {
+      "id": "_tnmi63yfm4",
+      "title": "Stiff? Move Like THIS Every Morning (Life-Changing)",
+      "channel": "mobility by julia reppel",
+      "duration": 13,
+      "url": "https://www.youtube.com/watch?v=_tnmi63yfm4",
+      "description": "A 10-minute morning mobility routine designed for gentle movement to help you start your day with ease, focusing on the shoulders, hips, and spine.",
+      "intensity": 2,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "(P)rehab",
         "Movement / Flow"
       ],
       "body_tags": [
