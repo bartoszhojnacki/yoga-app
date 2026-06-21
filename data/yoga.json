@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-14T09:18:41+00:00",
+  "updated_at": "2026-06-21T09:35:12+00:00",
   "videos": [
     {
       "id": "3j0qqpLed5k",
@@ -19687,6 +19687,39 @@
       ],
       "focus": [
         "Kręgosłup"
+      ]
+    },
+    {
+      "id": "l9Cd0muBc0o",
+      "title": "Joga na przesilenie letnie ★☆☆☆ 25 min łagodnej praktyki",
+      "channel": "Yoga Home",
+      "duration": 29,
+      "url": "https://www.youtube.com/watch?v=l9Cd0muBc0o",
+      "description": "Łagodna sesja jogi skoncentrowana na relaksacji ciała i głębokim oddechu z użyciem wałka do jogi.",
+      "intensity": 2,
+      "props": "Wałek do jogi",
+      "style": [
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "ShZBJrMZ820",
+      "title": "Shoulder Mobility & Chest Opening - Release Upper Back Tension - Silent Yoga | 45s STETCH 10s REST |",
+      "channel": "Yoga Home",
+      "duration": 12,
+      "url": "https://www.youtube.com/watch?v=ShZBJrMZ820",
+      "description": "Cisza w sesji jogi skoncentrowanej na mobilności ramion i otwieraniu klatki piersiowej z timerem ćwiczeń.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa"
+      ],
+      "focus": [
+        "Całe ciało"
       ]
     }
   ]

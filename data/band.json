@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-31T08:36:37+00:00",
+  "updated_at": "2026-06-21T09:35:52+00:00",
   "videos": [
     {
       "id": "IHQxFS-HEu0",
@@ -6591,6 +6591,30 @@
       ],
       "body_tags": [
         "Core / Brzuch"
+      ]
+    },
+    {
+      "id": "jGSjGpZrIGc",
+      "title": "No Repeat Resistance Band Full Body Workout - 35 Exercises - No Repeat Workout",
+      "channel": "ACHV PEAK",
+      "duration": 33,
+      "url": "https://www.youtube.com/watch?v=jGSjGpZrIGc",
+      "description": "This is a full body workout using various resistance band exercises designed for muscle building.",
+      "intensity": 3,
+      "props": "Bands",
+      "type_tags": [
+        "Full body",
+        "Upper body",
+        "Core / Abs",
+        "Strength",
+        "Mobility / Warmup"
+      ],
+      "body_tags": [
+        "Back / Plecy",
+        "Chest / Klatka",
+        "Arms / Ramiona",
+        "Core / Brzuch",
+        "Full body / Całe ciało"
       ]
     }
   ]

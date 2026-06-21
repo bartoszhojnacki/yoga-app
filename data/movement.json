@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-14T09:19:11+00:00",
+  "updated_at": "2026-06-21T09:35:42+00:00",
   "videos": [
     {
       "id": "eGcLZd8xtg0",
@@ -19490,6 +19490,47 @@
         "Plecy / Back",
         "Barki / Shoulders",
         "Całe ciało / Full body"
+      ]
+    },
+    {
+      "id": "SZitsvjwP0U",
+      "title": "Deep 20-Minute Lower Body Mobility (Follow Along, No Talking)",
+      "channel": "mobility by julia reppel",
+      "duration": 20,
+      "url": "https://www.youtube.com/watch?v=SZitsvjwP0U",
+      "description": "A 20-minute lower body mobility routine focused on easing stiffness and improving range of motion in the ankles, hips, and lumbar spine through dynamic stretching and active mobility exercises.",
+      "intensity": 3,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "Stretching",
+        "(P)rehab",
+        "Strength",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Biodra / Hips",
+        "Plecy / Back",
+        "Kostki / Ankles"
+      ]
+    },
+    {
+      "id": "i6AaeR8URm4",
+      "title": "10 Minutes is All You Need: Morning Mobility (Follow Along)",
+      "channel": "mobility by julia reppel",
+      "duration": 13,
+      "url": "https://www.youtube.com/watch?v=i6AaeR8URm4",
+      "description": "A 10-minute morning mobility routine combining gentle movements to improve hip and spine mobility, suitable for starting your day with ease.",
+      "intensity": 2,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "(P)rehab",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Biodra / Hips",
+        "Plecy / Back"
       ]
     }
   ]
