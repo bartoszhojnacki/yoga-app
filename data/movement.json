@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-21T09:35:42+00:00",
+  "updated_at": "2026-06-28T08:40:42+00:00",
   "videos": [
     {
       "id": "eGcLZd8xtg0",
@@ -19530,6 +19530,65 @@
       ],
       "body_tags": [
         "Biodra / Hips",
+        "Plecy / Back"
+      ]
+    },
+    {
+      "id": "4VvcTVMhIjs",
+      "title": "Best Mobility Routine For All Levels (15 Minutes, No Talking)",
+      "channel": "mobility by julia reppel",
+      "duration": 17,
+      "url": "https://www.youtube.com/watch?v=4VvcTVMhIjs",
+      "description": "This full body mobility routine covers all major joints and movement patterns in just 15 minutes and can be done daily.",
+      "intensity": 3,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "(P)rehab",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Biodra / Hips",
+        "Plecy / Back",
+        "Barki / Shoulders",
+        "Kostki / Ankles",
+        "Nadgarstki / Wrists",
+        "Całe ciało / Full body"
+      ]
+    },
+    {
+      "id": "xX4_6hTq7Rs",
+      "title": "10 Minute Mobility: Move Like This Every Morning (Life-Changing) | No Music, Nature Sounds",
+      "channel": "mobility by julia reppel",
+      "duration": 13,
+      "url": "https://www.youtube.com/watch?v=xX4_6hTq7Rs",
+      "description": "A gentle 10-minute spine-focused morning mobility routine to help you start your day with ease.",
+      "intensity": 2,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "(P)rehab",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Plecy / Back"
+      ]
+    },
+    {
+      "id": "UNxrkCSVD5M",
+      "title": "10 Minute Mobility: Move Like This Every Morning (Life-Changing)",
+      "channel": "mobility by julia reppel",
+      "duration": 13,
+      "url": "https://www.youtube.com/watch?v=UNxrkCSVD5M",
+      "description": "This is a gentle 10-minute spine-focused morning mobility routine designed to help you ease into your day.",
+      "intensity": 2,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "(P)rehab",
+        "Movement / Flow"
+      ],
+      "body_tags": [
         "Plecy / Back"
       ]
     }
