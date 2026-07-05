@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-28T08:40:11+00:00",
+  "updated_at": "2026-07-05T08:40:09+00:00",
   "videos": [
     {
       "id": "3j0qqpLed5k",
@@ -19730,6 +19730,22 @@
       "url": "https://www.youtube.com/watch?v=CyiAXTLbKrI",
       "description": "Dynamiczna sekwencja jogi dla zaawansowanych w metodzie rampy, gdzie stopniowo dodajemy asany do tworzonej sekwencji.",
       "intensity": 4,
+      "props": "Brak",
+      "style": [
+        "Dynamiczna / Vinyasa"
+      ],
+      "focus": [
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "lrT-SYsNSo0",
+      "title": "25min Choreo Vinyasa – część 1 ★☆☆☆ nauka sekwencji krok po kroku",
+      "channel": "Yoga Home",
+      "duration": 27,
+      "url": "https://www.youtube.com/watch?v=lrT-SYsNSo0",
+      "description": "W tym filmie skupiamy się na nauce bazowych przejść oraz rytmu oddechu w sekwencji Choreo Vinyasa.",
+      "intensity": 2,
       "props": "Brak",
       "style": [
         "Dynamiczna / Vinyasa"

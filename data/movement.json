@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-06-28T08:40:42+00:00",
+  "updated_at": "2026-07-05T08:40:42+00:00",
   "videos": [
     {
       "id": "eGcLZd8xtg0",
@@ -19589,6 +19589,67 @@
         "Movement / Flow"
       ],
       "body_tags": [
+        "Plecy / Back"
+      ]
+    },
+    {
+      "id": "1kD_Q-cxgNA",
+      "title": "10 Min. Full Body Stretch for Post-Workout (Cool Down)",
+      "channel": "mobility by julia reppel",
+      "duration": 9,
+      "url": "https://www.youtube.com/watch?v=1kD_Q-cxgNA",
+      "description": "Follow along with this 10-minute full body cooldown routine to stretch, reset, and recover after workouts.",
+      "intensity": 2,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "Stretching",
+        "(P)rehab",
+        "Strength",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Biodra / Hips",
+        "Plecy / Back",
+        "Barki / Shoulders",
+        "Całe ciało / Full body"
+      ]
+    },
+    {
+      "id": "fzyexErczto",
+      "title": "Move Like This Every Morning (Life-Changing) | No Talking",
+      "channel": "mobility by julia reppel",
+      "duration": 13,
+      "url": "https://www.youtube.com/watch?v=fzyexErczto",
+      "description": "Start your day with this 10-minute hip and spine-focused morning mobility routine featuring gentle movements.",
+      "intensity": 2,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "(P)rehab",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Biodra / Hips",
+        "Plecy / Back"
+      ]
+    },
+    {
+      "id": "-1GJdJWLmnk",
+      "title": "Move Like This Every Morning (Life-Changing) | No Talking, Nature Sounds",
+      "channel": "mobility by julia reppel",
+      "duration": 13,
+      "url": "https://www.youtube.com/watch?v=-1GJdJWLmnk",
+      "description": "Engage in this 10-minute morning mobility routine focusing on the hips and spine to ease into your day.",
+      "intensity": 2,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "(P)rehab",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Biodra / Hips",
         "Plecy / Back"
       ]
     }
