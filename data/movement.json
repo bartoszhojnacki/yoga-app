@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-05T08:40:42+00:00",
+  "updated_at": "2026-07-12T08:00:03+00:00",
   "videos": [
     {
       "id": "eGcLZd8xtg0",
@@ -19651,6 +19651,46 @@
       "body_tags": [
         "Biodra / Hips",
         "Plecy / Back"
+      ]
+    },
+    {
+      "id": "a5GMad_VCDs",
+      "title": "The 10 Minute Morning Routine That Keeps Me Running Injury Free (Follow Along)",
+      "channel": "mobility by julia reppel",
+      "duration": 12,
+      "url": "https://www.youtube.com/watch?v=a5GMad_VCDs",
+      "description": "This is a 10-minute morning mobility routine designed for runners to work through the lower body and spine, easing stiffness and preparing the body to move.",
+      "intensity": 2,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "Stretching",
+        "(P)rehab",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Biodra / Hips",
+        "Plecy / Back",
+        "Kostki / Ankles"
+      ]
+    },
+    {
+      "id": "ZF1mgot06o4",
+      "title": "30 Min. Deep Hip Mobility AND Stretching (Follow Along, No Talking)",
+      "channel": "mobility by julia reppel",
+      "duration": 31,
+      "url": "https://www.youtube.com/watch?v=ZF1mgot06o4",
+      "description": "This 30-minute hip mobility and stretch routine combines active mobility work and static stretching aimed at improving range of motion and relieving tension in the hips.",
+      "intensity": 3,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "Stretching",
+        "(P)rehab",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Biodra / Hips"
       ]
     }
   ]

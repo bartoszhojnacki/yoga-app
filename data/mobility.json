@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-05-26T18:51:53+00:00",
+  "updated_at": "2026-07-12T07:59:32+00:00",
   "videos": [
     {
       "id": "EQ61trCWfhY",
@@ -689,6 +689,21 @@
       "duration": 2,
       "url": "https://www.youtube.com/watch?v=3gCgrCSxZDY",
       "description": "",
+      "type_tags": [
+        "Stretching",
+        "Mobility"
+      ],
+      "body_tags": [
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "BCQlE5tz3Fg",
+      "title": "STRETCHING BEZ MATY | Rozciąganie całego ciała w 20 minut | Malva Stretching",
+      "channel": "Malva Stretching",
+      "duration": 19,
+      "url": "https://www.youtube.com/watch?v=BCQlE5tz3Fg",
+      "description": "♡ Jeżeli spodobał Ci się mój film, zapraszam do subskrybcji! ♡ Zapraszam Ciebie na moje zajęcia online dla sztywniaków! Ćwiczymy w każdą środę o 7:00. Zapisy w wiadomości prywatnej na instagramie. → Instagram @malva.stretching | → współpraca: stretching.malva@gmail.com 📍 Ach Studio Gdynia #stretching #mobility #szpagat #rozciąganie",
       "type_tags": [
         "Stretching",
         "Mobility"

@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-05T08:40:09+00:00",
+  "updated_at": "2026-07-12T07:59:31+00:00",
   "videos": [
     {
       "id": "3j0qqpLed5k",
@@ -19749,6 +19749,40 @@
       "props": "Brak",
       "style": [
         "Dynamiczna / Vinyasa"
+      ],
+      "focus": [
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "GgBvJbTdhGI",
+      "title": "Joga Vinyasa 25 min ★★☆☆ nauka sekwencji krok po kroku (część 2)",
+      "channel": "Yoga Home",
+      "duration": 24,
+      "url": "https://www.youtube.com/watch?v=GgBvJbTdhGI",
+      "description": "Płynna sekwencja Vinyasa z kolejnymi asanami, takimi jak pełne powitania słońca, wojownik i delfin. Skupiamy się na synchronizacji ruchu z oddechem.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Dynamiczna / Vinyasa",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "jOmYKEcgw3k",
+      "title": "Joga dynamiczna 25 min ★★☆☆ metoda rampy i płynna sekwencja",
+      "channel": "Yoga Home",
+      "duration": 26,
+      "url": "https://www.youtube.com/watch?v=jOmYKEcgw3k",
+      "description": "W pierwszej części serii Choreo Vinyasa uczymy się budować płynne przejścia w asanach, łącząc ruch z oddechem. To łagodna sesja dla początkujących.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Dynamiczna / Vinyasa",
+        "Dla początkujących"
       ],
       "focus": [
         "Całe ciało"
