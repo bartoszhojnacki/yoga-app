@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-12T07:59:31+00:00",
+  "updated_at": "2026-07-19T07:59:09+00:00",
   "videos": [
     {
       "id": "3j0qqpLed5k",
@@ -19786,6 +19786,44 @@
       ],
       "focus": [
         "Całe ciało"
+      ]
+    },
+    {
+      "id": "DnTd03MD2Y8",
+      "title": "30 min Joga Vinyasa ★★★☆ płynna sekwencja krok po kroku (część 3)",
+      "channel": "Yoga Home",
+      "duration": 30,
+      "url": "https://www.youtube.com/watch?v=DnTd03MD2Y8",
+      "description": "Płynna sekwencja jogi Vinyasa, gdzie ruchy są skoordynowane z oddechem, tworząc harmonijną całość.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Poranna",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Kręgosłup"
+      ]
+    },
+    {
+      "id": "SEC4YmsMW6M",
+      "title": "Ćwiczenia dla seniorów na krześle 25 min ★☆☆☆ łagodna joga",
+      "channel": "Yoga Home",
+      "duration": 25,
+      "url": "https://www.youtube.com/watch?v=SEC4YmsMW6M",
+      "description": "Łagodna joga dla seniorów na krześle, skoncentrowana na rozruszaniu kręgosłupa i poprawie równowagi.",
+      "intensity": 2,
+      "props": "Krzesło",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra"
       ]
     }
   ]

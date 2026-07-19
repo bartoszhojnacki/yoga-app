@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-12T08:00:03+00:00",
+  "updated_at": "2026-07-19T07:59:36+00:00",
   "videos": [
     {
       "id": "eGcLZd8xtg0",
@@ -19691,6 +19691,48 @@
       ],
       "body_tags": [
         "Biodra / Hips"
+      ]
+    },
+    {
+      "id": "QFUY2jQjNTg",
+      "title": "20 Min. Balancing, Stability & Core for Runners & Athletes | Follow Along",
+      "channel": "mobility by julia reppel",
+      "duration": 22,
+      "url": "https://www.youtube.com/watch?v=QFUY2jQjNTg",
+      "description": "A 20-minute routine that focuses on balance, stability, and core work, targeted at runners and athletes.",
+      "intensity": 3,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "(P)rehab",
+        "Strength",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Biodra / Hips",
+        "Plecy / Back",
+        "Kostki / Ankles"
+      ]
+    },
+    {
+      "id": "24f5fYV6_dc",
+      "title": "30 Min. Mobility Workout w/ Modifications (Follow Along)",
+      "channel": "mobility by julia reppel",
+      "duration": 33,
+      "url": "https://www.youtube.com/watch?v=24f5fYV6_dc",
+      "description": "An intermediate 30-minute mobility workout designed to improve full body mobility with dynamic movements.",
+      "intensity": 3,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "(P)rehab",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Biodra / Hips",
+        "Plecy / Back",
+        "Barki / Shoulders",
+        "Całe ciało / Full body"
       ]
     }
   ]
