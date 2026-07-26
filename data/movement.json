@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-19T07:59:36+00:00",
+  "updated_at": "2026-07-26T08:08:17+00:00",
   "videos": [
     {
       "id": "eGcLZd8xtg0",
@@ -19732,6 +19732,54 @@
         "Biodra / Hips",
         "Plecy / Back",
         "Barki / Shoulders",
+        "Całe ciało / Full body"
+      ]
+    },
+    {
+      "id": "sQUjqODk0V0",
+      "title": "The 5 Minute Running Warm Up You'll Actually Do (All Standing)",
+      "channel": "mobility by julia reppel",
+      "duration": 5,
+      "url": "https://www.youtube.com/watch?v=sQUjqODk0V0",
+      "description": "Follow this quick 5-minute warm-up routine with mobility and dynamic drills to prepare your body for a run.",
+      "intensity": 2,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "(P)rehab",
+        "Strength",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Biodra / Hips",
+        "Kolana / Knees",
+        "Plecy / Back",
+        "Kostki / Ankles"
+      ]
+    },
+    {
+      "id": "LnTL-umi2CM",
+      "title": "45 Min. Full Body Mobility & Stretching for Active Recovery",
+      "channel": "mobility by julia reppel",
+      "duration": 45,
+      "url": "https://www.youtube.com/watch?v=LnTL-umi2CM",
+      "description": "Engage in a thorough 45-minute full body mobility routine designed for active recovery and tension release.",
+      "intensity": 3,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "Stretching",
+        "(P)rehab",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Biodra / Hips",
+        "Kolana / Knees",
+        "Plecy / Back",
+        "Barki / Shoulders",
+        "Szyja / Neck",
+        "Kostki / Ankles",
+        "Nadgarstki / Wrists",
         "Całe ciało / Full body"
       ]
     }

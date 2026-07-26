@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-19T07:59:43+00:00",
+  "updated_at": "2026-07-26T08:08:24+00:00",
   "note": "Video IDs AI judged not a practice (is_practice=false). Skipped on future runs to save OpenAI calls.",
   "ids": [
     "-39KHTUc7l0",
@@ -765,6 +765,7 @@
     "UBBx86xR3xk",
     "UE9Tn08BZBA",
     "UGuDu68ZG5Y",
+    "UMiH5kp7Dug",
     "UO-L4Bi32Wo",
     "UOPJhZKa40g",
     "UYcW9b4cQQs",
@@ -825,6 +826,7 @@
     "Wm7VbrrSN4g",
     "Wn7BkEYQV_s",
     "WnErPXj4z_o",
+    "WnUIDCoChP4",
     "Wnn2rG3-T2s",
     "Woz8RYQnbhU",
     "WqTdfqcw9Mw",
@@ -1560,6 +1562,7 @@
     "zKv31ac5VMU",
     "zN6RuHY1eBA",
     "zO7vVAm4GZ0",
+    "zW8kj5QTXNM",
     "zWyOd2rtDEY",
     "z_krZT9HJko",
     "zbSz9VwOb5I",

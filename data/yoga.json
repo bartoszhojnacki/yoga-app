@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-19T07:59:09+00:00",
+  "updated_at": "2026-07-26T08:07:50+00:00",
   "videos": [
     {
       "id": "3j0qqpLed5k",
@@ -19824,6 +19824,23 @@
       "focus": [
         "Kręgosłup",
         "Biodra"
+      ]
+    },
+    {
+      "id": "iZs4S2ZXjm0",
+      "title": "Twój układ nerwowy Ci za to podziękuje | Neuro Flow • 22 minuty świadomego ruchu",
+      "channel": "Małgorzata Mostowska",
+      "duration": 22,
+      "url": "https://www.youtube.com/watch?v=iZs4S2ZXjm0",
+      "description": "Neuro Flow to praktyka łącząca elementy jogi, świadomego ruchu i oddechu, w celu regulacji układu nerwowego.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Dynamiczna / Vinyasa"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Całe ciało"
       ]
     }
   ]
