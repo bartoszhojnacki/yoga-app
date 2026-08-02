@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-26T08:07:50+00:00",
+  "updated_at": "2026-08-02T08:04:59+00:00",
   "videos": [
     {
       "id": "3j0qqpLed5k",
@@ -19841,6 +19841,23 @@
       "focus": [
         "Kręgosłup",
         "Całe ciało"
+      ]
+    },
+    {
+      "id": "ZRasNYASe40",
+      "title": "35 min Joga na mocny brzuch ★★★☆ core i stabilizacja dla zaawansowanych",
+      "channel": "Yoga Home",
+      "duration": 35,
+      "url": "https://www.youtube.com/watch?v=ZRasNYASe40",
+      "description": "Intensywna 35-minutowa praktyka koncentrująca się na wzmocnieniu mięśni brzucha i stabilizacji. Wykorzystuje płynne przejścia między asanami.",
+      "intensity": 4,
+      "props": "Brak",
+      "style": [
+        "Dynamiczna / Vinyasa",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Brzuch / Core"
       ]
     }
   ]

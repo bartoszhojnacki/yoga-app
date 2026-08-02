@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-07-26T08:08:17+00:00",
+  "updated_at": "2026-08-02T08:05:29+00:00",
   "videos": [
     {
       "id": "eGcLZd8xtg0",
@@ -19780,6 +19780,46 @@
         "Szyja / Neck",
         "Kostki / Ankles",
         "Nadgarstki / Wrists",
+        "Całe ciało / Full body"
+      ]
+    },
+    {
+      "id": "aADHHIXxsLw",
+      "title": "5 Min. Upper Body Stretch for Push Days (Cool Down)",
+      "channel": "mobility by julia reppel",
+      "duration": 5,
+      "url": "https://www.youtube.com/watch?v=aADHHIXxsLw",
+      "description": "A 5-minute upper body cool down routine focused on stretching the chest, shoulders, and triceps after workouts.",
+      "intensity": 2,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "Stretching",
+        "(P)rehab",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Barki / Shoulders"
+      ]
+    },
+    {
+      "id": "w20gBrqa8vI",
+      "title": "Move Like This For 20 Minutes Every Morning (Life-Changing) | No Talking",
+      "channel": "mobility by julia reppel",
+      "duration": 21,
+      "url": "https://www.youtube.com/watch?v=w20gBrqa8vI",
+      "description": "A 20-minute full body morning mobility routine with gentle movements to help you start your day with ease.",
+      "intensity": 2,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "(P)rehab",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Biodra / Hips",
+        "Plecy / Back",
+        "Barki / Shoulders",
         "Całe ciało / Full body"
       ]
     }
