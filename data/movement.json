@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-02T08:05:29+00:00",
+  "updated_at": "2026-08-09T06:37:58+00:00",
   "videos": [
     {
       "id": "eGcLZd8xtg0",
@@ -19820,6 +19820,48 @@
         "Biodra / Hips",
         "Plecy / Back",
         "Barki / Shoulders",
+        "Całe ciało / Full body"
+      ]
+    },
+    {
+      "id": "VfskLb9QZbY",
+      "title": "10 Min. Full Body Mobility Warm Up (for Gym or Home Workouts)",
+      "channel": "mobility by julia reppel",
+      "duration": 10,
+      "url": "https://www.youtube.com/watch?v=VfskLb9QZbY",
+      "description": "A 10 minute routine to increase range of motion and reduce stiffness, preparing the full body for workouts.",
+      "intensity": 3,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "(P)rehab",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Biodra / Hips",
+        "Plecy / Back",
+        "Barki / Shoulders",
+        "Kostki / Ankles",
+        "Nadgarstki / Wrists",
+        "Całe ciało / Full body"
+      ]
+    },
+    {
+      "id": "JBFLFk6OjNA",
+      "title": "30 Min. Strength AND Mobility Workout That Changes How You Move (With Kettlebells)",
+      "channel": "mobility by julia reppel",
+      "duration": 30,
+      "url": "https://www.youtube.com/watch?v=JBFLFk6OjNA",
+      "description": "A 30 minute workout combining weighted mobility and strength exercises that improve coordination and balance.",
+      "intensity": 4,
+      "props": "2x kettlebells",
+      "type_tags": [
+        "Mobility",
+        "(P)rehab",
+        "Strength",
+        "Movement / Flow"
+      ],
+      "body_tags": [
         "Całe ciało / Full body"
       ]
     }
