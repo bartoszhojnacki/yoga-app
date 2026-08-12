@@ -12,6 +12,8 @@ enrichment wyników AI (yoga, movement).
 YOGA_CHANNELS = {
     "Małgorzata Mostowska": "UCITlHzj4MUzRNM17pdWUWeQ",
     "Yoga Home": "UCUVNvkkzMrT4qMhlql2t4iQ",
+    # EN-language (handle @djkimyoga, resolved 2026-08-11, 678 vids)
+    "YOGA WITH DJ": "UCx5g8STDdi0tLOOcVI7wt7w",
 }
 
 MOBILITY_CHANNELS = {
@@ -39,18 +41,25 @@ BAND_CHANNELS = {
 
 MIN_DURATION_MIN = 2
 
+# PL+EN hybrydowe — YOGA WITH DJ publikuje po angielsku.
 YOGA_STYLE = {
-    "Spokojna / Yin": ["yin", "spokojna", "relaks", "wieczór", "stres", "sen", "rozciąganie"],
-    "Dynamiczna / Vinyasa": ["vinyasa", "power", "flow", "energia", "dynamiczna", "pot"],
-    "Poranna": ["dzień dobry", "poranna", "poranek", "rozruch", "pobudzenie"],
-    "Dla początkujących": ["początkujących", "podstawy", "łagodna", "prosta"],
+    "Spokojna / Yin": ["yin", "spokojna", "relaks", "wieczór", "stres", "sen", "rozciąganie",
+                       "relax", "restorative", "gentle", "calm", "bedtime", "sleep", "wind down", "nidra", "evening"],
+    "Dynamiczna / Vinyasa": ["vinyasa", "power", "flow", "energia", "dynamiczna", "pot",
+                             "strong", "sweat", "intense", "advanced"],
+    "Poranna": ["dzień dobry", "poranna", "poranek", "rozruch", "pobudzenie",
+                "morning", "wake up", "sunrise"],
+    "Dla początkujących": ["początkujących", "podstawy", "łagodna", "prosta",
+                           "beginner", "basics", "easy"],
 }
 
 YOGA_FOCUS = {
-    "Kręgosłup": ["kręgosłup", "plecy", "zdrowy kręgosłup", "odcinek"],
-    "Biodra": ["biodra", "bioder", "miednica"],
-    "Brzuch / Core": ["brzuch", "core", "mięśnie brzucha", "centrum"],
-    "Całe ciało": ["całe ciało", "full body", "ogólno"],
+    "Kręgosłup": ["kręgosłup", "plecy", "zdrowy kręgosłup", "odcinek",
+                  "spine", "back pain", "lower back", "upper back", "posture", "neck"],
+    "Biodra": ["biodra", "bioder", "miednica",
+               "hip", "hips", "hamstring"],
+    "Brzuch / Core": ["brzuch", "core", "mięśnie brzucha", "centrum", "abdominal"],
+    "Całe ciało": ["całe ciało", "full body", "ogólno", "total body", "whole body", "head to toe"],
 }
 
 MOBILITY_TYPE = {
