@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-09T06:37:58+00:00",
+  "updated_at": "2026-08-11T19:21:37+00:00",
   "videos": [
     {
       "id": "eGcLZd8xtg0",
@@ -19863,6 +19863,88 @@
       ],
       "body_tags": [
         "Całe ciało / Full body"
+      ]
+    },
+    {
+      "id": "uyTxYh4MJCw",
+      "title": "The Gentle 30-Minute Reset Your Body is Craving (Follow Along)",
+      "channel": "mobility by julia reppel",
+      "duration": 34,
+      "url": "https://www.youtube.com/watch?v=uyTxYh4MJCw",
+      "description": "A gentle 30-minute mobility workout featuring dynamic stretching and static stretches to relax the body.",
+      "intensity": 2,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "Stretching",
+        "(P)rehab",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Biodra / Hips",
+        "Kolana / Knees",
+        "Plecy / Back",
+        "Barki / Shoulders",
+        "Nadgarstki / Wrists",
+        "Całe ciało / Full body"
+      ]
+    },
+    {
+      "id": "mwaEHn2mZsE",
+      "title": "Sitting All Day? This One Exercise Fixes Everything!",
+      "channel": "Squat University",
+      "duration": 3,
+      "url": "https://www.youtube.com/watch?v=mwaEHn2mZsE",
+      "description": "Follow along to master the reverse plank, improving your posture and core strength.",
+      "intensity": 3,
+      "props": "Brak",
+      "type_tags": [
+        "Strength",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Biodra / Hips",
+        "Barki / Shoulders",
+        "Całe ciało / Full body"
+      ]
+    },
+    {
+      "id": "bXUr2kwWlV4",
+      "title": "Got Elbow Pain? Do THIS Instead of Resting!",
+      "channel": "Squat University",
+      "duration": 3,
+      "url": "https://www.youtube.com/watch?v=bXUr2kwWlV4",
+      "description": "Engage in a 3-step method to combat tennis elbow pain and rebuild strength.",
+      "intensity": 3,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "(P)rehab",
+        "Strength"
+      ],
+      "body_tags": [
+        "Biodra / Hips",
+        "Plecy / Back",
+        "Nadgarstki / Wrists"
+      ]
+    },
+    {
+      "id": "DJ8TzflTuQc",
+      "title": "4 Knee Pain Exercises That Rebuilt A World Champion!",
+      "channel": "Squat University",
+      "duration": 10,
+      "url": "https://www.youtube.com/watch?v=DJ8TzflTuQc",
+      "description": "Participate in a series of 4 effective knee pain exercises aimed at improving stability.",
+      "intensity": 3,
+      "props": "Brak",
+      "type_tags": [
+        "(P)rehab",
+        "Strength",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Biodra / Hips",
+        "Kolana / Knees"
       ]
     }
   ]
