@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-11T19:21:37+00:00",
+  "updated_at": "2026-08-16T06:22:33+00:00",
   "videos": [
     {
       "id": "eGcLZd8xtg0",
@@ -19945,6 +19945,27 @@
       "body_tags": [
         "Biodra / Hips",
         "Kolana / Knees"
+      ]
+    },
+    {
+      "id": "gXGB5iAVaUA",
+      "title": "Scrolling Won't Help You Fall Asleep (But This Will)",
+      "channel": "mobility by julia reppel",
+      "duration": 12,
+      "url": "https://www.youtube.com/watch?v=gXGB5iAVaUA",
+      "description": "A spine and hip-focused static stretching routine designed to help unwind and prepare for sleep.",
+      "intensity": 2,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "Stretching",
+        "(P)rehab",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Biodra / Hips",
+        "Plecy / Back",
+        "Całe ciało / Full body"
       ]
     }
   ]

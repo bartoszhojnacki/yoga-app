@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-11T19:20:37+00:00",
+  "updated_at": "2026-08-16T06:22:06+00:00",
   "videos": [
     {
       "id": "3j0qqpLed5k",
@@ -25180,6 +25180,99 @@
       ],
       "focus": [
         "Kręgosłup"
+      ]
+    },
+    {
+      "id": "bhgCtE2tYWo",
+      "title": "25 min Rozruszaj biodra, kręgosłup i barki ★☆☆☆ trening mobility",
+      "channel": "Yoga Home",
+      "duration": 25,
+      "url": "https://www.youtube.com/watch?v=bhgCtE2tYWo",
+      "description": "Trening mobility koncentrujący się na rozruszaniu bioder, kręgosłupa i obręczy barkowej. Sesja składa się z różnych ćwiczeń, które pomagają w poprawie elastyczności ciała.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Brzuch / Core"
+      ]
+    },
+    {
+      "id": "IiFPRJd_Hz8",
+      "title": "BUILD BETTER HIP, ANKLE & SPINE MOBILITY 🔥 | 6-MOVE ROUTINE",
+      "channel": "YOGA WITH DJ",
+      "duration": 2,
+      "url": "https://www.youtube.com/watch?v=IiFPRJd_Hz8",
+      "description": "Sześciomove'owa rutyna, która poprawia mobilność stawów biodrowych, kostek i kręgosłupa, wykorzystując kontrolowane ruchy oraz aktywne rozciąganie.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra"
+      ]
+    },
+    {
+      "id": "kKN3mX3ysQU",
+      "title": "70 Min Yoga Mobility | Build Strength, Improve Flexibility & Open Your Hips",
+      "channel": "YOGA WITH DJ",
+      "duration": 75,
+      "url": "https://www.youtube.com/watch?v=kKN3mX3ysQU",
+      "description": "70-minutowy flow jogowy, który łączy budowanie siły z poprawą elastyczności poprzez pełne ruchy ciała i dynamiczne przejścia.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Dynamiczna / Vinyasa",
+        "Poranna"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "cAJ33tCjMhE",
+      "title": "Full Body Yoga Mobility Flow | Hip & Spine Mobility for Flexibility (38 Min)",
+      "channel": "YOGA WITH DJ",
+      "duration": 37,
+      "url": "https://www.youtube.com/watch?v=cAJ33tCjMhE",
+      "description": "38-minutowa sesja jogi mobilności, która otwiera biodra, kręgosłup i ramiona, jednocześnie wzmacniając mięśnie rdzenia i nóg.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Brzuch / Core",
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "XyF1gt_7MII",
+      "title": "45 Min Hip Mobility Yoga | Deep Hip Opener & Spine Flow",
+      "channel": "YOGA WITH DJ",
+      "duration": 45,
+      "url": "https://www.youtube.com/watch?v=XyF1gt_7MII",
+      "description": "45-minutowy flow jogowy, który koncentruje się na poprawie mobilności bioder oraz zwiększeniu elastyczności poprzez rozciąganie różnych partii ciała.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Dynamiczna / Vinyasa",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra"
       ]
     }
   ]
