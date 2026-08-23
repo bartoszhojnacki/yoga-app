@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-16T06:22:06+00:00",
+  "updated_at": "2026-08-23T06:23:17+00:00",
   "videos": [
     {
       "id": "3j0qqpLed5k",
@@ -25273,6 +25273,121 @@
       "focus": [
         "Kręgosłup",
         "Biodra"
+      ]
+    },
+    {
+      "id": "qQ0gYodEQso",
+      "title": "JOGA zamiast SCROLLOWANIA | Obudź Ciało, Mózg i Ciekawość | 15 min",
+      "channel": "Małgorzata Mostowska",
+      "duration": 13,
+      "url": "https://www.youtube.com/watch?v=qQ0gYodEQso",
+      "description": "Ta praktyka obudzi Twoje ciało, mózg i ciekawość w niecałe 15 minut. To sesja jogi mająca na celu alternatywę dla scrollowania w telefonie.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa"
+      ],
+      "focus": [
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "cnm-mz8IDTk",
+      "title": "Joga z wałkiem 35 min ★★☆☆ vinyasa, równowaga i praca z balansem",
+      "channel": "Yoga Home",
+      "duration": 35,
+      "url": "https://www.youtube.com/watch?v=cnm-mz8IDTk",
+      "description": "Dynamiczna praktyka vinyasy z wałkiem dla średnio zaawansowanych, która łączy znane pozycje z użyciem wałka dla wsparcia i wyzwań.",
+      "intensity": 3,
+      "props": "Wałek",
+      "style": [
+        "Dynamiczna / Vinyasa",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra"
+      ]
+    },
+    {
+      "id": "IS18nJVvJhs",
+      "title": "The Secret Isn't Flexibility — It's Breath | 77-Min Full Body Yoga Mobility Flow",
+      "channel": "YOGA WITH DJ",
+      "duration": 77,
+      "url": "https://www.youtube.com/watch?v=IS18nJVvJhs",
+      "description": "77-minutowa praktyka jogi, która kładzie nacisk na oddech jako klucz do głębokiego rozciągania i mobilności.",
+      "intensity": 4,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Poranna"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Brzuch / Core",
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "l_oi7mQZlK0",
+      "title": "The Missing Link to Deep Flexibility | 50-Min Yoga Mobility | Build Strength to Stretch Deeper",
+      "channel": "YOGA WITH DJ",
+      "duration": 49,
+      "url": "https://www.youtube.com/watch?v=l_oi7mQZlK0",
+      "description": "50-minutowy płynny trening jogi, który łączy pracę nad mobilnością i siłą, aby osiągnąć trwałą elastyczność.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Poranna"
+      ],
+      "focus": [
+        "Biodra"
+      ]
+    },
+    {
+      "id": "BGi8K_vlxmc",
+      "title": "Sit All Day? Do THIS 30-Min Full Body Mobility & Stretch Flow",
+      "channel": "YOGA WITH DJ",
+      "duration": 31,
+      "url": "https://www.youtube.com/watch?v=BGi8K_vlxmc",
+      "description": "30-minutowy płynny trening mający na celu przywrócenie mobilności i elastyczności po długim siedzeniu przy biurku.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Poranna"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Brzuch / Core",
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "iZcEzXri3h4",
+      "title": "38 Min Mobility & Recovery Yoga | Full Body Stretch for Shoulders, Hips, Hamstrings & Spine",
+      "channel": "YOGA WITH DJ",
+      "duration": 38,
+      "url": "https://www.youtube.com/watch?v=iZcEzXri3h4",
+      "description": "38-minutowa sekwencja jogi na mobilność i regenerację całego ciała, idealna na dni odpoczynku i do poprawy elastyczności.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Całe ciało"
       ]
     }
   ]

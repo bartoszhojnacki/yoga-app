@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-16T06:22:33+00:00",
+  "updated_at": "2026-08-23T06:23:42+00:00",
   "videos": [
     {
       "id": "eGcLZd8xtg0",
@@ -19965,6 +19965,49 @@
       "body_tags": [
         "Biodra / Hips",
         "Plecy / Back",
+        "Całe ciało / Full body"
+      ]
+    },
+    {
+      "id": "HfDo0laBNNM",
+      "title": "5 Min. Upper Body Stretch for Pull Days (Cool Down)",
+      "channel": "mobility by julia reppel",
+      "duration": 6,
+      "url": "https://www.youtube.com/watch?v=HfDo0laBNNM",
+      "description": "A 5-minute upper body stretch routine focused on pulling movements to help you recover after workouts.",
+      "intensity": 2,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "Stretching",
+        "(P)rehab",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Plecy / Back"
+      ]
+    },
+    {
+      "id": "aEjl9FznxYA",
+      "title": "BEST 15 Minutes You’ll Spend on Mobility & Core Today",
+      "channel": "mobility by julia reppel",
+      "duration": 17,
+      "url": "https://www.youtube.com/watch?v=aEjl9FznxYA",
+      "description": "A 15-minute mobility flow that combines core strength exercises with full body joint mobility.",
+      "intensity": 3,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "(P)rehab",
+        "Strength",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Biodra / Hips",
+        "Plecy / Back",
+        "Barki / Shoulders",
+        "Kostki / Ankles",
+        "Nadgarstki / Wrists",
         "Całe ciało / Full body"
       ]
     }
