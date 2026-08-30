@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-23T06:23:42+00:00",
+  "updated_at": "2026-08-30T10:54:44+00:00",
   "videos": [
     {
       "id": "eGcLZd8xtg0",
@@ -20009,6 +20009,66 @@
         "Kostki / Ankles",
         "Nadgarstki / Wrists",
         "Całe ciało / Full body"
+      ]
+    },
+    {
+      "id": "_dt1-khBoSs",
+      "title": "10 Minute Stretch For Stiff Hips (FOLLOW ALONG)",
+      "channel": "Tom Merrick",
+      "duration": 11,
+      "url": "https://www.youtube.com/watch?v=_dt1-khBoSs",
+      "description": "Follow along with a 10-minute stretching routine designed to improve flexibility in stiff hips.",
+      "intensity": 2,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "Stretching",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Biodra / Hips",
+        "Plecy / Back"
+      ]
+    },
+    {
+      "id": "3NDiWXTPC9M",
+      "title": "40 Min. Strength Routine Specifically Made for Runners (Dumbbells + Mini Band)",
+      "channel": "mobility by julia reppel",
+      "duration": 40,
+      "url": "https://www.youtube.com/watch?v=3NDiWXTPC9M",
+      "description": "Engage in a 40-minute strength routine focused on resistance training for runners, targeting lower body and core.",
+      "intensity": 4,
+      "props": "Dumbbells, Mini Band",
+      "type_tags": [
+        "Mobility",
+        "(P)rehab",
+        "Strength",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Biodra / Hips",
+        "Plecy / Back",
+        "Barki / Shoulders",
+        "Kostki / Ankles"
+      ]
+    },
+    {
+      "id": "zFHTgsYCm7c",
+      "title": "15 Min. Deep Mobility for Upper & Mid Back",
+      "channel": "mobility by julia reppel",
+      "duration": 17,
+      "url": "https://www.youtube.com/watch?v=zFHTgsYCm7c",
+      "description": "Experience a 15-minute deep mobility routine for the upper and mid back focused on improving spinal flexibility.",
+      "intensity": 3,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "(P)rehab",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Plecy / Back",
+        "Barki / Shoulders"
       ]
     }
   ]

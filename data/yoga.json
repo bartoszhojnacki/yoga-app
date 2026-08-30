@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-23T06:23:17+00:00",
+  "updated_at": "2026-08-30T10:54:18+00:00",
   "videos": [
     {
       "id": "3j0qqpLed5k",
@@ -25387,6 +25387,123 @@
       "focus": [
         "Kręgosłup",
         "Biodra",
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "qTVqeYRJVuY",
+      "title": "Joga dynamiczna dla początkujących 30 min ★☆☆☆ płynna sekwencja - metoda rampy",
+      "channel": "Yoga Home",
+      "duration": 41,
+      "url": "https://www.youtube.com/watch?v=qTVqeYRJVuY",
+      "description": "Płynna sekwencja jogi dla początkujących z budowaniem równowagi na podstawie ułatwionej wersji powitania słońca. Metoda rampy polega na stopniowym dodawaniu asan w czasie praktyki.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Dynamiczna / Vinyasa",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Kręgosłup"
+      ]
+    },
+    {
+      "id": "7t_JZFX8FNg",
+      "title": "This Stretch Changed Everything | 45 Min Full Body Mobility (Neck to Hips)",
+      "channel": "YOGA WITH DJ",
+      "duration": 47,
+      "url": "https://www.youtube.com/watch?v=7t_JZFX8FNg",
+      "description": "Kompleksowy 45-minutowy flow mobilności, koncentrujący się na rozluźnieniu barków, kręgosłupa i bioder, zaczynając od rozgrzewki małych stawów.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Dynamiczna / Vinyasa"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Brzuch / Core",
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "ciZ2xiWzpSc",
+      "title": "70-Min Hip Mobility & Deep Squat Yoga Flow | Full Body Mobility for Beginners-Intermediate",
+      "channel": "YOGA WITH DJ",
+      "duration": 74,
+      "url": "https://www.youtube.com/watch?v=ciZ2xiWzpSc",
+      "description": "70-minutowy flow jogi mobilności, skupiający się na rozluźnieniu bioder oraz równocześnie budowaniu siły i elastyczności, dla początkujących i średniozaawansowanych.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Brzuch / Core",
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "rwZ8ySn7l9I",
+      "title": "43-Min Yoga Mobility Flow with Blocks | Build Skill & Adaptability (All Levels)",
+      "channel": "YOGA WITH DJ",
+      "duration": 43,
+      "url": "https://www.youtube.com/watch?v=rwZ8ySn7l9I",
+      "description": "43-minutowy flow jogi z wykorzystaniem klocków, koncentrujący się na mobilności i kontroli stawów poprzez powtarzające się ruchy.",
+      "intensity": 3,
+      "props": "Klocki",
+      "style": [
+        "Dynamiczna / Vinyasa",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Brzuch / Core"
+      ]
+    },
+    {
+      "id": "nO8AVaujzts",
+      "title": "40-Min Full Body Mobility Yoga | Build Strength, Control Your Range of Motion (Beginner–Friendly)",
+      "channel": "YOGA WITH DJ",
+      "duration": 39,
+      "url": "https://www.youtube.com/watch?v=nO8AVaujzts",
+      "description": "40-minutowy program jogi mobilności, który rozwija elastyczność w sposób bezpieczny oraz kontrolowany, unikając przymusu w rozciąganiu.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Dynamiczna / Vinyasa",
+        "Poranna",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Brzuch / Core",
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "qXSbfdmXaXI",
+      "title": "15 Moves to Replace Your ENTIRE Mobility Routine | Beginners Start Here",
+      "channel": "YOGA WITH DJ",
+      "duration": 33,
+      "url": "https://www.youtube.com/watch?v=qXSbfdmXaXI",
+      "description": "Runda mobilności dla początkujących, zawierająca 15 prostych ruchów, skoncentrowana na budowaniu funkcjonalnej mobilności.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Poranna",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Brzuch / Core",
         "Całe ciało"
       ]
     }
