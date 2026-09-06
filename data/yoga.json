@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-30T10:54:18+00:00",
+  "updated_at": "2026-09-06T09:54:09+00:00",
   "videos": [
     {
       "id": "3j0qqpLed5k",
@@ -25504,6 +25504,192 @@
         "Kręgosłup",
         "Biodra",
         "Brzuch / Core",
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "ibSlLFljtcE",
+      "title": "Uwolnij Ciało I Joga Powięziowa na napięcia i sztywność",
+      "channel": "Małgorzata Mostowska",
+      "duration": 26,
+      "url": "https://www.youtube.com/watch?v=ibSlLFljtcE",
+      "description": "To sesja jogi powięziowej skupiająca się na uwolnieniu napięć i sztywności w ciele poprzez płynne, wielokierunkowe ruchy.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Dynamiczna / Vinyasa"
+      ],
+      "focus": [
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "epe9MpE1g_Y",
+      "title": "25 min Joga na wzmocnienie ★★☆☆ deski i planki w wielu wariantach",
+      "channel": "Yoga Home",
+      "duration": 29,
+      "url": "https://www.youtube.com/watch?v=epe9MpE1g_Y",
+      "description": "Sesja jogi na wzmocnienie koncentrująca się na deskach i plankach w różnych wariantach.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Dynamiczna / Vinyasa"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Brzuch / Core"
+      ]
+    },
+    {
+      "id": "RX8z2-z3H74",
+      "title": "Complete Beginner to Advanced Flexibility Guide: Touch Your Toes, Front Splits & Pancake (30 Min)",
+      "channel": "YOGA WITH DJ",
+      "duration": 38,
+      "url": "https://www.youtube.com/watch?v=RX8z2-z3H74",
+      "description": "Kompleksowa sesja jogi, która prowadzi od początkującego do zaawansowanego poziomu elastyczności.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Dynamiczna / Vinyasa",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Biodra"
+      ]
+    },
+    {
+      "id": "SARWRiJxOtM",
+      "title": "80 Min Full Body Yoga Mobility Flow | This is How I Became Flexible (No Genetics)",
+      "channel": "YOGA WITH DJ",
+      "duration": 82,
+      "url": "https://www.youtube.com/watch?v=SARWRiJxOtM",
+      "description": "80-minutowy flow jogi, który skupia się na mobilności całego ciała oraz medytacji.",
+      "intensity": 4,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Brzuch / Core",
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "Kjejrv8Lp-E",
+      "title": "Fix Your Hips With a Chair | 27-Min Hip Mobility Routine (Beginner to Advanced)",
+      "channel": "YOGA WITH DJ",
+      "duration": 27,
+      "url": "https://www.youtube.com/watch?v=Kjejrv8Lp-E",
+      "description": "27-minutowa sesja mobilności bioder z wykorzystaniem krzesła, przystosowana dla różnych poziomów zaawansowania.",
+      "intensity": 3,
+      "props": "Krzesło",
+      "style": [
+        "Dynamiczna / Vinyasa",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Biodra"
+      ]
+    },
+    {
+      "id": "ZgUDT0-2Cd4",
+      "title": "40-Min Slow Deep Mobility Yoga | Hips, Squats & Spinal Rotation + Joint Flossing",
+      "channel": "YOGA WITH DJ",
+      "duration": 42,
+      "url": "https://www.youtube.com/watch?v=ZgUDT0-2Cd4",
+      "description": "40-minutowy flow mobilności, który otwiera biodra, ramiona i kręgosłup.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Poranna"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra"
+      ]
+    },
+    {
+      "id": "NqCZCGuPWlU",
+      "title": "Free Your Hips And Ease Your Lower Back! (the Full Video at the Link below 👇)",
+      "channel": "YOGA WITH DJ",
+      "duration": 2,
+      "url": "https://www.youtube.com/watch?v=NqCZCGuPWlU",
+      "description": "Celem sesji jest odblokowanie bioder oraz rozluźnienie dolnej części pleców.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Poranna",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra"
+      ]
+    },
+    {
+      "id": "B9zU4DJVbMg",
+      "title": "\"Shoulder, Core & Hip Mobility Flow | Build Full-Body Strength & Stability (Beginner-Friendly Yoga)",
+      "channel": "YOGA WITH DJ",
+      "duration": 39,
+      "url": "https://www.youtube.com/watch?v=B9zU4DJVbMg",
+      "description": "Flow jogi, który buduje siłę całego ciała skupiając się na stabilności ramion, mobilności bioder i kontroli rdzenia.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Poranna",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Biodra",
+        "Brzuch / Core",
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "afFzBWz4ZJI",
+      "title": "Free Your Hips, Ease Your Lower Back | 35-Min Hip Opener & Lower Back Relief Yoga Flow",
+      "channel": "YOGA WITH DJ",
+      "duration": 36,
+      "url": "https://www.youtube.com/watch?v=afFzBWz4ZJI",
+      "description": "This yoga flow includes hip circles, half side splits, and pancake stretches to unlock tight hips and relieve lower back tension.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Poranna",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra"
+      ]
+    },
+    {
+      "id": "oqVoQQ4HtY0",
+      "title": "A Full Body Stretch to End Your Day | 40-Min Gentle Full Body Reset (Hips, Hamstrings, Spine)",
+      "channel": "YOGA WITH DJ",
+      "duration": 41,
+      "url": "https://www.youtube.com/watch?v=oqVoQQ4HtY0",
+      "description": "A gentle full body stretch flow that focuses on neck, shoulders, spine mobility, and deep hip activation.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
         "Całe ciało"
       ]
     }

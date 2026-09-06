@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-30T10:54:44+00:00",
+  "updated_at": "2026-09-06T09:54:39+00:00",
   "videos": [
     {
       "id": "eGcLZd8xtg0",
@@ -20069,6 +20069,46 @@
       "body_tags": [
         "Plecy / Back",
         "Barki / Shoulders"
+      ]
+    },
+    {
+      "id": "kbC14BoqYAY",
+      "title": "The 5 Min. Daily Hip Mobility Routine (No Talking)",
+      "channel": "mobility by julia reppel",
+      "duration": 6,
+      "url": "https://www.youtube.com/watch?v=kbC14BoqYAY",
+      "description": "A 5-minute daily hip mobility routine guiding you through all movement patterns of the hip joint, targeting the hips and surrounding muscles.",
+      "intensity": 2,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "(P)rehab",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Biodra / Hips",
+        "Plecy / Back"
+      ]
+    },
+    {
+      "id": "6nwzAV7V2M8",
+      "title": "Move Like This For 20 Minutes Every Morning (Life-Changing) | No Talking",
+      "channel": "mobility by julia reppel",
+      "duration": 22,
+      "url": "https://www.youtube.com/watch?v=6nwzAV7V2M8",
+      "description": "A 20-minute morning mobility routine focusing on flexion, extension, rotation, and side bending to help wake up the body after sleep.",
+      "intensity": 2,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "(P)rehab",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Biodra / Hips",
+        "Plecy / Back",
+        "Barki / Shoulders",
+        "Szyja / Neck"
       ]
     }
   ]
