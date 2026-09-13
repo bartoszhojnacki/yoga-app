@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-06T09:54:39+00:00",
+  "updated_at": "2026-09-13T10:48:08+00:00",
   "videos": [
     {
       "id": "eGcLZd8xtg0",
@@ -20109,6 +20109,69 @@
         "Plecy / Back",
         "Barki / Shoulders",
         "Szyja / Neck"
+      ]
+    },
+    {
+      "id": "LVB49Hs7D7A",
+      "title": "Move Better All Day in Just 5 Minutes (Morning Mobility)",
+      "channel": "mobility by julia reppel",
+      "duration": 6,
+      "url": "https://www.youtube.com/watch?v=LVB49Hs7D7A",
+      "description": "A quick 5-minute morning mobility routine to loosen up before the day starts, targeting the lower and mid back, glutes, hip rotators, inner thighs, chest, and upper back.",
+      "intensity": 2,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "(P)rehab",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Biodra / Hips",
+        "Plecy / Back",
+        "Barki / Shoulders"
+      ]
+    },
+    {
+      "id": "mXMJrh2sWhQ",
+      "title": "15 Min. of Slow Mobility for Stiff Bodies (No Talking)",
+      "channel": "mobility by julia reppel",
+      "duration": 15,
+      "url": "https://www.youtube.com/watch?v=mXMJrh2sWhQ",
+      "description": "A gentle 15-minute mobility routine designed for every joint at a slow, easy pace, with an emphasis on shoulders, spine, and hips.",
+      "intensity": 2,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "Stretching",
+        "(P)rehab",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Biodra / Hips",
+        "Plecy / Back",
+        "Barki / Shoulders",
+        "Nadgarstki / Wrists",
+        "Całe ciało / Full body"
+      ]
+    },
+    {
+      "id": "6SHD6p7m6nc",
+      "title": "Exercises to Bulletproof Your Wrists",
+      "channel": "[P]rehab",
+      "duration": 2,
+      "url": "https://www.youtube.com/watch?v=6SHD6p7m6nc",
+      "description": "A sequence of exercises aimed at strengthening wrists and grip through four primary planes of wrist movement.",
+      "intensity": 3,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "(P)rehab",
+        "Strength",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Plecy / Back",
+        "Nadgarstki / Wrists"
       ]
     }
   ]

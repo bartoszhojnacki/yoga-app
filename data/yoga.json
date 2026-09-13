@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-06T09:54:09+00:00",
+  "updated_at": "2026-09-13T10:47:39+00:00",
   "videos": [
     {
       "id": "3j0qqpLed5k",
@@ -25691,6 +25691,173 @@
         "Kręgosłup",
         "Biodra",
         "Całe ciało"
+      ]
+    },
+    {
+      "id": "u4NfEIY5pw4",
+      "title": "Recepta na obolałe plecy - Joga dla początkujących | JOGOWY STARTER PACK #3",
+      "channel": "Yoga Home",
+      "duration": 38,
+      "url": "https://www.youtube.com/watch?v=u4NfEIY5pw4",
+      "description": "Sesja jogi skupiająca się na łagodzeniu bólu dolnego odcinka pleców i poprawie ruchomości kręgosłupa po długim siedzeniu.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra"
+      ]
+    },
+    {
+      "id": "tVOs7ik_xUw",
+      "title": "Instrukcja obsługi oddechu - Joga dla początkujących | JOGOWY STARTER PACK #2",
+      "channel": "Yoga Home",
+      "duration": 38,
+      "url": "https://www.youtube.com/watch?v=tVOs7ik_xUw",
+      "description": "Ćwiczenia oddechowe, które pomogą w świadomym oddychaniu i relaksacji ciała.",
+      "intensity": 1,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Brzuch / Core"
+      ]
+    },
+    {
+      "id": "85xMzKXiHuY",
+      "title": "Sposób na sprawne ciało - Joga dla początkujących | JOGOWY STARTER PACK #1",
+      "channel": "Yoga Home",
+      "duration": 35,
+      "url": "https://www.youtube.com/watch?v=85xMzKXiHuY",
+      "description": "Dynamiczna sesja jogi mająca na celu wzmocnienie ciała oraz poprawę jego codziennej sprawności.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "5SKy7OV2lO8",
+      "title": "The ONLY 5 Flexibility Exercises You Need! | 60-Min Complete Guide (Beginner–Intermediate)",
+      "channel": "YOGA WITH DJ",
+      "duration": 58,
+      "url": "https://www.youtube.com/watch?v=5SKy7OV2lO8",
+      "description": "Kompleksowy przewodnik po pięciu podstawowych ćwiczeniach elastyczności, który poprawi zakres ruchu.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Biodra"
+      ]
+    },
+    {
+      "id": "KDSot6BEdHs",
+      "title": "40 Min Full Body Yoga Mobility Flow | Hips, Groin & Hamstrings",
+      "channel": "YOGA WITH DJ",
+      "duration": 40,
+      "url": "https://www.youtube.com/watch?v=KDSot6BEdHs",
+      "description": "Dynamiczny przepływ jogi mający na celu otwarcie bioder, rozluźnienie napiętych hamstringów oraz poprawę elastyczności całego ciała.",
+      "intensity": 4,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Biodra",
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "KwXHrPxwJzA",
+      "title": "Tight hips? This fixes it 🦵🔥(Click the title to the full video)",
+      "channel": "YOGA WITH DJ",
+      "duration": 2,
+      "url": "https://www.youtube.com/watch?v=KwXHrPxwJzA",
+      "description": "Krótki przepływ rozgrzewający biodra, który obejmuje różnorodne ruchy mobilizacyjne i siłowe.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Dynamiczna / Vinyasa",
+        "Poranna"
+      ],
+      "focus": [
+        "Biodra"
+      ]
+    },
+    {
+      "id": "OsTPGehkXD8",
+      "title": "12 Hip Mobility Moves | 45-Min Hip Opening & Activation Flow (Tight Hips? This Fixes It!)",
+      "channel": "YOGA WITH DJ",
+      "duration": 46,
+      "url": "https://www.youtube.com/watch?v=OsTPGehkXD8",
+      "description": "Sesja mobilności bioder z ćwiczeniami mającymi na celu otwarcie, wzmocnienie i przywrócenie pełnego zakresu ruchu w biodrach.",
+      "intensity": 4,
+      "props": "Brak",
+      "style": [
+        "Dynamiczna / Vinyasa",
+        "Poranna"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra"
+      ]
+    },
+    {
+      "id": "orf7NpGjwHM",
+      "title": "Move Well, Not Just Stretch — 40-Min Yoga Mobility Flow, Joints to Core",
+      "channel": "YOGA WITH DJ",
+      "duration": 42,
+      "url": "https://www.youtube.com/watch?v=orf7NpGjwHM",
+      "description": "Sekwencja mobilności jogi, która skupia się na aktywnej kontroli ruchów oraz wzmacnianiu struktur ciała.",
+      "intensity": 4,
+      "props": "Brak",
+      "style": [
+        "Dynamiczna / Vinyasa",
+        "Poranna"
+      ],
+      "focus": [
+        "Biodra",
+        "Brzuch / Core"
+      ]
+    },
+    {
+      "id": "yH0-CzTcet8",
+      "title": "50 Min Gentle Yoga Mobility Flow | Hip Opening, Deep Stretch & Savasana | Breathe. Release. Restore.",
+      "channel": "YOGA WITH DJ",
+      "duration": 50,
+      "url": "https://www.youtube.com/watch?v=yH0-CzTcet8",
+      "description": "Powolny przepływ jogi, który aktywuje, otwiera i przywraca ciało do równowagi poprzez oddech i spokojne ruchy.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Poranna"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra"
       ]
     }
   ]
