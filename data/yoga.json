@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-13T10:47:39+00:00",
+  "updated_at": "2026-09-20T10:17:01+00:00",
   "videos": [
     {
       "id": "3j0qqpLed5k",
@@ -25858,6 +25858,158 @@
       "focus": [
         "Kręgosłup",
         "Biodra"
+      ]
+    },
+    {
+      "id": "Ly4-45-b_0k",
+      "title": "Joga na stres i napięcie | 30 min RESET dla układu nerwowego",
+      "channel": "Małgorzata Mostowska",
+      "duration": 30,
+      "url": "https://www.youtube.com/watch?v=Ly4-45-b_0k",
+      "description": "Joga na stres i napięcie to sesja kojących ruchów, mobility i spokojnego oddychania, która pozwala ciału na relaks i odprężenie.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa"
+      ],
+      "focus": [
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "qUwvEzoMehU",
+      "title": "Bulletproof Your Knees in 25 Min | Full Mobility, Stability & Strength Routine ( No More Knee Pain )",
+      "channel": "YOGA WITH DJ",
+      "duration": 26,
+      "url": "https://www.youtube.com/watch?v=qUwvEzoMehU",
+      "description": "Rutyna skupiająca się na mobilności, stabilności i wzmocnieniu stawów kolanowych, aby zredukować ból kolan.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin"
+      ],
+      "focus": [
+        "Biodra"
+      ]
+    },
+    {
+      "id": "LxT9aw2LnVs",
+      "title": "Tight Hips? Start Here. | 70-Min Full Body Mobility Flow (Hip Focus)",
+      "channel": "YOGA WITH DJ",
+      "duration": 69,
+      "url": "https://www.youtube.com/watch?v=LxT9aw2LnVs",
+      "description": "Sesja mobilności całego ciała z naciskiem na poprawę zakresu ruchu w biodrach.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "bYDMgSRvXf4",
+      "title": "Break the Tightness Trap | 40-Min Yoga Mobility Flow (Beginner-Intermediate)",
+      "channel": "YOGA WITH DJ",
+      "duration": 42,
+      "url": "https://www.youtube.com/watch?v=bYDMgSRvXf4",
+      "description": "Aktywna sesja jogowa łącząca dynamiczne ćwiczenia mobilności oraz techniki otwierania bioder.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Poranna",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Biodra",
+        "Brzuch / Core"
+      ]
+    },
+    {
+      "id": "imkDU_3aOEM",
+      "title": "45-Min Yoga Mobility Flow | Hip & Hamstring Stretch, Beginner to Advanced",
+      "channel": "YOGA WITH DJ",
+      "duration": 47,
+      "url": "https://www.youtube.com/watch?v=imkDU_3aOEM",
+      "description": "Sesja mobilności jogowej skupiająca się na rozluźnianiu napięcia w biodrach i hamstringach.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Poranna",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "DEmVW38pn9I",
+      "title": "45-Min Full-Body Yoga Mobility Flow | Flexibility, Balance & Core Strength",
+      "channel": "YOGA WITH DJ",
+      "duration": 47,
+      "url": "https://www.youtube.com/watch?v=DEmVW38pn9I",
+      "description": "Praktyka jogi pełnego ciała łącząca dynamiczne ruchy z budowaniem siły rdzenia i równowagi.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Brzuch / Core"
+      ]
+    },
+    {
+      "id": "R6wTn5MCtBI",
+      "title": "55-Min Full-Body Mobility Yoga | Deep Squat, Pancake, Spine Flow + Meditation",
+      "channel": "YOGA WITH DJ",
+      "duration": 56,
+      "url": "https://www.youtube.com/watch?v=R6wTn5MCtBI",
+      "description": "Sesja mobilności całego ciała z naciskiem na otwieranie bioder oraz medytację na zakończenie.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Brzuch / Core"
+      ]
+    },
+    {
+      "id": "B1-_uU59FiY",
+      "title": "50-Min Full Body Yoga Mobility Flow | Hips, Core & Spine Deep Stretch",
+      "channel": "YOGA WITH DJ",
+      "duration": 50,
+      "url": "https://www.youtube.com/watch?v=B1-_uU59FiY",
+      "description": "Zintegrowana sesja jogi koncentrująca się na mobilności stawów i rozluźnianiu napięć w ciele.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Poranna"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Brzuch / Core",
+        "Całe ciało"
       ]
     }
   ]

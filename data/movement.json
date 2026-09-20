@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-13T10:48:08+00:00",
+  "updated_at": "2026-09-20T10:17:28+00:00",
   "videos": [
     {
       "id": "eGcLZd8xtg0",
@@ -20172,6 +20172,48 @@
       "body_tags": [
         "Plecy / Back",
         "Nadgarstki / Wrists"
+      ]
+    },
+    {
+      "id": "rAy1jtPoErU",
+      "title": "Daily 5 Min. Balance & Stability for Runners & Athletes",
+      "channel": "mobility by julia reppel",
+      "duration": 7,
+      "url": "https://www.youtube.com/watch?v=rAy1jtPoErU",
+      "description": "A quick 5-minute routine designed to improve balance and stability, targeting the small muscles in the feet, ankles, glutes, and core.",
+      "intensity": 2,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "(P)rehab",
+        "Strength",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Biodra / Hips",
+        "Plecy / Back",
+        "Kostki / Ankles"
+      ]
+    },
+    {
+      "id": "4ATNy7mZ27Q",
+      "title": "35 Min. Intermediate Mobility (Lower Body for Runners & Athletes)",
+      "channel": "mobility by julia reppel",
+      "duration": 35,
+      "url": "https://www.youtube.com/watch?v=4ATNy7mZ27Q",
+      "description": "A 35-minute intermediate mobility workout focusing on lower body movements, including mobility complexes and a stretching routine.",
+      "intensity": 3,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "Stretching",
+        "(P)rehab",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Biodra / Hips",
+        "Plecy / Back",
+        "Kostki / Ankles"
       ]
     }
   ]
