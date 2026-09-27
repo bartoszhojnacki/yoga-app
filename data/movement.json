@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-20T10:17:28+00:00",
+  "updated_at": "2026-09-27T11:02:12+00:00",
   "videos": [
     {
       "id": "eGcLZd8xtg0",
@@ -20214,6 +20214,51 @@
         "Biodra / Hips",
         "Plecy / Back",
         "Kostki / Ankles"
+      ]
+    },
+    {
+      "id": "R9KKbNk3BVo",
+      "title": "Feel Brand New After This 20 Minute Runner’s Stretch",
+      "channel": "mobility by julia reppel",
+      "duration": 23,
+      "url": "https://www.youtube.com/watch?v=R9KKbNk3BVo",
+      "description": "A 20-minute deep stretch routine for runners, focusing on dynamic and static holds for flexibility and recovery in the lower body.",
+      "intensity": 2,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "Stretching",
+        "(P)rehab",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Biodra / Hips",
+        "Plecy / Back",
+        "Kostki / Ankles"
+      ]
+    },
+    {
+      "id": "oM9ZIVWOpgY",
+      "title": "30 Min. Intermediate Mobility Workout (Not Just Stretching)",
+      "channel": "mobility by julia reppel",
+      "duration": 30,
+      "url": "https://www.youtube.com/watch?v=oM9ZIVWOpgY",
+      "description": "An intermediate full body mobility workout consisting of 3 progressive complexes to enhance flexibility and movement.",
+      "intensity": 3,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "Stretching",
+        "(P)rehab",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Biodra / Hips",
+        "Plecy / Back",
+        "Barki / Shoulders",
+        "Kostki / Ankles",
+        "Nadgarstki / Wrists",
+        "Całe ciało / Full body"
       ]
     }
   ]
