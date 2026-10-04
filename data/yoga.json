@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-27T11:01:40+00:00",
+  "updated_at": "2026-10-04T11:30:39+00:00",
   "videos": [
     {
       "id": "3j0qqpLed5k",
@@ -26199,6 +26199,157 @@
         "Biodra",
         "Brzuch / Core",
         "Całe ciało"
+      ]
+    },
+    {
+      "id": "V1-UEj-6lpI",
+      "title": "Joga na dobry sen 30 min ★☆☆☆ łagodna praktyka na koniec dnia",
+      "channel": "Yoga Home",
+      "duration": 34,
+      "url": "https://www.youtube.com/watch?v=V1-UEj-6lpI",
+      "description": "Praktyka jogi stworzona z myślą o wyciszeniu przed snem, oparta na sekwencji powitania księżyca.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra"
+      ]
+    },
+    {
+      "id": "i_PNzDt231I",
+      "title": "40 Min Yoga Mobility Flow | Build Strength, Stability & Natural Flexibility",
+      "channel": "YOGA WITH DJ",
+      "duration": 40,
+      "url": "https://www.youtube.com/watch?v=i_PNzDt231I",
+      "description": "Joga mobilności przez 40 minut, budująca siłę, stabilność i naturalną elastyczność całego ciała.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Poranna"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Brzuch / Core",
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "Bbz23mEHI3I",
+      "title": "Yoga for Tightness | Deep Squat & Pancake Mobility Flow (70 Min)",
+      "channel": "YOGA WITH DJ",
+      "duration": 71,
+      "url": "https://www.youtube.com/watch?v=Bbz23mEHI3I",
+      "description": "70-minutowa sesja jogi skupiająca się na mobilności bioder i stawów skokowych, z dynamiczną sekwencją rozgrzewającą.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra"
+      ]
+    },
+    {
+      "id": "35E5hJz3AwI",
+      "title": "The Yoga Mobility Flow You Need After a Hard Day | Stretch, Breathe & Find Clarity",
+      "channel": "YOGA WITH DJ",
+      "duration": 66,
+      "url": "https://www.youtube.com/watch?v=35E5hJz3AwI",
+      "description": "65-minutowy flow jogi, który pomagają zredukować stres, odprężyć ciało i umysł poprzez stretching i oddychanie.",
+      "intensity": 3,
+      "props": "Klocki",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "GQcxhXio6Qg",
+      "title": "10 EXERCISES TO MOVE WELL IN YOUR 60s, 70s & 80s (FULL 28-MIN PRACTICE)",
+      "channel": "YOGA WITH DJ",
+      "duration": 28,
+      "url": "https://www.youtube.com/watch?v=GQcxhXio6Qg",
+      "description": "28-minutowa praktyka jogi, która oferuje 10 ćwiczeń wzmacniających równowagę, siłę bioder i mobilność.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Dynamiczna / Vinyasa"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Brzuch / Core"
+      ]
+    },
+    {
+      "id": "CK3ZsK4M7ng",
+      "title": "Yoga for Tight Shoulders & Stiff Upper Back | Full Mobility Flow (55 Min)",
+      "channel": "YOGA WITH DJ",
+      "duration": 54,
+      "url": "https://www.youtube.com/watch?v=CK3ZsK4M7ng",
+      "description": "55-minutowy flow jogi przeznaczony do uwolnienia napięcia w ramionach i górnej części pleców, budujący siłę.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Poranna"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Brzuch / Core"
+      ]
+    },
+    {
+      "id": "YLgncEQtdAs",
+      "title": "60 Min Slow Flow Yoga Mobility for Desk Bodies | Release Tight Shoulders, Back & Hips",
+      "channel": "YOGA WITH DJ",
+      "duration": 60,
+      "url": "https://www.youtube.com/watch?v=YLgncEQtdAs",
+      "description": "60-minutowy wolny flow jogi, który pomaga uwolnić napięcie w ramionach, plecach i biodrach po długim dniu pracy.",
+      "intensity": 3,
+      "props": "Klocki",
+      "style": [
+        "Dynamiczna / Vinyasa",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Brzuch / Core",
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "rPWM_V5yXpQ",
+      "title": "Fix Tight Adductors: 30-Min Inner Thigh & Groin Stretch (Follow Along)",
+      "channel": "YOGA WITH DJ",
+      "duration": 31,
+      "url": "https://www.youtube.com/watch?v=rPWM_V5yXpQ",
+      "description": "30-minutowy zestaw ćwiczeń na wewnętrzne uda i pachwiny, skoncentrowany na rozluźnianiu i poprawie mobilności.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin"
+      ],
+      "focus": [
+        "Biodra"
       ]
     }
   ]
