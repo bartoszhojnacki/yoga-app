@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-04T11:30:39+00:00",
+  "updated_at": "2026-10-11T11:48:02+00:00",
   "videos": [
     {
       "id": "3j0qqpLed5k",
@@ -26350,6 +26350,101 @@
       ],
       "focus": [
         "Biodra"
+      ]
+    },
+    {
+      "id": "hoABEpdDRfA",
+      "title": "10 min rozruszanie przy biurku i odpoczynek dla oczu ★☆☆☆ Przerwa w pracy #1",
+      "channel": "Yoga Home",
+      "duration": 10,
+      "url": "https://www.youtube.com/watch?v=hoABEpdDRfA",
+      "description": "Joga przy biurku, która pomaga w redukcji sztywności i zmęczenia po długim siedzeniu.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra"
+      ]
+    },
+    {
+      "id": "9sRH4Wac_0A",
+      "title": "From Tight to Free | 65-Min Yoga Mobility Flow for Hip Flexors, Hamstrings & Spine",
+      "channel": "YOGA WITH DJ",
+      "duration": 66,
+      "url": "https://www.youtube.com/watch?v=9sRH4Wac_0A",
+      "description": "Flows mobility yoga designed for hips, hamstrings, and spine, including warm-up and core strengthening.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Poranna"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Brzuch / Core",
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "1bDm-kGxhEU",
+      "title": "85-Minute Full Body Yoga Flow: Mobility, Arm Balances & Splits",
+      "channel": "YOGA WITH DJ",
+      "duration": 84,
+      "url": "https://www.youtube.com/watch?v=1bDm-kGxhEU",
+      "description": "Full body yoga flow encompassing mobility, strength, and deep stretching for various body parts.",
+      "intensity": 4,
+      "props": "Brak",
+      "style": [
+        "Dynamiczna / Vinyasa"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Brzuch / Core",
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "N7rEStHaVlc",
+      "title": "If I Lost My Mobility, I’d Start With These 10 Exercises",
+      "channel": "YOGA WITH DJ",
+      "duration": 47,
+      "url": "https://www.youtube.com/watch?v=N7rEStHaVlc",
+      "description": "Przewodnik po 10 ćwiczeniach budujących mobilność, siłę i elastyczność.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra"
+      ]
+    },
+    {
+      "id": "NBz_3ds_GqA",
+      "title": "The Only Hip Mobility Routine You Need | Side Lunges, Deep Squats & Pancake (55 Min)",
+      "channel": "YOGA WITH DJ",
+      "duration": 56,
+      "url": "https://www.youtube.com/watch?v=NBz_3ds_GqA",
+      "description": "Joga mobilności koncentrująca się na otwarciu bioder oraz wzmocnieniu ciała.",
+      "intensity": 3,
+      "props": "Klocki",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Poranna",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Brzuch / Core"
       ]
     }
   ]

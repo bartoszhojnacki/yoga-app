@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-04T11:31:10+00:00",
+  "updated_at": "2026-10-11T11:48:30+00:00",
   "videos": [
     {
       "id": "eGcLZd8xtg0",
@@ -20320,6 +20320,70 @@
         "Barki / Shoulders",
         "Kostki / Ankles",
         "Nadgarstki / Wrists",
+        "Całe ciało / Full body"
+      ]
+    },
+    {
+      "id": "HONl-zpieGI",
+      "title": "Move Better All Day in 5 Minutes (Morning Mobility)",
+      "channel": "mobility by julia reppel",
+      "duration": 6,
+      "url": "https://www.youtube.com/watch?v=HONl-zpieGI",
+      "description": "A 5 minute full body reset to loosen up stiffness, perfect for morning use or busy days.",
+      "intensity": 2,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "(P)rehab",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Biodra / Hips",
+        "Plecy / Back",
+        "Barki / Shoulders",
+        "Całe ciało / Full body"
+      ]
+    },
+    {
+      "id": "gwV3cB8hc0w",
+      "title": "Move Better All Day in 5 Minutes - Morning Mobility (No Music, Just Beeps)",
+      "channel": "mobility by julia reppel",
+      "duration": 6,
+      "url": "https://www.youtube.com/watch?v=gwV3cB8hc0w",
+      "description": "A 5 minute full body reset to loosen up stiffness, ideal for mornings or on busy days.",
+      "intensity": 2,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "(P)rehab",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Biodra / Hips",
+        "Plecy / Back",
+        "Barki / Shoulders",
+        "Całe ciało / Full body"
+      ]
+    },
+    {
+      "id": "lD-NRpLzywI",
+      "title": "40 Min. Primal Mobility Workout (That Gets Harder Each Round)",
+      "channel": "mobility by julia reppel",
+      "duration": 40,
+      "url": "https://www.youtube.com/watch?v=lD-NRpLzywI",
+      "description": "An intermediate 40 minute primal movement workout featuring mobility complexes for the upper body, lower body, and full body.",
+      "intensity": 4,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "(P)rehab",
+        "Strength",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Biodra / Hips",
+        "Plecy / Back",
+        "Barki / Shoulders",
         "Całe ciało / Full body"
       ]
     }
