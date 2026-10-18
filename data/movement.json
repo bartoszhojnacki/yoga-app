@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-11T11:48:30+00:00",
+  "updated_at": "2026-10-18T10:06:03+00:00",
   "videos": [
     {
       "id": "eGcLZd8xtg0",
@@ -20384,6 +20384,76 @@
         "Biodra / Hips",
         "Plecy / Back",
         "Barki / Shoulders",
+        "Całe ciało / Full body"
+      ]
+    },
+    {
+      "id": "Zy43l8Gd4IM",
+      "title": "30 Minute Full Body Flexibility Routine V6! (FOLLOW ALONG)",
+      "channel": "Tom Merrick",
+      "duration": 29,
+      "url": "https://www.youtube.com/watch?v=Zy43l8Gd4IM",
+      "description": "This is a 30-minute follow-along flexibility routine focusing on full-body mobility.",
+      "intensity": 3,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "Stretching",
+        "Strength",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Biodra / Hips",
+        "Plecy / Back",
+        "Barki / Shoulders",
+        "Kostki / Ankles",
+        "Całe ciało / Full body"
+      ]
+    },
+    {
+      "id": "ncZ1jczlv14",
+      "title": "10 Min. Daily Mobility for Desk Workers (Undo Hours of Sitting)",
+      "channel": "mobility by julia reppel",
+      "duration": 13,
+      "url": "https://www.youtube.com/watch?v=ncZ1jczlv14",
+      "description": "Engage in a 10-minute daily mobility routine designed to alleviate stiffness from prolonged sitting.",
+      "intensity": 2,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "Stretching",
+        "(P)rehab",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Biodra / Hips",
+        "Plecy / Back",
+        "Barki / Shoulders",
+        "Nadgarstki / Wrists",
+        "Całe ciało / Full body"
+      ]
+    },
+    {
+      "id": "Pc2IhRT3fO8",
+      "title": "15 Min. of Slow Mobility for Stiff Bodies (No Talking)",
+      "channel": "mobility by julia reppel",
+      "duration": 16,
+      "url": "https://www.youtube.com/watch?v=Pc2IhRT3fO8",
+      "description": "Participate in a gentle 15-minute full-body mobility routine at a slow and easy pace.",
+      "intensity": 2,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "Stretching",
+        "(P)rehab",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Biodra / Hips",
+        "Plecy / Back",
+        "Barki / Shoulders",
+        "Kostki / Ankles",
+        "Nadgarstki / Wrists",
         "Całe ciało / Full body"
       ]
     }
