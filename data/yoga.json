@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18T10:05:34+00:00",
+  "updated_at": "2026-10-25T10:22:51+00:00",
   "videos": [
     {
       "id": "3j0qqpLed5k",
@@ -26614,6 +26614,181 @@
       "style": [
         "Spokojna / Yin",
         "Dynamiczna / Vinyasa",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra"
+      ]
+    },
+    {
+      "id": "WJnUzk_X2yY",
+      "title": "Ból pośladka od siedzenia? ★☆☆☆ 25 min rozciąganie mięśnia gruszkowatego",
+      "channel": "Yoga Home",
+      "duration": 26,
+      "url": "https://www.youtube.com/watch?v=WJnUzk_X2yY",
+      "description": "Sesja rozciągania mięśnia gruszkowatego, łagodnych ćwiczeń na spięty pośladek i biodro.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa"
+      ],
+      "focus": [
+        "Brzuch / Core"
+      ]
+    },
+    {
+      "id": "opzuFgzNOVc",
+      "title": "10 min na zmęczone oczy i sztywne plecy ★☆☆☆ Przerwa w pracy #2",
+      "channel": "Yoga Home",
+      "duration": 10,
+      "url": "https://www.youtube.com/watch?v=opzuFgzNOVc",
+      "description": "Ćwiczenia rozciągające w biurze na kręgosłup, boki i zmęczone oczy.",
+      "intensity": 1,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra"
+      ]
+    },
+    {
+      "id": "sjyxzyPr2nw",
+      "title": "It’s Never Too Late to Move Freely | 50 Min Gentle Mobility & Yoga Flow",
+      "channel": "YOGA WITH DJ",
+      "duration": 49,
+      "url": "https://www.youtube.com/watch?v=sjyxzyPr2nw",
+      "description": "Czas na powolny i świadomy flow jogi, z naciskiem na mobilność całego ciała.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "L85m3t5Skgg",
+      "title": "68-Min Full Body Yoga Flow | Open Hips, Strengthen Core & Release Tension",
+      "channel": "YOGA WITH DJ",
+      "duration": 68,
+      "url": "https://www.youtube.com/watch?v=L85m3t5Skgg",
+      "description": "Sesja jogi łącząca rozciąganie i wzmacnianie ciała w celu uwolnienia napięcia.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Biodra",
+        "Brzuch / Core",
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "KgoIo9Ry_qs",
+      "title": "50 Min Daily Mobility Yoga for Stiff Hips, Ankles & Back Pain Relie",
+      "channel": "YOGA WITH DJ",
+      "duration": 51,
+      "url": "https://www.youtube.com/watch?v=KgoIo9Ry_qs",
+      "description": "50 minutowy flow jogi skoncentrowany na mobilności bioder, kostek i odcinka lędźwiowego.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Poranna"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Brzuch / Core"
+      ]
+    },
+    {
+      "id": "EvSkwKTePxo",
+      "title": "Open Your Hips, Strengthen Your Shoulders, Free Your Spine | 60-Min Full Body Yoga Mobility",
+      "channel": "YOGA WITH DJ",
+      "duration": 60,
+      "url": "https://www.youtube.com/watch?v=EvSkwKTePxo",
+      "description": "Kompleksowy flow jogi obejmujący mobilność bioder, wzmocnienie barków i kręgosłupa.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Poranna"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Brzuch / Core",
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "LGhVPx1gFB4",
+      "title": "Do These 3 Mobility Routines If You Want to Move Well at 80 | 50-Min Class",
+      "channel": "YOGA WITH DJ",
+      "duration": 50,
+      "url": "https://www.youtube.com/watch?v=LGhVPx1gFB4",
+      "description": "Klasa z ćwiczeniami mobilizującymi biodra, barki i kręgosłup, przeznaczona dla początkujących.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra"
+      ]
+    },
+    {
+      "id": "tpWlg-eSzXU",
+      "title": "Stiff Hips & Tight Back? Try This 60 Min Yoga Mobility Flow",
+      "channel": "YOGA WITH DJ",
+      "duration": 63,
+      "url": "https://www.youtube.com/watch?v=tpWlg-eSzXU",
+      "description": "Sesja jogi mobilizująca całe ciało, koncentrująca się na rozluźnieniu bioder i kręgosłupa.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Poranna",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Brzuch / Core"
+      ]
+    },
+    {
+      "id": "vEktWFoPpIE",
+      "title": "Reset Your Body After Sitting All Day | 50-Min Yoga for Neck, Shoulders, Back & Hips",
+      "channel": "YOGA WITH DJ",
+      "duration": 51,
+      "url": "https://www.youtube.com/watch?v=vEktWFoPpIE",
+      "description": "Klasa jogi zajmująca się rozciąganiem szyi, barków, pleców i bioder po długim siedzeniu.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Poranna",
         "Dla początkujących"
       ],
       "focus": [

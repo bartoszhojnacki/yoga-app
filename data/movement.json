@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-18T10:06:03+00:00",
+  "updated_at": "2026-10-25T10:23:23+00:00",
   "videos": [
     {
       "id": "eGcLZd8xtg0",
@@ -20446,6 +20446,52 @@
         "Mobility",
         "Stretching",
         "(P)rehab",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Biodra / Hips",
+        "Plecy / Back",
+        "Barki / Shoulders",
+        "Kostki / Ankles",
+        "Nadgarstki / Wrists",
+        "Całe ciało / Full body"
+      ]
+    },
+    {
+      "id": "xZKxov4ei8w",
+      "title": "Move Better All Day in 5 Minutes (Upper, Mid & Lower Back)",
+      "channel": "mobility by julia reppel",
+      "duration": 7,
+      "url": "https://www.youtube.com/watch?v=xZKxov4ei8w",
+      "description": "A 5-minute daily mobility routine targeting the spine to loosen up stiffness and enhance fluid movement throughout the day, focusing on neck, upper back, mid back, and lower back.",
+      "intensity": 2,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "(P)rehab",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Kolana / Knees",
+        "Plecy / Back",
+        "Barki / Shoulders",
+        "Szyja / Neck"
+      ]
+    },
+    {
+      "id": "IDoGdMZCRxs",
+      "title": "Stretching Feels Too Easy? Try 30 Minutes of Sweaty Full Body Mobility",
+      "channel": "mobility by julia reppel",
+      "duration": 32,
+      "url": "https://www.youtube.com/watch?v=IDoGdMZCRxs",
+      "description": "An intermediate 30-minute full body mobility workout that builds strength and control through progressively challenging movements for the lower, upper, and full body.",
+      "intensity": 4,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "Stretching",
+        "(P)rehab",
+        "Strength",
         "Movement / Flow"
       ],
       "body_tags": [
