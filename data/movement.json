@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T10:23:23+00:00",
+  "updated_at": "2026-11-01T12:18:37+00:00",
   "videos": [
     {
       "id": "eGcLZd8xtg0",
@@ -20501,6 +20501,50 @@
         "Kostki / Ankles",
         "Nadgarstki / Wrists",
         "Całe ciało / Full body"
+      ]
+    },
+    {
+      "id": "dSyyom9iUB4",
+      "title": "10 Min. Daily Full Body Stretch for Mobility & Flexibility (No Talking)",
+      "channel": "mobility by julia reppel",
+      "duration": 12,
+      "url": "https://www.youtube.com/watch?v=dSyyom9iUB4",
+      "description": "A 10-minute daily stretching routine that works through your whole body to build flexibility and improve movement.",
+      "intensity": 2,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "Stretching",
+        "(P)rehab",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Biodra / Hips",
+        "Plecy / Back",
+        "Barki / Shoulders",
+        "Całe ciało / Full body"
+      ]
+    },
+    {
+      "id": "76e5vx_KbQw",
+      "title": "15 Min. Morning Mobility for a Deeper, Easier Squat",
+      "channel": "mobility by julia reppel",
+      "duration": 17,
+      "url": "https://www.youtube.com/watch?v=76e5vx_KbQw",
+      "description": "A 15-minute morning stretch routine designed to loosen tight hips and ankles to help you progress into a deep squat.",
+      "intensity": 2,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "Stretching",
+        "(P)rehab",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Biodra / Hips",
+        "Kolana / Knees",
+        "Plecy / Back",
+        "Kostki / Ankles"
       ]
     }
   ]

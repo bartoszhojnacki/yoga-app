@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-10-25T10:22:51+00:00",
+  "updated_at": "2026-11-01T12:18:10+00:00",
   "videos": [
     {
       "id": "3j0qqpLed5k",
@@ -26794,6 +26794,157 @@
       "focus": [
         "Kręgosłup",
         "Biodra"
+      ]
+    },
+    {
+      "id": "btArrA3GdUA",
+      "title": "The Ultimate 90/90 Hip Mobility Routine | 7 Moves to Unlock Tight Hips",
+      "channel": "YOGA WITH DJ",
+      "duration": 2,
+      "url": "https://www.youtube.com/watch?v=btArrA3GdUA",
+      "description": "This session focuses on a 7-move routine aimed at improving hip mobility through various hip exercises.",
+      "intensity": 3,
+      "props": "Klocki",
+      "style": [
+        "Spokojna / Yin"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra"
+      ]
+    },
+    {
+      "id": "YocJZS3HrjM",
+      "title": "The Ultimate 90/90 Hip Mobility Routine | 7 Moves to Unlock Tight Hips",
+      "channel": "YOGA WITH DJ",
+      "duration": 52,
+      "url": "https://www.youtube.com/watch?v=YocJZS3HrjM",
+      "description": "A challenging 50-minute class utilizing 90/90 mobility exercises to enhance hip strength and control.",
+      "intensity": 4,
+      "props": "Klocki",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra"
+      ]
+    },
+    {
+      "id": "tsHGEzo4PL4",
+      "title": "75-Minute Full Body Mobility Yoga | Deep Squats, Cossack & Pancake Stretch | All Levels",
+      "channel": "YOGA WITH DJ",
+      "duration": 75,
+      "url": "https://www.youtube.com/watch?v=tsHGEzo4PL4",
+      "description": "A comprehensive 75-minute yoga mobility class that incorporates various poses to enhance flexibility and structural balance.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "amCwXWFtBDg",
+      "title": "Unlock Tight Hips: 60-Minute Gentle Yoga Mobility Flow",
+      "channel": "YOGA WITH DJ",
+      "duration": 59,
+      "url": "https://www.youtube.com/watch?v=amCwXWFtBDg",
+      "description": "A gentle 60-minute flow focusing on deep stretching to alleviate tension in the hips and promote overall mobility.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "buzzJPdZXOk",
+      "title": "Beyond the Basics — 55 Min Yoga & Mobility for Hips, Spine & Shoulders",
+      "channel": "YOGA WITH DJ",
+      "duration": 55,
+      "url": "https://www.youtube.com/watch?v=buzzJPdZXOk",
+      "description": "This 55-minute session combines yoga and mobility drills to strengthen and loosen the entire body, focusing on the hips, spine, and shoulders.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Brzuch / Core"
+      ]
+    },
+    {
+      "id": "aFU54ctlSaU",
+      "title": "Why Your Stretches Aren’t Working | Try This 55 Min Yoga Mobility Flow",
+      "channel": "YOGA WITH DJ",
+      "duration": 54,
+      "url": "https://www.youtube.com/watch?v=aFU54ctlSaU",
+      "description": "A 55-minute mobility flow designed to avoid ineffective stretching by prioritizing joint movement before holding positions.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Poranna",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "qV5INhXXL28",
+      "title": "Stuck at Beginner? This 48 Min Yoga Flow Will Move You Forward 🧘‍♀️",
+      "channel": "YOGA WITH DJ",
+      "duration": 48,
+      "url": "https://www.youtube.com/watch?v=qV5INhXXL28",
+      "description": "A 48-minute flow designed specifically to help beginners advance by focusing on proper warm-ups and gradual progress.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Biodra",
+        "Brzuch / Core"
+      ]
+    },
+    {
+      "id": "v21kPMqO_b4",
+      "title": "Still Hesitating? Start With These 10 Moves | 40 Min Healthy Aging Workout",
+      "channel": "YOGA WITH DJ",
+      "duration": 41,
+      "url": "https://www.youtube.com/watch?v=v21kPMqO_b4",
+      "description": "This 40-minute full body workout includes 10 foundational moves aimed at building strength and mobility without any equipment.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Biodra",
+        "Całe ciało"
       ]
     }
   ]
