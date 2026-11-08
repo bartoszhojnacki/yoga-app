@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-01T12:18:10+00:00",
+  "updated_at": "2026-11-08T12:26:13+00:00",
   "videos": [
     {
       "id": "3j0qqpLed5k",
@@ -26944,6 +26944,161 @@
       ],
       "focus": [
         "Biodra",
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "PGOFFcwWvNo",
+      "title": "Joga na Kręgosłup – szybka ulga w 15 minut",
+      "channel": "Małgorzata Mostowska",
+      "duration": 15,
+      "url": "https://www.youtube.com/watch?v=PGOFFcwWvNo",
+      "description": "Szybka praktyka jogi dla kręgosłupa, która pomaga rozluźnić ciało i zmniejszyć napięcie w plecach.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Dynamiczna / Vinyasa"
+      ],
+      "focus": [
+        "Kręgosłup"
+      ]
+    },
+    {
+      "id": "tiw1gf4xo-0",
+      "title": "Wyprostuj się! Joga na prostą postawę 40 min ★★☆☆ otwarcie klatki piersiowej",
+      "channel": "Yoga Home",
+      "duration": 43,
+      "url": "https://www.youtube.com/watch?v=tiw1gf4xo-0",
+      "description": "Sesja jogi na prostą postawę, skupiająca się na otwarciu klatki piersiowej i wzmocnieniu pleców.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Dynamiczna / Vinyasa",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "DjuGVGqAfBQ",
+      "title": "Tight Hips? Start Here | 5-Level Hip Mobility Routine (Beginner to Advanced)",
+      "channel": "YOGA WITH DJ",
+      "duration": 34,
+      "url": "https://www.youtube.com/watch?v=DjuGVGqAfBQ",
+      "description": "Rutyna mobilności bioder, prowadząca od poziomu początkującego do zaawansowanego.",
+      "intensity": 3,
+      "props": "Krzesło",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Poranna",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Biodra"
+      ]
+    },
+    {
+      "id": "8dweNEaHX90",
+      "title": "Full Body Mobility Yoga for Backbends, Splits & Arm Balances (70 Min)",
+      "channel": "YOGA WITH DJ",
+      "duration": 68,
+      "url": "https://www.youtube.com/watch?v=8dweNEaHX90",
+      "description": "Sesja mobility yoga, która wzmacnia ciało i otwiera biodra oraz ramiona.",
+      "intensity": 4,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Brzuch / Core",
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "mA6tdtf0Aqs",
+      "title": "50-Min Yoga Mobility for Longevity | Hips, Shoulders, Ankles & Spine",
+      "channel": "YOGA WITH DJ",
+      "duration": 48,
+      "url": "https://www.youtube.com/watch?v=mA6tdtf0Aqs",
+      "description": "Sesja jogi koncentrująca się na mobilności w kluczowych obszarach ciała dla długoterminowej sprawności.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Poranna"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Brzuch / Core"
+      ]
+    },
+    {
+      "id": "P2ZEuZ3tLCU",
+      "title": "15-Move Morning Flow | 45-Min Beginner Mobility Routine",
+      "channel": "YOGA WITH DJ",
+      "duration": 44,
+      "url": "https://www.youtube.com/watch?v=P2ZEuZ3tLCU",
+      "description": "Poranna rutyna mobilności, która otwiera stawy i rozgrzewa ciało.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Poranna",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra"
+      ]
+    },
+    {
+      "id": "HkoyglqBg0Y",
+      "title": "70-Min Yoga Mobility Flow for a Strong, Flexible Spine | Move Freely at Any Age",
+      "channel": "YOGA WITH DJ",
+      "duration": 70,
+      "url": "https://www.youtube.com/watch?v=HkoyglqBg0Y",
+      "description": "Yogowa mobilność, która wzmacnia i otwiera kręgosłup, biodra oraz ramiona dla łatwiejszego ruchu.",
+      "intensity": 4,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Poranna"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Brzuch / Core",
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "iuhvulbJxbU",
+      "title": "55 Min Yoga Mobility | Stiff Hips, Hamstrings, Shoulders & Spine",
+      "channel": "YOGA WITH DJ",
+      "duration": 65,
+      "url": "https://www.youtube.com/watch?v=iuhvulbJxbU",
+      "description": "This session focuses on improving mobility through gentle warm-ups and deeper stretches for the hips, hamstrings, shoulders, and spine.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Poranna"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Brzuch / Core",
         "Całe ciało"
       ]
     }

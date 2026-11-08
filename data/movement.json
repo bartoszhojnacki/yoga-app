@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-01T12:18:37+00:00",
+  "updated_at": "2026-11-08T12:26:37+00:00",
   "videos": [
     {
       "id": "eGcLZd8xtg0",
@@ -20545,6 +20545,48 @@
         "Kolana / Knees",
         "Plecy / Back",
         "Kostki / Ankles"
+      ]
+    },
+    {
+      "id": "ZDG6DSd55yo",
+      "title": "5 Min. Morning Mobility for Your Spine (Upper, Mid & Lower Back)",
+      "channel": "mobility by julia reppel",
+      "duration": 7,
+      "url": "https://www.youtube.com/watch?v=ZDG6DSd55yo",
+      "description": "A 5-minute morning mobility routine focusing on twisting, rounding, and arching to loosen up your spine and relieve stiffness.",
+      "intensity": 3,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "(P)rehab",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Kolana / Knees",
+        "Plecy / Back",
+        "Barki / Shoulders",
+        "Szyja / Neck"
+      ]
+    },
+    {
+      "id": "OxFk5gsPDco",
+      "title": "The 10 Min. Workout That Gets You Your First Push Up (Beginner, No Equipment)",
+      "channel": "mobility by julia reppel",
+      "duration": 12,
+      "url": "https://www.youtube.com/watch?v=OxFk5gsPDco",
+      "description": "A beginner-friendly 10-minute workout designed to help you progress towards your first push-up, including warm-up, mobility, and strength-building exercises.",
+      "intensity": 3,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "(P)rehab",
+        "Strength",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Plecy / Back",
+        "Barki / Shoulders",
+        "Nadgarstki / Wrists"
       ]
     }
   ]

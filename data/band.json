@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-08-11T19:22:06+00:00",
+  "updated_at": "2026-11-08T12:26:47+00:00",
   "videos": [
     {
       "id": "IHQxFS-HEu0",
@@ -6615,6 +6615,30 @@
         "Arms / Ramiona",
         "Core / Brzuch",
         "Full body / Całe ciało"
+      ]
+    },
+    {
+      "id": "EiTlZV7B2Ns",
+      "title": "Upper Body Resistance Workout - No Repeats",
+      "channel": "ACHV PEAK",
+      "duration": 35,
+      "url": "https://www.youtube.com/watch?v=EiTlZV7B2Ns",
+      "description": "Follow along with this structured upper body resistance band workout that targets every muscle group with no repeats.",
+      "intensity": 3,
+      "props": "Resistance bands",
+      "type_tags": [
+        "Upper body",
+        "Core / Abs",
+        "Strength",
+        "Mobility / Warmup"
+      ],
+      "body_tags": [
+        "Legs / Nogi",
+        "Back / Plecy",
+        "Chest / Klatka",
+        "Shoulders / Barki",
+        "Arms / Ramiona",
+        "Core / Brzuch"
       ]
     }
   ]
