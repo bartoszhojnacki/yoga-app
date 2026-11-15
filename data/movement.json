@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-08T12:26:37+00:00",
+  "updated_at": "2026-11-15T13:09:45+00:00",
   "videos": [
     {
       "id": "eGcLZd8xtg0",
@@ -20587,6 +20587,48 @@
         "Plecy / Back",
         "Barki / Shoulders",
         "Nadgarstki / Wrists"
+      ]
+    },
+    {
+      "id": "x21ZTC07FOw",
+      "title": "10 Min. Post Leg Day Stretch (Follow Along, No Talking)",
+      "channel": "mobility by julia reppel",
+      "duration": 12,
+      "url": "https://www.youtube.com/watch?v=x21ZTC07FOw",
+      "description": "Join for a 10-minute lower body cool down to stretch after leg day, targeting the lower back, hip flexors, quads, hamstrings, glutes, and calves.",
+      "intensity": 2,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "Stretching",
+        "(P)rehab",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Biodra / Hips",
+        "Plecy / Back"
+      ]
+    },
+    {
+      "id": "ZzgURR39d3s",
+      "title": "20 Min. Gentle Mobility for Period Cramps & PMS/PMDD",
+      "channel": "mobility by julia reppel",
+      "duration": 21,
+      "url": "https://www.youtube.com/watch?v=ZzgURR39d3s",
+      "description": "Engage in a 20-minute gentle mobility routine designed to ease period cramps and lower back discomfort with soothing movements.",
+      "intensity": 2,
+      "props": "Brak",
+      "type_tags": [
+        "Mobility",
+        "Stretching",
+        "(P)rehab",
+        "Movement / Flow"
+      ],
+      "body_tags": [
+        "Biodra / Hips",
+        "Plecy / Back",
+        "Barki / Shoulders",
+        "Kostki / Ankles"
       ]
     }
   ]

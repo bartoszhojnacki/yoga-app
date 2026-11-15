@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-08T12:26:13+00:00",
+  "updated_at": "2026-11-15T13:09:19+00:00",
   "videos": [
     {
       "id": "3j0qqpLed5k",
@@ -27100,6 +27100,141 @@
         "Biodra",
         "Brzuch / Core",
         "Całe ciało"
+      ]
+    },
+    {
+      "id": "wjoI-chU1B8",
+      "title": "Build Flexibility You Can Actually Use | 35-Min Mobility Flow",
+      "channel": "YOGA WITH DJ",
+      "duration": 35,
+      "url": "https://www.youtube.com/watch?v=wjoI-chU1B8",
+      "description": "In this 35-minute full-body yoga mobility flow, we build strength and control in deep squats while exploring our range of motion. The practice includes transitioning between different positions to enhance flexibility.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra"
+      ]
+    },
+    {
+      "id": "67BiaUYugck",
+      "title": "How Healthy Are Your Hips and Spine? | 77 Min Functional Mobility Yoga",
+      "channel": "YOGA WITH DJ",
+      "duration": 77,
+      "url": "https://www.youtube.com/watch?v=67BiaUYugck",
+      "description": "This 77-minute Functional Mobility Yoga class focuses on increasing strength and mobility in the hips and spine through various poses and a mindful warm-up.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Dynamiczna / Vinyasa"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Brzuch / Core",
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "CUJRybHFOjc",
+      "title": "Stiff Spine, Tight Hips & Ankles? 45-Minute Yoga Mobility Flow for Your Whole Body",
+      "channel": "YOGA WITH DJ",
+      "duration": 44,
+      "url": "https://www.youtube.com/watch?v=CUJRybHFOjc",
+      "description": "This 45-minute yoga mobility flow helps improve flexibility and strength across the entire body, focusing on areas that commonly get stiff, such as shoulders, spine, and hips.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Brzuch / Core",
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "pGBPBrbj-o8",
+      "title": "What If Your Back Pain Starts in Your Hips? 40-Minute Yoga for Mobility",
+      "channel": "YOGA WITH DJ",
+      "duration": 39,
+      "url": "https://www.youtube.com/watch?v=pGBPBrbj-o8",
+      "description": "In this 40-minute yoga mobility class, we emphasize keeping the hips and spine healthy through joint warm-up exercises and a dynamic flow.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Brzuch / Core"
+      ]
+    },
+    {
+      "id": "2-oPllxZ7uk",
+      "title": "It’s Not Too Late to Build Strong Knees (Beginner-Friendly) | I Started at 42 and now 47!",
+      "channel": "YOGA WITH DJ",
+      "duration": 35,
+      "url": "https://www.youtube.com/watch?v=2-oPllxZ7uk",
+      "description": "This 35-minute beginner-friendly routine focuses on building strength and stability in the knees, utilizing chair and wall support for safety.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Biodra"
+      ]
+    },
+    {
+      "id": "B50D-Pl6n-w",
+      "title": "Rest Day? Your Body Still Needs This | 45-Min Active Recovery Yoga",
+      "channel": "YOGA WITH DJ",
+      "duration": 46,
+      "url": "https://www.youtube.com/watch?v=B50D-Pl6n-w",
+      "description": "Today's 45-minute active recovery yoga practice combines gentle movement and deep stretching to help the body recover and release tension.",
+      "intensity": 2,
+      "props": "Yoga block",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Brzuch / Core"
+      ]
+    },
+    {
+      "id": "B8OidsfqS1w",
+      "title": "Your Stiff Joints and Weak Core Need This | 10 Exercises, 45 Minutes, Beginner-Friendly",
+      "channel": "YOGA WITH DJ",
+      "duration": 46,
+      "url": "https://www.youtube.com/watch?v=B8OidsfqS1w",
+      "description": "This 45-minute follow-along practice focuses on improving mobility and building core strength through a series of exercises with one yoga block used for meditation.",
+      "intensity": 2,
+      "props": "Yoga block",
+      "style": [
+        "Spokojna / Yin",
+        "Poranna",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Brzuch / Core"
       ]
     }
   ]
