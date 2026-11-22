@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-15T13:09:19+00:00",
+  "updated_at": "2026-11-22T13:46:14+00:00",
   "videos": [
     {
       "id": "3j0qqpLed5k",
@@ -27235,6 +27235,211 @@
         "Kręgosłup",
         "Biodra",
         "Brzuch / Core"
+      ]
+    },
+    {
+      "id": "kAUlD9encSE",
+      "title": "Koło do jogi dla początkujących 15 min ★☆☆☆ odpoczynek i regeneracja",
+      "channel": "Yoga Home",
+      "duration": 18,
+      "url": "https://www.youtube.com/watch?v=kAUlD9encSE",
+      "description": "Regeneracyjna praktyka jogi, która otwiera klatkę piersiową i przynosi ulgę zmęczonym nogom, wykorzystując koło do jogi.",
+      "intensity": 1,
+      "props": "Koło do jogi",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Biodra"
+      ]
+    },
+    {
+      "id": "OrGsYnY5NK8",
+      "title": "40 min koordynacja i płynność ruchu ★★☆☆ Joga metoda rampy",
+      "channel": "Yoga Home",
+      "duration": 44,
+      "url": "https://www.youtube.com/watch?v=OrGsYnY5NK8",
+      "description": "Dynamiczne flow jogi, które wzmacnia i rozciąga poprzez stopniowe dodawanie asan, tworząc płynną sekwencję.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Dynamiczna / Vinyasa",
+        "Poranna"
+      ],
+      "focus": [
+        "Biodra"
+      ]
+    },
+    {
+      "id": "ZrRrCHVWPfc",
+      "title": "Day 6: Beginner Yoga Mobility Challenge | Hamstrings & Hip Mobility Flow",
+      "channel": "YOGA WITH DJ",
+      "duration": 74,
+      "url": "https://www.youtube.com/watch?v=ZrRrCHVWPfc",
+      "description": "Sesja jogi skupiająca się na mobilności ścięgien i bioder, z różnorodnymi ćwiczeniami rozgrzewającymi i rozciągającymi.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra"
+      ]
+    },
+    {
+      "id": "EFJXstEZ8eA",
+      "title": "Day 5: Beginner Yoga Mobility Challenge | Lower Body Mobility & Strength",
+      "channel": "YOGA WITH DJ",
+      "duration": 61,
+      "url": "https://www.youtube.com/watch?v=EFJXstEZ8eA",
+      "description": "Sesja mobilności i siły dolnej części ciała, koncentrująca się na kostkach i biodrach, z rozgrzewającymi ćwiczeniami.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra"
+      ]
+    },
+    {
+      "id": "FCMBDjxueL4",
+      "title": "Mobility Vinyasa | Dancing Camel & Pincha Flow (77 Min)",
+      "channel": "YOGA WITH DJ",
+      "duration": 77,
+      "url": "https://www.youtube.com/watch?v=FCMBDjxueL4",
+      "description": "Sesja Mobility Vinyasa koncentrująca się na otwieraniu pleców, bioder oraz budowaniu siły przy pomocy serii asan.",
+      "intensity": 4,
+      "props": "Brak",
+      "style": [
+        "Dynamiczna / Vinyasa"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Brzuch / Core",
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "U1tfA0v46Xs",
+      "title": "Day 4: Beginner Yoga Mobility Challenge | Full Body Mobility & Strength Flow",
+      "channel": "YOGA WITH DJ",
+      "duration": 66,
+      "url": "https://www.youtube.com/watch?v=U1tfA0v46Xs",
+      "description": "Sesja mobilności całego ciała, z naciskiem na stabilność stawów i różnorodne ćwiczenia rozciągające.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "9muOaUZyHMU",
+      "title": "Day 3: Beginner Yoga Mobility Challenge | Full Body Mobility & Joint Care",
+      "channel": "YOGA WITH DJ",
+      "duration": 62,
+      "url": "https://www.youtube.com/watch?v=9muOaUZyHMU",
+      "description": "Sesja mobilności całego ciała, skupiająca się na pracy ze stawami i zakończona medytacją siedzącą.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "CUb9_6nUtyU",
+      "title": "Day 2: Beginner Yoga Mobility Challenge | Mobility & Stability Basics",
+      "channel": "YOGA WITH DJ",
+      "duration": 59,
+      "url": "https://www.youtube.com/watch?v=CUb9_6nUtyU",
+      "description": "Sesja koncentrująca się na podstawach mobilności i stabilności, dochodząc od stóp do nadgarstków.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra"
+      ]
+    },
+    {
+      "id": "S9gNAjMNG2s",
+      "title": "Hip Mobility Yoga: Active Pigeon to Knee Over Toes + Deep Squat & Pancake Work",
+      "channel": "YOGA WITH DJ",
+      "duration": 41,
+      "url": "https://www.youtube.com/watch?v=S9gNAjMNG2s",
+      "description": "Hip mobility yoga flow, transformujący pozycję gołębia w aktywne ćwiczenia siły i elastyczności.",
+      "intensity": 3,
+      "props": "Brak",
+      "style": [
+        "Dynamiczna / Vinyasa"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Brzuch / Core",
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "244GJVg5N9U",
+      "title": "Day 1: Beginner Yoga Mobility Challenge | 30-Day Start Here",
+      "channel": "YOGA WITH DJ",
+      "duration": 41,
+      "url": "https://www.youtube.com/watch?v=244GJVg5N9U",
+      "description": "To rozpoczęcie 30-dniowego wyzwania, które pomoże w budowaniu mobilności, stabilności i kontroli ruchu. Celem jest poprawa zakresu ruchu stawów.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Dla początkujących"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Całe ciało"
+      ]
+    },
+    {
+      "id": "JJOcEcQGJEQ",
+      "title": "35 Min Full Body Deep Stretch | Slow Yoga for Total Release",
+      "channel": "YOGA WITH DJ",
+      "duration": 34,
+      "url": "https://www.youtube.com/watch?v=JJOcEcQGJEQ",
+      "description": "Sesja pełnego ciała skoncentrowana na powolnym głębokim rozciąganiu, mająca na celu relaksację i wsłuchanie się w potrzeby ciała.",
+      "intensity": 2,
+      "props": "Brak",
+      "style": [
+        "Spokojna / Yin",
+        "Dynamiczna / Vinyasa",
+        "Poranna"
+      ],
+      "focus": [
+        "Kręgosłup",
+        "Biodra",
+        "Całe ciało"
       ]
     }
   ]
